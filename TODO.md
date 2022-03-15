@@ -4,8 +4,7 @@ Source of truth for all 2022 Code Samples
 
 ### Would Be Nice
 
-- [ ] Keep it professional, nothing directly negative  
-- [ ] Copy the Tao of React "Do and Don't" style but for how I got rid of technical debt  
+- [ ] Include audio snippets:  https://stackoverflow.com/a/68493876/6200791 ✅ only positive  
 
 ### TODO
 
