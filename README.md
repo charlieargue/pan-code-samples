@@ -105,6 +105,7 @@
 
 - [ ] include testing pyramid pic
 - [ ] re-use of msw & msw/d
+- [ ] cypress & E2E, include 🔴 BEFORE:       ✅ AFTER: see `CSP-9659.xlsx` (blurred)
 
 
 

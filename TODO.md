@@ -4,14 +4,10 @@ Source of truth for all 2022 Code Samples
 
 ### Would Be Nice
 
-- [ ] Include audio snippets:  https://stackoverflow.com/a/68493876/6200791 ✅ only positive  
+- [ ] Can include audio snippets:  https://stackoverflow.com/a/68493876/6200791  
 
 ### TODO
 
-- [ ] Go thru my PAN Accomplishments + Resume and choose what needed from there  
-- [ ] CODE SAMPLES  
-- [ ] Drop in latest code-samples from my zips  
-- [ ] Sanitize!  
 - [ ] SCREENSHOTS  
 - [ ] Go thru all my POKAZ and cherry pick  
 - [ ] Do like a BLUR EFFECT on the AI App.js and how it was "all in one file" and then show the AFTER somehow...  
@@ -25,8 +21,11 @@ Source of truth for all 2022 Code Samples
 
 ### UP NEXT
 
-- [ ] Go thru BLUE FOLDER and org those notes  
+- [ ] Sanitize!  
+- [ ] Go thru my PAN Accomplishments + Resume and choose what needed from there  
 
 ### IN PROGRESS
 
+- [ ] CODE SAMPLES  
+- [ ] Drop in latest code-samples from my zips  
 
