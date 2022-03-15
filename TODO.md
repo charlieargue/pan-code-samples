@@ -21,8 +21,10 @@ Source of truth for all 2022 Code Samples
 
 ### UP NEXT
 
+- [ ] go thru my #pan channel  
+- [ ] go thru PAN ACC print-out  
+- [ ] Go thru my Resume and choose what needed from there  
 - [ ] Sanitize!  
-- [ ] Go thru my PAN Accomplishments + Resume and choose what needed from there  
 
 ### IN PROGRESS
 

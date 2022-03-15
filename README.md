@@ -2,6 +2,13 @@
 
 
 
+# 📚 Resources 
+
+- [ ] https://blur.page/
+- [ ] https://divbyzero.com/tools/blur-extension/#howto
+
+
+
 
 
 ## tldr; main impact:
@@ -44,18 +51,24 @@
 
 - [ ] axios Base Query, 
 - [ ] fetcherService, 
+- [ ] show complete component heirarchy (Transfers were most recent)
 - [ ] builders
 - [ ] cache (pessimistic, optimized, and general) ... pull from bkups... and 
 - [ ] ... IEECTA was originally in rtk-query, right??? or was there a version b4 that? react-tracked? ... something changed in how the cache was done, no? check...
-
 - [ ] Sanitzed 🔴 BEFORE:       ✅ AFTER:
   - [ ] units.js
   - [ ] App.js 
   - [ ] AI in generale
-  - [ ] MFE-B might be good, b-and-a
+  - [ ] Componentizing! (into `Review`, `Details`, etc...)
+  - [ ] **MFE-B** might be good, b-and-a
   - [ ] useFetch and everything in redux lol -> rtk-query + cache
+  - [ ] centralized error handling!
   - [ ] bindClass service stuff -> builders only super lean, show size
   - [ ] barelling and better import/export patterns
+
+![image-20220315042930192](/Users/karlgolka/PROJECTS/FYI/_typora_images/image-20220315042930192.png)
+
+
 
 
 
@@ -133,10 +146,12 @@ Guided project management on:
 
 ## Testimonials
 
+- [ ] see my google ops doc
 - [ ] pics
 - [ ] audio
 - [ ] transcripts/quotes/blurbs
   - [ ] PR's 100%, no bugs, refactored entire MFE w/i 1 month of being there, no bugs/revisions from QA/UAT!
+- [ ] Show Alex's: `all good questions` from [JIRA pic](ALEX-2-Screen Shot 2022-02-14 at 2.15.29 PM.png)
 
 
 
