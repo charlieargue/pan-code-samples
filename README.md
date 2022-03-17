@@ -49,284 +49,33 @@
 
 ## Code Samples
 
-
-
-### RTK-Q Builders
-
-#### Example #1:
-
-```js 
-// file: src/rtkq/builders/getPendingAssetsBuilder.js
-const url = '/api/Lorem/Ipsum';
-
-export const getPendingAssetsBuilder = (builder) =>
-    builder.query({
-        query: ({ userAccountId, supportAccountId }) => {
-            return {
-                url,
-                method: 'GET',
-                params: { userAccountId, supportAccountId },
-            };
-        },
-        providesTags: result =>
-            result
-                ? [
-                    ...result?.map(
-                        ({ device_transfer_id }) =>
-                            ({ type: 'Transfer', id: device_transfer_id })),
-                    { type: 'Transfer', id: 'LIST' },
-
-                ]
-                : [{ type: 'Transfer', id: 'LIST' }],
-    });
-
-export default getPendingAssetsBuilder;
-```
+RTK-Q = *Redux ToolKit - Query*
 
 
 
-#### Example #2:
+### RTK-Q Builders 
 
-```js 
-// file: src/rtkq/builders/startTransferBuilder.js
-const url = '/api/Lorem/Ipsum';
-
-export const startTransferBuilder = (builder) =>
-    builder.mutation({
-        query: ({ userAccountId, supportAccountId, formValues, record }) => {
-            return {
-                url,
-                method: 'POST',
-                params: {
-                    userAccountId,
-                    supportAccountId,
-                },
-                body: buildBody(supportAccountId, formValues, record)
-            };
-        },
-        invalidatesTags: (result, error, { record }) => {
-            return [{ type: 'Asset', id: record.id }];
-        },
-    });
-
-function buildBody(supportAccountId, formValues, record) {
-    let transferBy;
-    let destination;
-    if (formValues['transfer-destination'] === 'USER') {
-        transferBy = "EmailRecipient";
-        destination = {
-            destination_email: formValues.email,
-        };
-
-    } else if (formValues['transfer-destination'] === 'SUPPORT_ACCOUNT') {
-        transferBy = "SupportAccount";
-        destination = {
-            support_account_id: supportAccountId,
-        };
-
-    }
-    const payload = {
-        device_id: record.id,
-        device_name: record.name,
-        has_asc_transfer_access: false,
-        has_lgs_associated: record.has_lgs_associated,
-        notify_user: formValues['notify-user'],
-        part_number: null, // legacy, can be null
-        serial_number: record.serial_number,
-        transfer_by: transferBy,
-        ...destination,
-    };
-    return payload;
-}
-
-export default startTransferBuilder;
-```
+* [Example #1](code-samples/rtkq/builders/example-1.md) (Get Pending Assets - Builder)
+* [Example #2](code-samples/rtkq/builders/example-2.md) (Start Transfer - Builder)
 
 
 
 ### RTK-Q Cache Updates
 
-#### Pessimistic Example:
+* [Pessimistic Example](code-samples/rtkq/cache-updates/pessimistic.md) (code fragment)
+* [Optimistic Example](code-samples/rtkq/cache-updates/optimistic.md) (code fragment)
 
-```js 
-// file: src/hooks/rtk-query/api-and-hooks.js (FRAGMENT)
-
-extendExpirationDate: build.mutation({
-    async queryFn({ requestId }, { dispatch, getState }) {
-        try {
-            const result = await extendExpirationDate(getState, requestId);
-            Message.info('Request was successful.', MESSAGE_DISPLAY_DURATION);
-            return result;
-        } catch (error) {
-            return handleReduxError(error, dispatch, setGlobal);
-        } finally {
-          dispatch(setGlobal({ isFetchingRequests: false }));
-        }
-    },
-    async onQueryStarted({ ...patch }, { dispatch, queryFulfilled }) {
-        dispatch(setGlobal({ isFetchingRequests: true }));
-        const { data: updatedRequest } = await queryFulfilled;
-        dispatch(
-            api.util.updateQueryData('getActiveRequests', undefined, draftRequests => {
-                const foundDraft = draftRequests.find(
-                    request => request.requestId === patch.requestId
-                );
-                delete foundDraft.isExpiring;
-                foundDraft.expirationDate = updatedRequest.expirationDate;
-            })
-        );
-    },
-}),
-```
+* [General (from Component) Example](code-samples/rtkq/cache-updates/general.md)  (code fragment)
 
 
 
-#### Optimistic Example:
+### Other Javascript Examples
 
-```js 
-// file: src/rtkq/builders/getPendingAssetsBuilder.js (FRAGMENT)
-
-onQueryStarted(
-  { userAccountId, supportAccountId, deviceTransferId }, 
-  { dispatch, queryFulfilled }) {
-  const fresh = dispatch(
-      api.util.updateQueryData(
-          'getPendingAssets',
-          { userAccountId, supportAccountId },
-          drafts => {
-              const foundDraft = drafts.find(draft => 
-                       draft.device_transfer_id === deviceTransferId);
-              Object.assign(foundDraft, {
-                  device_transfer_state: TRANSFER_STATUS.ACCEPTED,
-              });
-          }
-      )
-  );
-  queryFulfilled.catch(fresh.undo);
-},
-```
+* ["Fetcher" Service based on `fetch`](code-samples/rtkq/javascript/fetch.md) 
+* ["Fetcher" Service based `axios`](code-samples/rtkq/javascript/axios.md) (for RTK-Q)
 
 
 
-#### General (from Component) Example:
-
-```js 
-// file: src/components/popovers/incoming/IncomingPopover.jsx (FRAGMENT)
-
-const onAcceptClick = async () => {
-    await triggerAccept({ userAccountId, supportAccountId, deviceTransferId });
-    setAlertVisibility(ALERT_VISIBILITY_STATES.ACCEPTED_ALERT);
-    setTimeout(() => {
-        dispatch(
-            api.util.updateQueryData(
-                'getPendingAssets',
-                { userAccountId, supportAccountId },
-                (drafts) => {
-                    drafts.splice(
-                        drafts.findIndex((draft) => draft.device_transfer_id === deviceTransferId,
-                        ),
-                        1,
-                    );
-                }));
-    }, PO_ALERT_TIMEOUT);
-};
-```
-
-
-
-### Javascript Examples
-
-#### fetch-based "Fetcher" Service
-
-```js 
-import { getDefaultPayload, getHeaders, handleErrorAPI } from '@lorem/ipsum';
-
-const DEFAULT_OPTIONS = {
-    method: 'POST',
-    getState: () => {},
-    body: () => {},
-    params: () => {},
-};
-
-// ##################################################################################
-// # Abstraction for fetch-based requests
-// ##################################################################################
-export const fetcherService = async (options = DEFAULT_OPTIONS) => {
-    const mergedOptions = {
-        ...DEFAULT_OPTIONS,
-        ...options,
-    };
-    const { auth } = mergedOptions.getState((freshState) => freshState);
-    let url = mergedOptions.url ? `${auth.baseUrl}${mergedOptions.url}` : auth.baseUrl;
-    const fetchOptions = {
-        method: mergedOptions.method,
-        headers: getHeaders(auth),
-    };
-    if (mergedOptions.params) {
-        // thx: https://stackoverflow.com/a/58437909  (MOOT once switch to axios)
-        url += `?${new URLSearchParams(mergedOptions.params(auth))}`;
-    }
-    if (['POST', 'PUT', 'PATCH'].includes(mergedOptions.method)) {
-        const body = JSON.stringify({
-            ...getDefaultPayload(auth),
-            ...mergedOptions.body(auth),
-        });
-        fetchOptions.body = body;
-    }
-    const result = await fetch(url, fetchOptions);
-    const unpacked = await result.json();
-    handleErrorAPI(unpacked);
-    return unpacked;
-};
-export default fetcherService;
-```
-
-#### axios-based  "Fetcher" Service (for RTK-Q)
-
-```js 
-// file: src/utils/axiosBaseQuery.js
-
-import axios from 'axios';
-import { handleErrorAPI } from './error-handling/handleErrorAPI';
-import { getHeaders } from './getHeaders';
-
-// ##################################################################################
-// axios BASE QUERY (for rtkq)
-// ##################################################################################
-export const axiosBaseQuery =
-    () =>
-    async (requestOptions, { getState }) => {
-        try {
-            const { auth } = getState();
-            const { baseUrl } = auth;
-            const defaultHeaders = getHeaders(auth);
-            const options = {
-                ...requestOptions,
-                headers: {
-                    ...defaultHeaders,
-                    ...requestOptions.headers,
-                },
-                url: baseUrl + requestOptions.url,
-            };
-            const result = await axios(options);
-            handleErrorAPI(result);
-            return { data: result?.data.data || result.data };
-        } catch (axiosError) {
-            return {
-                error: {
-                    status: axiosError.response?.status,
-                    data: axiosError.response?.data,
-                },
-            };
-        }
-    };
-
-export default axiosBaseQuery;
-```
-
-
-
-- [ ] 
 - [ ] show complete component heirarchy (Transfers were most recent)
   - [ ] include screenshot of folder / file org!
 - [ ] show entire popover maybe (with .css styles, yes! pick my best ones!) some FLEX!
