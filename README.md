@@ -75,12 +75,10 @@ RTK-Q = *Redux ToolKit - Query*
 
 
 
-
-
 ### Component Examples:
 
-* [Incoming Popover](code-samples/components/popovers/incoming.md) (simple)
-* Transfer Asset Drawer (more complex)
+* [Incoming Popover](code-samples/components/incoming-popover.md) (simple)
+* Transfer Asset - Drawer (more complex)
 
 
 
@@ -93,24 +91,19 @@ RTK-Q = *Redux ToolKit - Query*
 
 
 
-
-
-show entire popover maybe (with .css styles, yes! pick my best ones!) some FLEX!
-
-
-
 - [ ] show complete component heirarchy (Transfers were most recent)
   - [ ] include screenshot of folder / file org!
-- [ ] 
-- [ ] ... IEECTA was originally in rtk-query, right??? or was there a version b4 that? react-tracked? ... something changed in how the cache was done, no? check...
+- [ ] show entire MFE! ( with lots of "blurred bits") - ⏸ PendingTransfers 
+- [ ] ... IEECTA was originally in react-query, right??? **YES**
+- [ ] ctx-options!
 - [ ] Sanitzed 🔴 BEFORE:       ✅ AFTER:
   - [ ] units.js
   - [ ] App.js 
   - [ ] AI in generale
   - [ ] Componentizing! (into `Review`, `Details`, etc...)
   - [ ] **MFE-B** might be good, b-and-a
-  - [ ] useFetch and everything in redux lol -> rtk-query + cache
-  - [ ] centralized error handling!
+  - [x] useFetch and everything in redux lol -> rtk-query + cache
+  - [ ] ~~centralized error handling!~~
   - [ ] bindClass service stuff -> builders only super lean, show size
   - [ ] barelling and better import/export patterns
 

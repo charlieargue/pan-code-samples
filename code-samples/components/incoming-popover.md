@@ -4,13 +4,13 @@
 
 ### File Organization
 
-<img src="../../../_markdown_assets/images/image-20220316224148580.png" alt="image-20220316224148580" style="zoom:50%;" />
+<img src="../../_markdown_assets/images/image-20220316224148580.png" alt="image-20220316224148580" style="zoom:50%;" />
 
 
 
 ### UI Screen Shots
 
-<img src="../../../_markdown_assets/images/image-20220316225003165.png" alt="image-20220316225003165" style="zoom:50%;" />
+<img src="../../_markdown_assets/images/image-20220316225003165.png" alt="image-20220316225003165" style="zoom:50%;" />
 
 
 
@@ -19,7 +19,7 @@
 IncomingPopover.jsx
 
 ```jsx
-import { formatDate, Popover } from '@paloaltonetworks/ethos';
+import { formatDate, Popover } from '@Lorem/Ipsum';
 import { PropTypes as PT } from 'prop-types';
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -165,7 +165,7 @@ export default IncomingPopover;
 IncomingPopover.styles.js
 
 ```jsx  
-import { Space, units, Alert } from '@paloaltonetworks/ethos';
+import { Space, units, Alert } from '@Lorem/Ipsum';
 import styled from 'styled-components';
 
 export const StyledContent = styled.div`
@@ -218,7 +218,7 @@ export const StyledAlert = styled(Alert)`
 IncomingPopover.stories.jsx
 
 ```jsx  
-import { colors, Space } from '@paloaltonetworks/ethos';
+import { colors, Space } from '@Lorem/Ipsum';
 import React from 'react';
 import { IncomingPopover } from './IncomingPopover';
 import { HoverablePlugin } from '../../assets/PendingTable/HoverablePlugin';
@@ -253,7 +253,7 @@ Primary.args = {
 AcceptBtn.jsx
 
 ```jsx  
-import { Button } from '@paloaltonetworks/ethos';
+import { Button } from '@Lorem/Ipsum';
 import { PropTypes as PT } from 'prop-types';
 import React from 'react';
 
