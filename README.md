@@ -8,15 +8,6 @@
 
 
 
-# 📚 Resources 
-
-- [ ] https://blur.page/
-- [ ] https://divbyzero.com/tools/blur-extension/#howto
-
-
-
-
-
 ## tldr; main impact:
 
 - [ ] **msw/d** unblocked dysfunctional and regular being-blocked by BE
@@ -56,6 +47,12 @@
 ## Code Samples
 
 RTK-Q = *Redux ToolKit - Query*
+
+
+
+### RTK-Q API, Endpoints, and Auto-Generated Hooks
+
+*  [Example #1](code-samples/rtkq/api-endpoints-and-hooks.md)
 
 
 
