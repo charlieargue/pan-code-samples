@@ -49,11 +49,114 @@
 
 ## Code Samples
 
+### RTK-Q Builders
+
+```js 
+// file: src/rtkq/builders/getPendingAssetsBuilder.js
+
+const url = '/api/Lorem/Ipsum';
+
+// ##################################################################################
+// GET PENDING ASSETS builder
+// ##################################################################################
+export const getPendingAssetsBuilder = (builder) =>
+    builder.query({
+        query: ({ userAccountId, supportAccountId }) => {
+            return {
+                url,
+                method: 'GET',
+                params: { userAccountId, supportAccountId },
+            };
+        },
+        providesTags: result =>
+            result
+                ? [
+                    ...result?.map(
+                        ({ device_transfer_id }) =>
+                            ({ type: 'Transfer', id: device_transfer_id })),
+                    { type: 'Transfer', id: 'LIST' },
+
+                ]
+                : [{ type: 'Transfer', id: 'LIST' }],
+    });
+
+export default getPendingAssetsBuilder;
+```
+
+
+
+```js 
+// file: src/rtkq/builders/startTransferBuilder.js
+
+const url = '/api/Lorem/Ipsum';
+
+// ##################################################################################
+// STARTT RANSFER builder
+// ##################################################################################
+export const startTransferBuilder = (builder) =>
+    builder.mutation({
+        query: ({ userAccountId, supportAccountId, formValues, record }) => {
+            return {
+                url,
+                method: 'POST',
+                params: {
+                    userAccountId,
+                    supportAccountId,
+                },
+                body: buildBody(supportAccountId, formValues, record)
+            };
+        },
+        invalidatesTags: (result, error, { record }) => {
+            return [{ type: 'Asset', id: record.id }];
+        },
+    });
+
+function buildBody(supportAccountId, formValues, record) {
+    let transferBy;
+    let destination;
+    if (formValues['transfer-destination'] === 'USER') {
+        transferBy = "EmailRecipient";
+        destination = {
+            destination_email: formValues.email,
+        };
+
+    } else if (formValues['transfer-destination'] === 'SUPPORT_ACCOUNT') {
+        transferBy = "SupportAccount";
+        destination = {
+            support_account_id: supportAccountId,
+        };
+
+    }
+    const payload = {
+        device_id: record.id,
+        device_name: record.name,
+        has_asc_transfer_access: false,
+        has_lgs_associated: record.has_lgs_associated,
+        notify_user: formValues['notify-user'],
+        part_number: null, // legacy, can be null
+        serial_number: record.serial_number,
+        transfer_by: transferBy,
+        ...destination,
+    };
+    return payload;
+}
+
+export default startTransferBuilder;
+```
+
+
+
+
+
+
+
+
+
+- [ ] 
+- [ ] cache (pessimistic, optimized, and general) ... pull from bkups... and 
 - [ ] axios Base Query, 
 - [ ] fetcherService, 
 - [ ] show complete component heirarchy (Transfers were most recent)
-- [ ] builders
-- [ ] cache (pessimistic, optimized, and general) ... pull from bkups... and 
 - [ ] ... IEECTA was originally in rtk-query, right??? or was there a version b4 that? react-tracked? ... something changed in how the cache was done, no? check...
 - [ ] Sanitzed 🔴 BEFORE:       ✅ AFTER:
   - [ ] units.js
@@ -144,7 +247,7 @@ Guided project management on:
 
 
 
-## Testimonials
+# Testimonials
 
 - [ ] see my google ops doc
 - [ ] pics
@@ -152,6 +255,8 @@ Guided project management on:
 - [ ] transcripts/quotes/blurbs
   - [ ] PR's 100%, no bugs, refactored entire MFE w/i 1 month of being there, no bugs/revisions from QA/UAT!
 - [ ] Show Alex's: `all good questions` from [JIRA pic](ALEX-2-Screen Shot 2022-02-14 at 2.15.29 PM.png)
+- [ ] ![image-20220316175533444](/Users/karlgolka/PROJECTS/FYI/_typora_images/image-20220316175533444.png)
+- [ ] 
 
 
 

@@ -2,10 +2,6 @@
 
 Source of truth for all 2022 Code Samples
 
-### Would Be Nice
-
-- [ ] Can include audio snippets:  https://stackoverflow.com/a/68493876/6200791  
-
 ### TODO
 
 - [ ] SCREENSHOTS  
@@ -18,16 +14,15 @@ Source of truth for all 2022 Code Samples
 - [ ] add THIS to resume!  
 - [ ] this should link to ctx-options  
 - [ ] should be SOURCE of truth, and have a link to "other code samples and demo projecs"  
+- [ ] WOULD BE NICE: Can include audio snippets:  https://stackoverflow.com/a/68493876/6200791  
 
 ### UP NEXT
 
-- [ ] go thru my #pan channel  
-- [ ] go thru PAN ACC print-out  
 - [ ] Go thru my Resume and choose what needed from there  
 - [ ] Sanitize!  
 
 ### IN PROGRESS
 
-- [ ] CODE SAMPLES  
 - [ ] Drop in latest code-samples from my zips  
+- [ ] CODE SAMPLES  
 
