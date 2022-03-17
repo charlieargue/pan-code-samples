@@ -1,8 +1,8 @@
-#### MSW
+#### Initializing and bootstrapping MSW
 
 
 
-msw.js
+###### msw.js
 
 ```js 
 'use strict';

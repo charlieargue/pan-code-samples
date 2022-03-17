@@ -16,7 +16,7 @@
 
 ### Code Samples:
 
-IncomingPopover.jsx
+###### IncomingPopover.jsx
 
 ```jsx
 import { formatDate, Popover } from '@Lorem/Ipsum';
@@ -162,7 +162,7 @@ export default IncomingPopover;
 
 
 
-IncomingPopover.styles.js
+###### IncomingPopover.styles.js
 
 ```jsx  
 import { Space, units, Alert } from '@Lorem/Ipsum';
@@ -215,7 +215,7 @@ export const StyledAlert = styled(Alert)`
 
 
 
-IncomingPopover.stories.jsx
+###### IncomingPopover.stories.jsx
 
 ```jsx  
 import { colors, Space } from '@Lorem/Ipsum';
@@ -250,7 +250,7 @@ Primary.args = {
 
 
 
-AcceptBtn.jsx
+###### AcceptBtn.jsx
 
 ```jsx  
 import { Button } from '@Lorem/Ipsum';

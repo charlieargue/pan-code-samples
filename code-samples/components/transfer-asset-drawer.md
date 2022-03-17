@@ -78,7 +78,7 @@ export default TransferDrawer;
 
 
 
-TransferDrawer.styles.js
+###### TransferDrawer.styles.js
 
 ```js 
 import { SideDrawer } from '@Lorem/Ipsum';
