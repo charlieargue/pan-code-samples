@@ -8,7 +8,7 @@
 
 ### UI Screen Shots
 
-![image-20220317020153985](/Users/karlgolka/PROJECTS/FYI/_typora_images/image-20220317020153985.png)
+![image-20220317020153985](../../_markdown_assets/images/image-20220317020153985.png)
 
 
 
