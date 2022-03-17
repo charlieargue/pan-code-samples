@@ -214,36 +214,122 @@ onQueryStarted(
 // file: src/components/popovers/incoming/IncomingPopover.jsx (FRAGMENT)
 
 const onAcceptClick = async () => {
-  await triggerAccept({ userAccountId, supportAccountId, deviceTransferId });
-  setAlertVisibility(ALERT_VISIBILITY_STATES.ACCEPTED_ALERT);
-  setTimeout(() => {
-      dispatch(
-          api.util.updateQueryData(
-              'getPendingAssets',
-              { userAccountId, supportAccountId },
-              (drafts) => {
-                  drafts.splice(
-                      drafts.findIndex(
-                          (draft) => draft.device_transfer_id === deviceTransferId,
-                      ),
-                      1,
-                  );
-              },
-          ),
-      );
-  }, PO_ALERT_TIMEOUT);
+    await triggerAccept({ userAccountId, supportAccountId, deviceTransferId });
+    setAlertVisibility(ALERT_VISIBILITY_STATES.ACCEPTED_ALERT);
+    setTimeout(() => {
+        dispatch(
+            api.util.updateQueryData(
+                'getPendingAssets',
+                { userAccountId, supportAccountId },
+                (drafts) => {
+                    drafts.splice(
+                        drafts.findIndex((draft) => draft.device_transfer_id === deviceTransferId,
+                        ),
+                        1,
+                    );
+                }));
+    }, PO_ALERT_TIMEOUT);
 };
 ```
 
 
 
+### Javascript Examples
+
+#### fetch-based "Fetcher" Service
+
+```js 
+import { getDefaultPayload, getHeaders, handleErrorAPI } from '@lorem/ipsum';
+
+const DEFAULT_OPTIONS = {
+    method: 'POST',
+    getState: () => {},
+    body: () => {},
+    params: () => {},
+};
+
+// ##################################################################################
+// # Abstraction for fetch-based requests
+// ##################################################################################
+export const fetcherService = async (options = DEFAULT_OPTIONS) => {
+    const mergedOptions = {
+        ...DEFAULT_OPTIONS,
+        ...options,
+    };
+    const { auth } = mergedOptions.getState((freshState) => freshState);
+    let url = mergedOptions.url ? `${auth.baseUrl}${mergedOptions.url}` : auth.baseUrl;
+    const fetchOptions = {
+        method: mergedOptions.method,
+        headers: getHeaders(auth),
+    };
+    if (mergedOptions.params) {
+        // thx: https://stackoverflow.com/a/58437909  (MOOT once switch to axios)
+        url += `?${new URLSearchParams(mergedOptions.params(auth))}`;
+    }
+    if (['POST', 'PUT', 'PATCH'].includes(mergedOptions.method)) {
+        const body = JSON.stringify({
+            ...getDefaultPayload(auth),
+            ...mergedOptions.body(auth),
+        });
+        fetchOptions.body = body;
+    }
+    const result = await fetch(url, fetchOptions);
+    const unpacked = await result.json();
+    handleErrorAPI(unpacked);
+    return unpacked;
+};
+export default fetcherService;
+```
+
+#### axios-based  "Fetcher" Service (for RTK-Q)
+
+```js 
+// file: src/utils/axiosBaseQuery.js
+
+import axios from 'axios';
+import { handleErrorAPI } from './error-handling/handleErrorAPI';
+import { getHeaders } from './getHeaders';
+
+// ##################################################################################
+// axios BASE QUERY (for rtkq)
+// ##################################################################################
+export const axiosBaseQuery =
+    () =>
+    async (requestOptions, { getState }) => {
+        try {
+            const { auth } = getState();
+            const { baseUrl } = auth;
+            const defaultHeaders = getHeaders(auth);
+            const options = {
+                ...requestOptions,
+                headers: {
+                    ...defaultHeaders,
+                    ...requestOptions.headers,
+                },
+                url: baseUrl + requestOptions.url,
+            };
+            const result = await axios(options);
+            handleErrorAPI(result);
+            return { data: result?.data.data || result.data };
+        } catch (axiosError) {
+            return {
+                error: {
+                    status: axiosError.response?.status,
+                    data: axiosError.response?.data,
+                },
+            };
+        }
+    };
+
+export default axiosBaseQuery;
+```
 
 
 
-
-- [ ] axios Base Query, 
-- [ ] fetcherService, 
+- [ ] 
 - [ ] show complete component heirarchy (Transfers were most recent)
+  - [ ] include screenshot of folder / file org!
+- [ ] show entire popover maybe (with .css styles, yes! pick my best ones!) some FLEX!
 - [ ] ... IEECTA was originally in rtk-query, right??? or was there a version b4 that? react-tracked? ... something changed in how the cache was done, no? check...
 - [ ] Sanitzed 🔴 BEFORE:       ✅ AFTER:
   - [ ] units.js
