@@ -1,4 +1,4 @@
-#### "Fetcher" Service based on `fetch`
+# "Fetcher" Service based on `fetch`
 
 ```js 
 import { getDefaultPayload, getHeaders, handleErrorAPI } from '@lorem/ipsum';

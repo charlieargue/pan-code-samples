@@ -1,4 +1,4 @@
-#### Example #1: Get Pending Assets - Builder
+# Example #1: Get Pending Assets - Builder
 
 ```js 
 // file: src/rtkq/builders/getPendingAssetsBuilder.js

@@ -1,6 +1,14 @@
-#### Tooling
+# Token Automation
 
 
+
+### Terminal Screen Shots
+
+![Pasted_Image_3_17_22__4_04_PM](../../_markdown_assets/images/Pasted_Image_3_17_22__4_04_PM.png)
+
+
+
+### Code Samples
 
 ###### Token.js
 

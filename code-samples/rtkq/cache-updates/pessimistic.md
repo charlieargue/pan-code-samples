@@ -1,4 +1,4 @@
-#### Pessimistic Example:
+# Pessimistic Example:
 
 ```js 
 // file: src/hooks/rtk-query/api-and-hooks.js (FRAGMENT)

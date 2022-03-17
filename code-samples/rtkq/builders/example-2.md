@@ -1,4 +1,4 @@
-#### Example #2: Start Transfer - Builder
+# Example #2: Start Transfer - Builder
 
 ```js 
 // file: src/rtkq/builders/startTransferBuilder.js

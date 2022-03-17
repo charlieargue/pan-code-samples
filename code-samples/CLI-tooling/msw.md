@@ -1,6 +1,14 @@
-#### Initializing and bootstrapping MSW
+# Initializing and bootstrapping MSW
 
 
+
+### Terminal Screen Shots
+
+![image001](../../_markdown_assets/images/image-msw-terminal.png)
+
+
+
+### Code Samples
 
 ###### msw.js
 

@@ -1,4 +1,4 @@
-#### Optimistic Example:
+# Optimistic Example:
 
 ```js 
 // file: src/rtkq/builders/getPendingAssetsBuilder.js (FRAGMENT)

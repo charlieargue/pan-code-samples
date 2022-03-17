@@ -1,4 +1,4 @@
-#### General (from Component) Example:
+# General (from Component) Example:
 
 ```js 
 // file: src/components/popovers/incoming/IncomingPopover.jsx (FRAGMENT)

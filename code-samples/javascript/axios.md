@@ -1,4 +1,4 @@
-#### "Fetcher" Service based `axios` (for RTK-Q)
+# "Fetcher" Service based `axios` (for RTK-Q)
 
 ```js 
 // file: src/utils/axiosBaseQuery.js
