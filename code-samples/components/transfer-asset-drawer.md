@@ -28,7 +28,7 @@
 
 ### Code Samples:
 
-TransferDrawer.jsx
+###### TransferDrawer.jsx
 
 ```jsx  
 import { bool, func } from 'prop-types';
@@ -106,12 +106,73 @@ export default styled(SideDrawer)`
 
 
 
-
-
-Heading.jsx
+###### DrawerContents.jsx
 
 ```jsx  
-// file: src/components/assets/drawers/TransferDrawer/heading/Heading.jsx
+/* eslint-disable no-unused-vars */
+import { Skeleton, useMounted } from '@Lorem/Ipsum';
+import { PropTypes as PT } from 'prop-types';
+import React, { useEffect, useState } from 'react';
+import { FormSkeleton } from '../../../common/FormSkeleton';
+import { assetPropType } from '../../assetPropType';
+import { Alert, AlertSkeleton } from './alert';
+import { TransferDestinationForm } from './forms';
+import { Heading } from './heading';
+
+// ##################################################################################
+// # DRAWER CONTENTS
+// ##################################################################################
+export const DrawerContents = ({ visible, record, onClose }) => {
+    const isMounted = useMounted();
+    const [isFormDisabled, setIsFormDisabled] = useState(record.has_lgs_associated === true);
+    const [fakeLoading, setFakeLoading] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setFakeLoading(false);
+        }, 2000);
+    }, []);
+
+    return (
+        <>
+            <FormSkeleton loading={fakeLoading} noBottomMargin>
+                <Heading record={record} />
+            </FormSkeleton>
+            <AlertSkeleton loading={fakeLoading}>
+                <Alert
+                    hasLogsAssociated={record.has_lgs_associated}
+                    isFormDisabled={isFormDisabled}
+                    setIsFormDisabled={setIsFormDisabled}
+                    onClose={onClose}
+                />
+            </AlertSkeleton>
+
+            <Skeleton loading={fakeLoading} style={{ marginTop: '14px' }}>
+                <TransferDestinationForm
+                    isFormDisabled={isFormDisabled}
+                    onClose={onClose}
+                    record={record}
+                />
+            </Skeleton>
+            <Skeleton avatar loading={fakeLoading} style={{ marginTop: '28px' }} />
+        </>
+    );
+};
+
+DrawerContents.propTypes = {
+    visible: PT.bool,
+    record: assetPropType,
+    onClose: PT.func,
+};
+
+export default DrawerContents;
+```
+
+
+
+###### Heading.jsx
+
+```jsx  
 import { colors, units } from '@Lorem/Ipsum';
 import React from 'react';
 import styled from 'styled-components';
@@ -183,7 +244,7 @@ export default Heading;
 
 
 
-DefinitionList.jsx
+###### DefinitionList.jsx
 
 ```jsx  
 import { colors, remCalc } from '@Lorem/ipsum';
@@ -216,6 +277,134 @@ export const Description = styled.dd`
 
 
 
+###### TransferDestinationForm.jsx
+
+```jsx  
+import { Radio } from '@paloaltonetworks/ethos';
+import { PropTypes as PT } from 'prop-types';
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
+import {
+    useGetSupportAccountsQuery,
+    useStartTransferMutation
+} from '../../../../../hooks/rtkq-api-and-hooks';
+import { assetPropType } from '../../../assetPropType';
+import { Title } from '../typography';
+import { Buttons } from './Buttons';
+import { FormItemEmail } from './FormItemEmail';
+import FormItemSupportAccount from './FormItemSupportAccount';
+import { StyledForm, StyledFormItemRadGrp } from './TransferDestinationForm.styles';
+
+
+const DESTINATIONS = {
+    USER: 'USER',
+    SUPPORT_ACCOUNT: 'SUPPORT_ACCOUNT',
+};
+
+const DESTINATION_FORM_ITEMS = {
+    USER: FormItemEmail,
+    SUPPORT_ACCOUNT: FormItemSupportAccount,
+};
+
+// ##################################################################################
+// # Transfer Destination form
+// ##################################################################################
+export const TransferDestinationForm = ({ record, isFormDisabled, onClose }) => {
+    const [form] = StyledForm.useForm();
+    const { userAccountId, supportAccountId, emailAddress } = useSelector((state) => state.auth);
+    const [startTransfer, { isLoading }] = useStartTransferMutation();
+    const [destination, setDestination] = useState(DESTINATIONS.USER);
+    const [skipAccounts, setSkipAccounts] = useState(true);
+
+    const { data: supportAccountOptions, isFetching: fetchingAccounts } =
+        useGetSupportAccountsQuery(emailAddress, { skip: skipAccounts });
+
+    const onFinish = async (values) => {
+        await form.validateFields();
+        try {
+            const result = await startTransfer({
+                userAccountId,
+                supportAccountId,
+                formValues: values,
+                record,
+            });
+            if (!result.error) {
+                onClose();
+            }
+        } catch (error) {
+            console.log('🚀 ~ onFinish error: ', error);
+        }
+    };
+
+    const onDestinationChange = (event) => {
+        const val = event.target.value;
+        if (val === DESTINATIONS.SUPPORT_ACCOUNT) {
+            setSkipAccounts(false);
+        }
+        setDestination(val);
+    };
+
+    const DESTINATION_PROPS = {
+        USER: {
+            disabled: isFormDisabled,
+        },
+        SUPPORT_ACCOUNT: {
+            loading: fetchingAccounts,
+            options: supportAccountOptions,
+            disabled: isFormDisabled,
+        },
+    };
+
+    const DestinationInput = DESTINATION_FORM_ITEMS[destination];
+    return (
+        <>
+            <Title disabled={isFormDisabled}>Transfer Destination</Title>
+            <StyledForm
+                initialValues={{
+                    'transfer-destination': destination,
+                    email: '',
+                    'notify-user': false,
+                }}
+                form={form}
+                name='register'
+                onFinish={onFinish}
+                scrollToFirstError>
+                <StyledFormItemRadGrp
+                    colon={false}
+                    name='transfer-destination'
+                    rules={[
+                        {
+                            required: true,
+                            message: 'Please select a transfer destination',
+                        },
+                    ]}
+                    onChange={onDestinationChange}>
+                    <Radio.Group>
+                        <Radio disabled={isFormDisabled} value={DESTINATIONS.USER}>
+                            User (Email Address)
+                        </Radio>
+                        <Radio disabled={isFormDisabled} value={DESTINATIONS.SUPPORT_ACCOUNT}>
+                            Support Account
+                        </Radio>
+                    </Radio.Group>
+                </StyledFormItemRadGrp>
+                <DestinationInput {...DESTINATION_PROPS[destination]} disabled={isFormDisabled} />
+                <StyledForm.Item>
+                    <Buttons onClose={onClose} isLoading={isLoading} disabled={isFormDisabled} />
+                </StyledForm.Item>
+            </StyledForm>
+        </>
+    );
+};
+
+TransferDestinationForm.propTypes = {
+    record: assetPropType,
+    isFormDisabled: PT.bool,
+    onClose: PT.func,
+};
+
+export default TransferDestinationForm;
+```
 
 
 
@@ -224,9 +413,10 @@ export const Description = styled.dd`
 
 
 
-### Cypress UI Integation Testing (E2E) & StoryBook - Code Samples:
 
-TransferDrawer.stories.jsx (**StoryBook**)
+### Cypress UI Component Testing (E2E) & StoryBook - Code Samples:
+
+###### TransferDrawer.stories.jsx (StoryBook)
 
 ```jsx  
 import React from 'react';
@@ -267,7 +457,7 @@ Primary.args = {
 
 
 
-TransferDrawer.spec.js (**Cypress**)
+###### TransferDrawer.spec.js (**Cypress**, FRAGMENT)
 
 ```jsx  
 /* eslint-disable no-undef */
