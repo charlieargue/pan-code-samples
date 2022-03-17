@@ -75,7 +75,9 @@ RTK-Q = *Redux ToolKit - Query*
 ### Component Examples:
 
 * [Incoming Popover](code-samples/components/incoming-popover.md) (simple)
-* [Transfer Asset - Drawer](code-samples/components/transfer-asset-drawer.md) (more complex, with StoryBook & Cypress testing)
+* [Transfer Asset Drawer](code-samples/components/transfer-asset-drawer.md) (more complex, with StoryBook & Cypress testing)
+
+* [Pending Transfers](code-samples/mfe/pending-transfers-MFE.md) (a Micro-Frontend)
 
 
 
