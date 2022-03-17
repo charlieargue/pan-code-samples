@@ -42,10 +42,8 @@ RTK-Q = *Redux ToolKit - Query*
 ### Component Examples:
 
 * [Incoming Popover](code-samples/components/incoming-popover.md) (simple)
-* [Expiration Extension CTA](code-samples/components/IEECTA.md) (with <u>react-query</u>)
+* [Expiration Extension CTA](code-samples/components/IEECTA.md) (with react-query and Jest unit tests)
 * [Transfer Asset Drawer](code-samples/components/transfer-asset-drawer.md) (more complex, with StoryBook & Cypress testing)
-* 🔥 `TODO:` Temperature Guages (License expirations)
-* 🔥 `TODO:` IEECTA
 
 
 
@@ -75,9 +73,6 @@ RTK-Q = *Redux ToolKit - Query*
 
 - [ ] Automating repetive daily developer chores ([token.js in CLI tooling](code-samples/CLI-tooling/token.md))
 - [ ] Initializing and bootstrapping `msw` ([msw.js in CLI tooling](code-samples/CLI-tooling/msw.md))
-- [ ] 
-
-
 
 
 
@@ -92,7 +87,7 @@ RTK-Q = *Redux ToolKit - Query*
 ## UI ScreenShots of Features
 
 * `inline or separate file(s)?` ... maybe one separate long-scrollable file is best!
-* Temp Guages
+* 🔥 `TODO:` Temperature Guages (License expirations)
 * IEECTA
 * Transfer Drawer
 * 3 Popoevers
