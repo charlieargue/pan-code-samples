@@ -60,7 +60,7 @@
 
 ### POC / Spike Story Examples
 
-- [ ] [ctx-options ("Context Options") ](https://github.com/charlieargue/ctx-options)
+- [ctx-options ("Context Options") ](https://github.com/charlieargue/ctx-options)
   - GitHub repo I made showing patterns for avoiding **React Context** "over-rendering", as well as data fetching and caching
   - `RTK-Q` was chosen team-wide based on this proof-of-concept
 
@@ -69,22 +69,22 @@
 
 ### Mocked API Server Examples
 
-- [ ] [`msw` and `@mswjs/data`](code-samples/msw/msw.md) 
+- [`msw` and `@mswjs/data`](code-samples/msw/msw.md) 
 
 
 
 ### CLI & Tooling Examples
 
-- [ ] [token.js](code-samples/CLI-tooling/token.md) - automates repetive daily developer chores
-- [ ] [msw.js](code-samples/CLI-tooling/msw.md) - initializes and bootstraps `msw`  for any `MFE`
+- [token.js](code-samples/CLI-tooling/token.md) - automates repetive daily developer chores
+- [msw.js](code-samples/CLI-tooling/msw.md) - initializes and bootstraps `msw`  for any `MFE`
 
 
 
 ### Cypress Integration Tests
 
-- [ ] E2E tests! (with looms)
+- [E2E tests and tooling]()
 
-  
+
 
 
 
