@@ -42,4 +42,3 @@ export const fetcherService = async (options = DEFAULT_OPTIONS) => {
 export default fetcherService;
 ```
 
-#### 
