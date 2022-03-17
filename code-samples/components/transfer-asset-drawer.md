@@ -18,7 +18,7 @@
 
 ### Loom Demos
 
-* [2 minute video](_markdown_assets/videos/Asset-Transfer-DEMO-(NS_CPT)-6-February-2022.mp4)
+* [2 minute video](../../_markdown_assets/videos/Asset-Transfer-DEMO-(NS_CPT)-6-February-2022.mp4)
 
 
 
@@ -416,11 +416,12 @@ export default TransferDestinationForm;
 
 
 
-### Cypress UI Component Testing (E2E) & StoryBook - Code Samples:
+### UI Unit Testing Samples:
 
-###### TransferDrawer.stories.jsx (StoryBook)
+###### TransferDrawer.stories.jsx
 
 ```jsx  
+// StoryBook
 import React from 'react';
 
 import { TransferDrawer } from '.';
@@ -459,10 +460,10 @@ Primary.args = {
 
 
 
-###### TransferDrawer.spec.js (**Cypress**, FRAGMENT)
+###### TransferDrawer.spec.js
 
 ```jsx  
-/* eslint-disable no-undef */
+// Cypress (FRAGMENT)
 import { MOCKED_RESPONSE_ASSET_DETAILS } from '../../../../mocks/mock-responses';
 
 const COMPONENT_SB_PATH = '/iframe.html?path=/story/drawers-transfer-drawer--primary';
