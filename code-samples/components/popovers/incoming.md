@@ -4,13 +4,13 @@
 
 ### File Organization
 
-<img src="/Users/karlgolka/PROJECTS/FYI/_typora_images/image-20220316224148580.png" alt="image-20220316224148580" style="zoom:50%;" />
+<img src="../../../_markdown_assets/images/image-20220316224148580.png" alt="image-20220316224148580" style="zoom:50%;" />
 
 
 
 ### UI Screen Shots
 
-<img src="/Users/karlgolka/PROJECTS/FYI/_typora_images/image-20220316225003165.png" alt="image-20220316225003165" style="zoom:50%;" />
+<img src="../../../_markdown_assets/images/image-20220316225003165.png" alt="image-20220316225003165" style="zoom:50%;" />
 
 
 
