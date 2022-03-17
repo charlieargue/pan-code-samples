@@ -2,6 +2,12 @@
 
 
 
+## 🔥 ✅ Tasks:  
+
+- [ ] spell check this!
+
+
+
 # 📚 Resources 
 
 - [ ] https://blur.page/
@@ -69,6 +75,14 @@ RTK-Q = *Redux ToolKit - Query*
 
 
 
+
+
+### Component Examples:
+
+* [Incoming Popover](code-samples/components/popovers/incoming.md)
+
+
+
 ### Other Javascript Examples
 
 * ["Fetcher" Service based on `fetch`](code-samples/rtkq/javascript/fetch.md) 
@@ -76,9 +90,17 @@ RTK-Q = *Redux ToolKit - Query*
 
 
 
+
+
+
+
+show entire popover maybe (with .css styles, yes! pick my best ones!) some FLEX!
+
+
+
 - [ ] show complete component heirarchy (Transfers were most recent)
   - [ ] include screenshot of folder / file org!
-- [ ] show entire popover maybe (with .css styles, yes! pick my best ones!) some FLEX!
+- [ ] 
 - [ ] ... IEECTA was originally in rtk-query, right??? or was there a version b4 that? react-tracked? ... something changed in how the cache was done, no? check...
 - [ ] Sanitzed 🔴 BEFORE:       ✅ AFTER:
   - [ ] units.js
