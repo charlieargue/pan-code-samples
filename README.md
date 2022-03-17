@@ -8,39 +8,6 @@
 
 
 
-## tldr; main impact:
-
-- [ ] **msw/d** unblocked dysfunctional and regular being-blocked by BE
-- [ ] delivered bug-free much-loved **features**, making the designer happy with pixel-perfect build-outs of his Figma prototypes:
-  - [ ] license expiration temperature guages
-  - [ ] asset transfer flows 
-  - [ ] entire AI and IEECTA
-
-- [ ] guided my supervising **staff engineer** on the **latest** general software as well as React best practices, patterns, and trends — he  adopted the following, amongst others:
-  - [ ] Typora for markdown
-  - [ ] having a centralized markdown-based knowledge base
-  - [ ] switching to MBP (and guidance on that)
-  - [ ] following React community leaders such as Kent Dobbs, Ben Awad and well-known guides such as Tao of React
-  - [ ] purchasing the Epic React and Javacsript Testing workshops by Kent Dobbs, upon my personal recommendation
-  - [ ] using Tabox for Chrome tab group management
-  - [ ] using Github Desktop
-  - [ ] using VSCode extensions such as: auto-imports, 
-  - [ ] using VSCode keyboard short-cuts such as: auto-order/dedupe imports, 
-  - [ ] NOT having prettier auto-format run upon each file save, but instead centralizing prettier formatting via `husky` hooks
-  - [ ] Rule of 3s, ctx-options
-  - [ ] separating App from Server state
-- [ ] Created momentum, enthusiasm, and consus on **future** architectural decisions and upgrades, such as:
-  - [ ] upgrading to Next.js (or even Remix)
-  - [ ] migrating to a monorepo, such as NX or turborepo
-  - [ ] running Cypress E2E tests via GitHub actions (in parallel, across multiple machines)
-
-- [ ] Serios productivity and DX improvements thru automation:
-  - [ ] token auth (dozens of MFEs and environments!)
-  - [ ] msw (everything faster! not dep. on unstable BE any more)
-  - [ ] no more prettier, zsh aliases, ...
-
-
-
 
 
 
@@ -75,9 +42,10 @@ RTK-Q = *Redux ToolKit - Query*
 ### Component Examples:
 
 * [Incoming Popover](code-samples/components/incoming-popover.md) (simple)
+* 🔥 `TODO:` WildFirePopover 
 * [Transfer Asset Drawer](code-samples/components/transfer-asset-drawer.md) (more complex, with StoryBook & Cypress testing)
-
-* [Pending Transfers](code-samples/mfe/pending-transfers-MFE.md) (a Micro-Frontend)
+* 🔥 `TODO:` Temperature Guages (License expirations)
+* 🔥 `TODO:` IEECTA
 
 
 
@@ -88,39 +56,86 @@ RTK-Q = *Redux ToolKit - Query*
 
 
 
+### POC / Spike Story Examples
+
+- [ ] [ctx-options ("Context Options") ](https://github.com/charlieargue/ctx-options)
+  - A GitHub repo I made showing patterns for avoiding React Context "over-rendering", as well as data fetching and caching
+  - `RTK-Q` was chosen team-wide based on this proof-of-concept
 
 
-- [ ] show complete component heirarchy (Transfers were most recent)
-  - [ ] include screenshot of folder / file org!
-- [ ] show entire MFE! ( with lots of "blurred bits") - ⏸ PendingTransfers 
-- [ ] ... IEECTA was originally in react-query, right??? **YES**
-- [ ] ctx-options!
-- [ ] Sanitzed 🔴 BEFORE:       ✅ AFTER:
-  - [ ] units.js
-  - [ ] App.js 
-  - [ ] AI in generale
-  - [ ] Componentizing! (into `Review`, `Details`, etc...)
-  - [ ] **MFE-B** might be good, b-and-a
-  - [x] useFetch and everything in redux lol -> rtk-query + cache
-  - [ ] ~~centralized error handling!~~
-  - [ ] bindClass service stuff -> builders only super lean, show size
-  - [ ] barelling and better import/export patterns
-
-![image-20220315042930192](/Users/karlgolka/PROJECTS/FYI/_typora_images/image-20220315042930192.png)
 
 
+### Mocked API Server Examples
+
+- [ ] msw & msw/data 
+
+
+
+### CLI Tooling Examples
+
+- [ ] Automating tedios and repetive daily developer chores ([token.js in CLI tooling](code-samples/CLI-tooling/token.md))
+- [ ] Initializing and bootstrapping `msw` ([msw.js in CLI tooling](code-samples/CLI-tooling/msw.md))
+- [ ] 
+
+
+
+
+
+### Cypress Integration Tests
+
+- [ ] cypress tests! (with looms)
+
+  
 
 
 
 ## UI ScreenShots of Features
 
-- [ ] 
+* `inline or separate file(s)?` ... maybe one separate long-scrollable file is best!
+* Temp Guages
+* IEECTA
+* Transfer Drawer
+* 3 Popoevers
+* Pending Assets
+* WildFire Popover?
+* AI:  everything basically
 
 
 
 ## Looms of UI Features
 
 
+
+## tldr; main impact:
+
+- [ ] **msw/d** unblocked dysfunctional and regular being-blocked by BE
+- [ ] delivered bug-free much-loved **features**, making the designer happy with pixel-perfect build-outs of his Figma prototypes:
+  - [ ] license expiration temperature guages
+  - [ ] asset transfer flows 
+  - [ ] entire AI and IEECTA
+
+- [ ] guided my supervising **staff engineer** on the **latest** general software as well as React best practices, patterns, and trends — he  adopted the following, amongst others:
+  - [ ] Typora for markdown
+  - [ ] having a centralized markdown-based knowledge base
+  - [ ] switching to MBP (and guidance on that)
+  - [ ] following React community leaders such as Kent Dobbs, Ben Awad and well-known guides such as Tao of React
+  - [ ] purchasing the Epic React and Javacsript Testing workshops by Kent Dobbs, upon my personal recommendation
+  - [ ] using Tabox for Chrome tab group management
+  - [ ] using Github Desktop
+  - [ ] using VSCode extensions such as: auto-imports, 
+  - [ ] using VSCode keyboard short-cuts such as: auto-order/dedupe imports, 
+  - [ ] NOT having prettier auto-format run upon each file save, but instead centralizing prettier formatting via `husky` hooks
+  - [ ] Rule of 3s, ctx-options
+  - [ ] separating App from Server state
+- [ ] Created momentum, enthusiasm, and consus on **future** architectural decisions and upgrades, such as:
+  - [ ] upgrading to Next.js (or even Remix)
+  - [ ] migrating to a monorepo, such as NX or turborepo
+  - [ ] running Cypress E2E tests via GitHub actions (in parallel, across multiple machines)
+
+- [ ] Serios productivity and DX improvements thru automation:
+  - [ ] token auth (dozens of MFEs and environments!)
+  - [ ] msw (everything faster! not dep. on unstable BE any more)
+  - [ ] no more prettier, zsh aliases, ...
 
 
 

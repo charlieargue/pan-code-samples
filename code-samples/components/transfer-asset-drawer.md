@@ -18,7 +18,7 @@
 
 ### Loom Demos
 
-* [2 minute video](../../_markdown_assets/videos/Asset-Transfer-DEMO-(NS_CPT)-6-February-2022.mp4) (click `View raw`)
+* [2 minute video](../../_markdown_assets/videos/Asset-Transfer-DEMO-(NS_CPT)-6-February-2022.mp4) (click `Download` or `View raw`)
 
 
 
