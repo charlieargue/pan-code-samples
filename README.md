@@ -49,16 +49,16 @@
 
 ## Code Samples
 
+
+
 ### RTK-Q Builders
+
+#### Example #1:
 
 ```js 
 // file: src/rtkq/builders/getPendingAssetsBuilder.js
-
 const url = '/api/Lorem/Ipsum';
 
-// ##################################################################################
-// GET PENDING ASSETS builder
-// ##################################################################################
 export const getPendingAssetsBuilder = (builder) =>
     builder.query({
         query: ({ userAccountId, supportAccountId }) => {
@@ -85,14 +85,12 @@ export default getPendingAssetsBuilder;
 
 
 
+#### Example #2:
+
 ```js 
 // file: src/rtkq/builders/startTransferBuilder.js
-
 const url = '/api/Lorem/Ipsum';
 
-// ##################################################################################
-// STARTT RANSFER builder
-// ##################################################################################
 export const startTransferBuilder = (builder) =>
     builder.mutation({
         query: ({ userAccountId, supportAccountId, formValues, record }) => {
@@ -146,14 +144,103 @@ export default startTransferBuilder;
 
 
 
+### RTK-Q Cache Updates
+
+#### Pessimistic Example:
+
+```js 
+// file: src/hooks/rtk-query/api-and-hooks.js (FRAGMENT)
+
+extendExpirationDate: build.mutation({
+    async queryFn({ requestId }, { dispatch, getState }) {
+        try {
+            const result = await extendExpirationDate(getState, requestId);
+            Message.info('Request was successful.', MESSAGE_DISPLAY_DURATION);
+            return result;
+        } catch (error) {
+            return handleReduxError(error, dispatch, setGlobal);
+        } finally {
+          dispatch(setGlobal({ isFetchingRequests: false }));
+        }
+    },
+    async onQueryStarted({ ...patch }, { dispatch, queryFulfilled }) {
+        dispatch(setGlobal({ isFetchingRequests: true }));
+        const { data: updatedRequest } = await queryFulfilled;
+        dispatch(
+            api.util.updateQueryData('getActiveRequests', undefined, draftRequests => {
+                const foundDraft = draftRequests.find(
+                    request => request.requestId === patch.requestId
+                );
+                delete foundDraft.isExpiring;
+                foundDraft.expirationDate = updatedRequest.expirationDate;
+            })
+        );
+    },
+}),
+```
+
+
+
+#### Optimistic Example:
+
+```js 
+// file: src/rtkq/builders/getPendingAssetsBuilder.js (FRAGMENT)
+
+onQueryStarted(
+  { userAccountId, supportAccountId, deviceTransferId }, 
+  { dispatch, queryFulfilled }) {
+  const fresh = dispatch(
+      api.util.updateQueryData(
+          'getPendingAssets',
+          { userAccountId, supportAccountId },
+          drafts => {
+              const foundDraft = drafts.find(draft => 
+                       draft.device_transfer_id === deviceTransferId);
+              Object.assign(foundDraft, {
+                  device_transfer_state: TRANSFER_STATUS.ACCEPTED,
+              });
+          }
+      )
+  );
+  queryFulfilled.catch(fresh.undo);
+},
+```
+
+
+
+#### General (from Component) Example:
+
+```js 
+// file: src/components/popovers/incoming/IncomingPopover.jsx (FRAGMENT)
+
+const onAcceptClick = async () => {
+  await triggerAccept({ userAccountId, supportAccountId, deviceTransferId });
+  setAlertVisibility(ALERT_VISIBILITY_STATES.ACCEPTED_ALERT);
+  setTimeout(() => {
+      dispatch(
+          api.util.updateQueryData(
+              'getPendingAssets',
+              { userAccountId, supportAccountId },
+              (drafts) => {
+                  drafts.splice(
+                      drafts.findIndex(
+                          (draft) => draft.device_transfer_id === deviceTransferId,
+                      ),
+                      1,
+                  );
+              },
+          ),
+      );
+  }, PO_ALERT_TIMEOUT);
+};
+```
 
 
 
 
 
 
-- [ ] 
-- [ ] cache (pessimistic, optimized, and general) ... pull from bkups... and 
+
 - [ ] axios Base Query, 
 - [ ] fetcherService, 
 - [ ] show complete component heirarchy (Transfers were most recent)
