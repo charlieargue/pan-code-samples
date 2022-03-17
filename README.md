@@ -13,7 +13,11 @@
 
 ## Code Samples
 
-RTK-Q = *Redux ToolKit - Query*
+`RTK-Q` = *Redux ToolKit - Query*
+
+`MFE` = *Micro-Frontend*
+
+`msw` = *Mock Service Worker*
 
 
 
@@ -42,22 +46,22 @@ RTK-Q = *Redux ToolKit - Query*
 ### Component Examples:
 
 * [Incoming Popover](code-samples/components/incoming-popover.md) (simple)
-* [Expiration Extension CTA](code-samples/components/IEECTA.md) (with react-query and Jest unit tests)
-* [Transfer Asset Drawer](code-samples/components/transfer-asset-drawer.md) (more complex, with StoryBook & Cypress testing)
+* [Expiration Extension CTA](code-samples/components/IEECTA.md) (with **react-query** and **Jest** unit tests)
+* [Transfer Asset Drawer](code-samples/components/transfer-asset-drawer.md) (more complex, with **StoryBook** & **Cypress** testing)
 
 
 
 ### Other Javascript Examples
 
 * ["Fetcher" Service based on `fetch`](code-samples/javascript/fetch.md) 
-* ["Fetcher" Service based `axios`](code-samples/javascript/axios.md) (for RTK-Q)
+* ["Fetcher" Service based `axios`](code-samples/javascript/axios.md) (for `RTK-Q`)
 
 
 
 ### POC / Spike Story Examples
 
 - [ ] [ctx-options ("Context Options") ](https://github.com/charlieargue/ctx-options)
-  - A GitHub repo I made showing patterns for avoiding React Context "over-rendering", as well as data fetching and caching
+  - GitHub repo I made showing patterns for avoiding **React Context** "over-rendering", as well as data fetching and caching
   - `RTK-Q` was chosen team-wide based on this proof-of-concept
 
 
@@ -65,20 +69,20 @@ RTK-Q = *Redux ToolKit - Query*
 
 ### Mocked API Server Examples
 
-- [ ] msw & msw/data 
+- [ ] [`msw` and `@mswjs/data`]() 
 
 
 
-### CLI Tooling Examples
+### CLI & Tooling Examples
 
-- [ ] Automating repetive daily developer chores ([token.js in CLI tooling](code-samples/CLI-tooling/token.md))
-- [ ] Initializing and bootstrapping `msw` ([msw.js in CLI tooling](code-samples/CLI-tooling/msw.md))
+- [ ] [token.js](code-samples/CLI-tooling/token.md) - automates repetive daily developer chores
+- [ ] [msw.js](code-samples/CLI-tooling/msw.md) - initializes and bootstraps `msw`  for any `MFE`
 
 
 
 ### Cypress Integration Tests
 
-- [ ] cypress tests! (with looms)
+- [ ] E2E tests! (with looms)
 
   
 
