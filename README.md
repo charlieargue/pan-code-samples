@@ -269,16 +269,26 @@ Guided project management on:
 
 
 
-# Testimonials
+# Testimonials & Feedback
+
+
+
+### Feedback after First Demo  `FRI Jan 21`:
+
+| <img src="_markdown_assets/images/image-20220318155554872-7645128.png" alt="image-20220318155554872" style="zoom:67%;" /> | ![5lp](_markdown_assets/images/5lp.gif) |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+
+
+
+
+
+
+
+
 
 - [ ] ![image-20220318160135522](/Users/karlgolka/PROJECTS/FYI/_typora_images/image-20220318160135522.png)
 
-- [ ] demo feedback: put the image in here :) yes!
-
-  - [ ]  `FRI Jan 21`
-  - [ ] Feedback :)
-  - [ ] ![image-20220318155554872](/Users/karlgolka/PROJECTS/pan-code-samples/_markdown_assets/images/image-20220318155554872.png) 
-  - [ ] ... he takes his cap off as a salute :)
+  
 
 - [ ] pics
 
