@@ -8,6 +8,18 @@
 
 
 
+## How I Spent My Time
+
+```mermaid
+pie
+    title Time Spent at PAN
+    "Refactoring & Tech Debt" : 30
+    "Tooling, CLI, Automation" : 15
+    "React UI / Features" : 40
+    "Mentoring / Pair Sessions" :  10
+		"Testing" :  5
+```
+
 
 
 
@@ -82,13 +94,17 @@
 
 ### Cypress Integration Tests
 
-- [E2E tests and tooling]()
+- [E2E tests and tooling](code-samples/cypress/e2e.md)
 
 
 
 
 
-## UI ScreenShots of Features
+## UI ScreenShots
+
+
+
+
 
 * `inline or separate file(s)?` ... maybe one separate long-scrollable file is best!
 * 🔥 `TODO:` Temperature Guages (License expirations)
@@ -102,6 +118,9 @@
 
 
 ## Looms of UI Features
+
+- [ ] BLUR: 29 passing AI tests against msw
+- [ ] BLUR: fly-thru of Asset Transfer
 
 
 
@@ -201,37 +220,19 @@ Guided project management on:
 # Testimonials
 
 - [ ] see my google ops doc
+
 - [ ] pics
+
 - [ ] audio
+
 - [ ] transcripts/quotes/blurbs
   - [ ] PR's 100%, no bugs, refactored entire MFE w/i 1 month of being there, no bugs/revisions from QA/UAT!
+  
 - [ ] Show Alex's: `all good questions` from [JIRA pic](ALEX-2-Screen Shot 2022-02-14 at 2.15.29 PM.png)
+
 - [ ] ![image-20220316175533444](/Users/karlgolka/PROJECTS/FYI/_typora_images/image-20220316175533444.png)
-- [ ] 
 
-
-
-## Screenshots / Looms of Testing
-
-- [ ] testing pyramid
-- [ ] looms of e2e tests of AI 
-
-
-
-
-
-## Screenshots of JIRA / PM / Design Diagrams
-
-- [ ] 
-
-
-
-
-## ctx-options
-
-## other code samples and demo projecs
-
-
+  
 
 
 | First Header                | Second Header                |
