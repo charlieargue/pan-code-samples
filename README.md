@@ -105,9 +105,9 @@ pie
 
 
 
-## 👾 Sample Cheatsheets
+## 👾 Sample Cheatsheet
 
-- [ ] Team loved this [MBP "Setup Cheatsheet"](other/mbp-setup-cheatsheet.md)  I made for 💙 DX and productivity
+- Team 💙 this [MBP "Setup Cheatsheet"](other/mbp-setup-cheatsheet.md) I made for improved DX and productivity
 
 
 
@@ -141,92 +141,103 @@ pie
 
 
 
-## Sample Flow Charts and Diagrams:
-
-- [ ] where to put state flow chart
-- [ ] testing pyramid
-
-- [ ] Refactoring and Tech Debt Effort
-
-```mermaid
-        graph TD
-          A[Convert Class to Functional Components] -->|Get money| B(Go shopping)
-          B --> C{Let me think}
-          B --> G[/Another/]
-          C ==>|One| D[Laptop]
-          C -->|Two| E[iPhone]
-          C -->|Three| F[fa:fa-car Car]
-          subgraph section
-            C
-            D
-            E
-            F
-            G
-          end
-```
+## Main Impact Areas
 
 
+
+### Refactoring and Tech Debt flow chart / process 
+
+- [ ] 🔥(do a gant chart! just timeline!) use my notes/Ops to make it super realistic!
+
+* lots of dealing with **TECH DEBT** (hit the ground sprinting cleaning up tech debt!):
+* **refactoring entire MFE after 1 month being there!!!**
+  * then refactoring another, and then refactoring the MFE-boilerplate so all future MFEs have the same standards and patterns
+* service architecture / DI refactoring
+* upgrading away from legacy class components
+* DRY-ing / SRP-ing / Tao of React-ing EVERYTHING!
+* the MFEs/apps/components were basically UNTESTABLE before this!
+* rigorous and efficient testing
+* Msw 
+* useContext upgrade
+* ErrorBoundary (for every MFE!), before just crashed app, now EVERY MFE is safely container and doesn't crash and shows nice error!
+* fixed broken error handling for all ambr-impr!
+* rtk-q
+* better statemanagement (where to put state, Context clarificaiton, staff engineer was against using context because of a fundamental misunderstanding of how it works, see ctx-options)
+* caching strategies
 
 
 
 
 
+### "Where to Put State" flow chart
 
 
 
+### Testing & Mocking
 
-## tldr; main impact:
+- Setup modern **testing infrastructure** **and tooling** (`msw`, Jest, Cypress), centralized so developers could use them from any MFE
+- Setup next-generation **API mocking** (`msw`), that allowed effortless request interception at the network level, and seamless re-use the same mock definitions for testing, development, and debugging
+- Demonstrated successful use of **Cypress E2E tests** to confidently and quickly refactor entire MFEs, to hunt/fix/prevent bugs, and as a UI unit and component testing tool (against StoryBook stories)
+- Introduced Postman as a critical tool for sharing collections between BE and FE during requirements-gathering phase
+- Guided team on what to test and how to test (see [Testing Pyramid](https://github.com/charlieargue/multi-cart#-testing))
+- **🚀 IMPACT:** 
+  - Solved FE team's primary pain point of blockage by BE dysfunction and unstable BE environments
+  - Super-charged development velocity and allowed for rapid prototyping
+  - Developers stopped putting mocking code all over the codebase
+  - Staff engineer started using Cypress/Jest/Postman/`msw` and our joint efforts led to complete adoption by the team
+  - `msw/data` in particular allowed for mocked data persistence and allowed for effectively mocking entire complex workflows and building out entire features without waiting for the BE
+  - Greatly improved team's capability to deliver bug-free features
 
-- [ ] **msw/d** unblocked dysfunctional and regular being-blocked by BE
-- [ ] delivered bug-free much-loved **features**, making the designer happy with pixel-perfect build-outs of his Figma prototypes:
-  - [ ] license expiration temperature gauges
-  - [ ] asset transfer flows 
-  - [ ] entire AI and IEECTA
 
-- [ ] guided my supervising **staff engineer** on the **latest** general software as well as React best practices, patterns, and trends — he  adopted the following, amongst others:
+
+### Design Impact:
+
+- Made the designer very happy with pixel-perfect build-outs of his Figma prototypes (thx [PerfectPixel](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?hl=en)!)
+- Provided frequent useful feedback on better UI design (eg. better design of toasts and alerts for popovers in a DataTable context)
+
+
+
+### Mentoring the Staff Engineer
+
+- [ ] Provided regular guidance to my supervising **staff engineer** on the **latest** React (and general software) best practices, patterns, and trends — he  adopted almost all of my suggestions, including but not limited to:
   - [ ] Typora for markdown
   - [ ] having a centralized markdown-based knowledge base
   - [ ] switching to MBP (and guidance on that)
   - [ ] following React community leaders such as Kent Dobbs, Ben Awad and well-known guides such as Tao of React
   - [ ] purchasing the Epic React and JavaScript Testing workshops by Kent Dobbs, upon my personal recommendation
   - [ ] using Tabox for Chrome tab group management
-  - [ ] using Github Desktop
-  - [ ] using VSCode extensions such as: auto-imports, 
-  - [ ] using VSCode keyboard short-cuts such as: auto-order/dedupe imports, 
+  - [ ] switching to Github Desktop
+  - [ ] switching to VSCode extensions such as: auto-imports, spell checker, snippets, Quokka, etc.
+  - [ ] using VSCode keyboard short-cuts such as: auto-order/dedupe imports, auto-formatting, etc.
   - [ ] NOT having prettier auto-format run upon each file save, but instead centralizing prettier formatting via `husky` hooks
   - [ ] Rule of 3s, ctx-options
   - [ ] separating App from Server state
-- [ ] Created momentum, enthusiasm, and consensus on **future** architectural decisions and upgrades, such as:
-  - [ ] upgrading to Next.js (or even Remix)
-  - [ ] migrating to a monorepo, such as NX or turborepo
-  - [ ] running Cypress E2E tests via GitHub actions (in parallel, across multiple machines)
 
-- [ ] Serious productivity and DX improvements thru automation:
-  - [ ] token auth (dozens of MFEs and environments!)
-  - [ ] msw (everything faster! not dep. on unstable BE any more)
-  - [ ] no more prettier, zsh aliases, ...
+  
 
 
 
+### Team Productivity & DX
 
-
-## Impact: Team Velocity & Productivity & DX
-
-- [ ] ⭐️**unblocking** blocked by BE: msw + msw/d
-- [ ] repetitive chore automation 💚 (puppeteer, saving hours of dev time!)
+- [ ] repetitive chore automation 💚 (puppeteer, saving hours of dev time, (dozens of MFEs and environments!)
   - [ ] Before & After Processes: **token automation**
 - [ ] linking, starting, and msw command shortcuts (via `zsh` config)
-- [ ] MBP cheatsheet (**and LINK to it)**
-- [ ] bringing in Postman shared collections
-- [ ] any other cheatsheets?
+- [ ] no more prettier sheesh! introduced husky
+- [ ] VSCode extensions, chrome extensions, see MBP cheatsheet
 
 
 
+### Future Directions
+
+Created momentum, enthusiasm, and consensus on **future** architectural decisions and upgrades, such as:
+
+- [ ] upgrading to Next.js (team now even considering Remix!)
+- [ ] migrating to a monorepo, such as NX  (team now even considering TurboRepo!)
+- [ ] running Cypress E2E tests in CICD via GitHub actions (provided GitHub .yml scripts for running E2E tests in parallel, across multiple machines)
 
 
 
-
-## Impact: Tech Debt
+### Tech Debt
 
 * ctx-options
 * rtk-query / separating App State from Server State
@@ -238,15 +249,7 @@ pie
 
 
 
-# Impact: Testing
-
-- [ ] include testing pyramid pic
-- [ ] re-use of msw & msw/d
-- [ ] cypress & E2E, include 🔴 BEFORE:       ✅ AFTER: see `CSP-9659.xlsx` (blurred)
-
-
-
-## Impact: Agile Rituals
+### Agile and Project Management
 
 Guided project management on:
 
@@ -255,12 +258,6 @@ Guided project management on:
 - [ ] de-coupling FE from BE in stories (separate integration stories)
 - [ ] keeping stand-ups short, using call-outs in JIRA and slack, and leaning out amount of meetings
 
-
-
-## Impact: Project Management
-
-Guided project management on:
-
 - [ ] how to switch from Visual to Text editing mode
 - [ ] how to use markdown auto-outlining syntax
 - [ ] what is an epic, how to write Acceptance Criteria, etc.
@@ -268,30 +265,32 @@ Guided project management on:
 
 
 
+
+
+
+
 # Testimonials
 
-- [ ] see my google ops doc
+- [ ] ![image-20220318160135522](/Users/karlgolka/PROJECTS/FYI/_typora_images/image-20220318160135522.png)
+
+- [ ] demo feedback: put the image in here :) yes!
+
+  - [ ]  `FRI Jan 21`
+  - [ ] Feedback :)
+  - [ ] ![image-20220318155554872](/Users/karlgolka/PROJECTS/pan-code-samples/_markdown_assets/images/image-20220318155554872.png) 
+  - [ ] ... he takes his cap off as a salute :)
 
 - [ ] pics
 
-- [ ] audio
+- [ ] audio (iphone), 
+
+  - [ ] 🔥 esp.  entire Mazen VIP recording plz asap! (from **Thur, Feb 10, 2022**)
 
 - [ ] transcripts/quotes/blurbs
   - [ ] PR's 100%, no bugs, refactored entire MFE w/i 1 month of being there, no bugs/revisions from QA/UAT!
-  
+
 - [ ] Show Alex's: `all good questions` from [JIRA pic](ALEX-2-Screen Shot 2022-02-14 at 2.15.29 PM.png)
 
 - [ ] ![image-20220316175533444](/Users/karlgolka/PROJECTS/FYI/_typora_images/image-20220316175533444.png)
 
   
-
-
-| First Header                | Second Header                |
-| --------------------------- | ---------------------------- |
-| Content from cell 1         | Content from cell 2          |
-| Content in the first column | Content in the second column |
-
-
-
-
-
