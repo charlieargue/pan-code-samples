@@ -51,6 +51,7 @@ pie
 
 ### Component Examples:
 
+* [License "Temperature Gauges"](code-samples/components/temperature-gauges.md) (simple)
 * [Incoming Popover](code-samples/components/incoming-popover.md) (simple)
 * [Expiration Extension CTA](code-samples/components/IEECTA.md) (with **react-query** and **Jest** unit tests)
 * [Transfer Asset Drawer](code-samples/components/transfer-asset-drawer.md) (more complex, with **StoryBook** & **Cypress** testing)
@@ -81,7 +82,7 @@ pie
 
 ### CLI & Tooling Examples
 
-- [token.js](code-samples/CLI-tooling/token.md) - automates repetive daily developer chores
+- [token.js](code-samples/CLI-tooling/token.md) - automates repetitive daily developer chores
 - [msw.js](code-samples/CLI-tooling/msw.md) - initializes and bootstraps `msw`  for any `MFE`
 
 
@@ -115,7 +116,11 @@ pie
 
 
 
-![Pasted_Image_3_17_22__10_47_PM](/Users/karlgolka/PROJECTS/pan-code-samples/_markdown_assets/images/Pasted_Image_3_17_22__10_47_PM.png)
+![Pasted_Image_3_17_22__10_47_PM](_markdown_assets/images/Pasted_Image_3_17_22__10_47_PM.png)
+
+
+
+![Pasted_Image_3_17_22__11_02_PM](_markdown_assets/images/Pasted_Image_3_17_22__11_02_PM.png)
 
 
 
@@ -126,8 +131,7 @@ pie
 
 
 
-
-- [ ] 🔥 show ENTIRE SPUI  with container (license Guauges in that!?)
+- [ ] 🔥 show ENTIRE SPUI  with container (license Gauges in that!?)
 
 - [ ] 🔥 we want GIFS here, animated of each one! 
 
