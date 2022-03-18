@@ -104,7 +104,7 @@ pie
 
 - [ ] 🔥 we want GIFS here, animated of each one! 
 
-- [ ] Temperature Guages (License expirations)
+- [ ] Temperature Gauges (License expirations)
 - [ ] IEECTA
 - [ ] Transfer Drawer
 - [ ] Pending Assets & 3 Popovers
@@ -117,6 +117,14 @@ pie
 
 ## Other 
 
+- [MSW Video (<2 min)](other/msw-video.md) 
+  - [ ] Follow-up video to team documentation I wrote, on how `msw` mocking works on React MFEs 
+  - [ ] *I later automated all these implementation details into the MFE CLI*
+
+
+
+
+
 Cheatsheets
 
 - [ ] 🔥 cheat sheet!!!!
@@ -125,7 +133,29 @@ Cheatsheets
 
 Flow Charts and Diagrams:
 
+- [ ] where to put state
+- [ ] testing pyramid
 
+
+
+###### Refactoring and Tech Debt Effort
+
+```mermaid
+        graph TD
+          A[Convert Class to Functional Components] -->|Get money| B(Go shopping)
+          B --> C{Let me think}
+          B --> G[/Another/]
+          C ==>|One| D[Laptop]
+          C -->|Two| E[iPhone]
+          C -->|Three| F[fa:fa-car Car]
+          subgraph section
+            C
+            D
+            E
+            F
+            G
+          end
+```
 
 
 
@@ -141,7 +171,7 @@ Flow Charts and Diagrams:
 
 - [ ] **msw/d** unblocked dysfunctional and regular being-blocked by BE
 - [ ] delivered bug-free much-loved **features**, making the designer happy with pixel-perfect build-outs of his Figma prototypes:
-  - [ ] license expiration temperature guages
+  - [ ] license expiration temperature gauges
   - [ ] asset transfer flows 
   - [ ] entire AI and IEECTA
 
@@ -150,7 +180,7 @@ Flow Charts and Diagrams:
   - [ ] having a centralized markdown-based knowledge base
   - [ ] switching to MBP (and guidance on that)
   - [ ] following React community leaders such as Kent Dobbs, Ben Awad and well-known guides such as Tao of React
-  - [ ] purchasing the Epic React and Javacsript Testing workshops by Kent Dobbs, upon my personal recommendation
+  - [ ] purchasing the Epic React and JavaScript Testing workshops by Kent Dobbs, upon my personal recommendation
   - [ ] using Tabox for Chrome tab group management
   - [ ] using Github Desktop
   - [ ] using VSCode extensions such as: auto-imports, 
@@ -158,12 +188,12 @@ Flow Charts and Diagrams:
   - [ ] NOT having prettier auto-format run upon each file save, but instead centralizing prettier formatting via `husky` hooks
   - [ ] Rule of 3s, ctx-options
   - [ ] separating App from Server state
-- [ ] Created momentum, enthusiasm, and consus on **future** architectural decisions and upgrades, such as:
+- [ ] Created momentum, enthusiasm, and consensus on **future** architectural decisions and upgrades, such as:
   - [ ] upgrading to Next.js (or even Remix)
   - [ ] migrating to a monorepo, such as NX or turborepo
   - [ ] running Cypress E2E tests via GitHub actions (in parallel, across multiple machines)
 
-- [ ] Serios productivity and DX improvements thru automation:
+- [ ] Serious productivity and DX improvements thru automation:
   - [ ] token auth (dozens of MFEs and environments!)
   - [ ] msw (everything faster! not dep. on unstable BE any more)
   - [ ] no more prettier, zsh aliases, ...
@@ -174,8 +204,8 @@ Flow Charts and Diagrams:
 
 ## Impact: Team Velocity & Productivity & DX
 
-- [ ] ⭐️**onblocking** blocked by BE: msw + msw/d
-- [ ] repetitive chore automation 💚 (pupetteer, saving hours of dev time!)
+- [ ] ⭐️**unblocking** blocked by BE: msw + msw/d
+- [ ] repetitive chore automation 💚 (puppeteer, saving hours of dev time!)
   - [ ] Before & After Processes: **token automation**
 - [ ] linking, starting, and msw command shortcuts (via `zsh` config)
 - [ ] MBP cheatsheet (**and LINK to it)**
