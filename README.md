@@ -14,9 +14,6 @@ pie
 		"Testing" :  5
 ```
 
-
-
-
 ## 💻 Code Samples
 
 `RTK-Q` = *Redux ToolKit - Query*
@@ -134,7 +131,7 @@ pie
 
 ###### Popovers
 
-| ![image-20220317231604081](/Users/karlgolka/PROJECTS/FYI/_typora_images/image-20220317231604081-7584316.png) | ![image-20220317231731005](/Users/karlgolka/PROJECTS/FYI/_typora_images/image-20220317231731005-7584327.png) |
+| ![image-20220317231604081](_markdown_assets/images/image-20220317231604081-7584316.png) | ![image-20220317231731005](_markdown_assets/images/image-20220317231731005-7584327.png) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | ![image-20220317231925933](_markdown_assets/images/image-20220317231925933.png) | ![image-20220317231958141](_markdown_assets/images/image-20220317231958141.png) |
 
