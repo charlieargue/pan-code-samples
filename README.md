@@ -2,13 +2,7 @@
 
 
 
-## 🔥 ✅ Tasks:  
-
-- [ ] spell check this!
-
-
-
-## How I Spent My Time
+## 🕙 How I Spent My Time
 
 ```mermaid
 pie
@@ -23,7 +17,7 @@ pie
 
 
 
-## Code Samples
+## 💻 Code Samples
 
 `RTK-Q` = *Redux ToolKit - Query*
 
@@ -100,26 +94,36 @@ pie
 
 
 
-## UI Features / Highlights / Videos
+## UI Features / Highlights
+
+- [ ] 🔥 show ENTIRE SPUI  with container (license Guauges in that!?)
 
 - [ ] 🔥 we want GIFS here, animated of each one! 
 
 - [ ] Temperature Gauges (License expirations)
+
 - [ ] IEECTA
+
 - [ ] Transfer Drawer
+
 - [ ] Pending Assets & 3 Popovers
+
 - [ ] AI:  everything basically
 
-- [ ] BLUR: 29 passing AI tests against msw
-- [ ] BLUR: fly-thru of Asset Transfer
-
-
+  
 
 ## Other 
 
-- [MSW Video (<2 min)](https://github.com/charlieargue/pan-code-samples/issues/1) 
-  - [ ] Follow-up video to team documentation I wrote, on how `msw` mocking works on React MFEs 
-  - [ ] *I later automated all these implementation details into the MFE CLI*
+- 🎦 [MSW Video](https://github.com/charlieargue/pan-code-samples/issues/1) (<2 min)
+  
+  - Follow-up video to team documentation I wrote, on how `msw` mocking works on React MFEs 
+  - *I later automated all these implementation details into the MFE CLI*
+  
+- 🎦  [29 Cypress E2E](https://github.com/charlieargue/pan-code-samples/issues/2) tests running against `msw` (3.5 min)
+
+  
+
+- [ ] BLUR: fly-thru of Asset Transfer
 
 
 
