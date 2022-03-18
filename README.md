@@ -117,7 +117,7 @@ pie
 
 ## Other 
 
-- [MSW Video (<2 min)](other/msw-video.md) 
+- [MSW Video (<2 min)](https://github.com/charlieargue/pan-code-samples/issues/1) 
   - [ ] Follow-up video to team documentation I wrote, on how `msw` mocking works on React MFEs 
   - [ ] *I later automated all these implementation details into the MFE CLI*
 
