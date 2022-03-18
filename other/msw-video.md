@@ -1,4 +1,14 @@
 # MSW Video Overview
 
-<video src="../_markdown_assets/videos/msw-overview-and-setup.mp4"></video>
+
+
+###### Part 1
+
+<video src="../_markdown_assets/videos/msw-overview-and-setup-part-1.mp4"></video>
+
+
+
+###### Part 2
+
+<video src="../_markdown_assets/videos/msw-overview-and-setup-part-2.mp4"></video>
 

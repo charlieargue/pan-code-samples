@@ -13,9 +13,9 @@
 ```mermaid
 pie
     title Time Spent at PAN
+    "React UI / Features" : 40
     "Refactoring & Tech Debt" : 30
     "Tooling, CLI, Automation" : 15
-    "React UI / Features" : 40
     "Mentoring / Pair Sessions" :  10
 		"Testing" :  5
 ```
