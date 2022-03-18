@@ -100,27 +100,40 @@ pie
 
 
 
-## UI ScreenShots
+## UI Features / Highlights / Videos
 
+- [ ] 🔥 we want GIFS here, animated of each one! 
 
-
-
-
-* `inline or separate file(s)?` ... maybe one separate long-scrollable file is best!
-* 🔥 `TODO:` Temperature Guages (License expirations)
-* IEECTA
-* Transfer Drawer
-* 3 Popoevers
-* Pending Assets
-* WildFire Popover?
-* AI:  everything basically
-
-
-
-## Looms of UI Features
+- [ ] Temperature Guages (License expirations)
+- [ ] IEECTA
+- [ ] Transfer Drawer
+- [ ] Pending Assets & 3 Popovers
+- [ ] AI:  everything basically
 
 - [ ] BLUR: 29 passing AI tests against msw
 - [ ] BLUR: fly-thru of Asset Transfer
+
+
+
+## Other 
+
+Cheatsheets
+
+- [ ] 🔥 cheat sheet!!!!
+
+
+
+Flow Charts and Diagrams:
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -243,19 +256,4 @@ Guided project management on:
 
 
 
-
-
-My **Codebase** Refactoring efforts:
-
-```mermaid
-graph TD;
-    Upgrade_Class_Components-->Service_DI-->File-and-Component-Separation-->msw/d-->Jest-&-E2E-Tests-->MicroFEs-&-MFE-Boilerplate;
-```
-
-My **Toolkit/Tooling, and Builder** Refactoring efforts:
-
-```mermaid
-graph TD;
-    A-->B-->C;
-```
 
