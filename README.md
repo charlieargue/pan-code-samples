@@ -93,7 +93,7 @@ pie
 
 
 
-## 🎦 Demos and Videos
+## 🎦 Demos and Videos Samples
 
 - [MSW Video](https://github.com/charlieargue/pan-code-samples/issues/1) (<2 min)
   - Follow-up video to team documentation I wrote, on how `msw` mocking works on React MFEs 
@@ -108,15 +108,23 @@ pie
 
 
 
+## 👾 Sample Cheatsheets
+
+- [ ] Team loved this [MBP "Setup Cheatsheet"](other/mbp-setup-cheatsheet.md)  I made for 💙 DX and productivity
+
+
+
+
+
 ## ⭐️ UI Features / Highlights
 
 <img src="_markdown_assets/images/image-20220317224458358.png" alt="image-20220317224458358" style="zoom:67%;" />
 
+<img src="_markdown_assets/images/Pasted_Image_3_17_22__11_22_PM.png" alt="Pasted_Image_3_17_22__11_22_PM" style="zoom:67%;" />
 
 
 
-
-![Pasted_Image_3_17_22__10_47_PM](_markdown_assets/images/Pasted_Image_3_17_22__10_47_PM.png)
+<img src="_markdown_assets/images/Pasted_Image_3_17_22__10_47_PM.png" alt="Pasted_Image_3_17_22__10_47_PM" style="zoom:67%;" />
 
 
 
@@ -136,39 +144,12 @@ pie
 
 
 
+## Sample Flow Charts and Diagrams:
 
-- [ ] 🔥 show ENTIRE SPUI  with container (license Gauges in that!?)
-
-- [ ] 🔥 we want GIFS here, animated of each one! 
-
-- [ ] Temperature Gauges (License expirations)
-
-- [ ] IEECTA
-
-- [ ] Transfer Drawer
-
-- [ ] Pending Assets & 3 Popovers
-
-- [ ] AI:  everything basically
-
-  
-
-
-
-Cheatsheets
-
-- [ ] 🔥 cheat sheet!!!!
-
-
-
-Flow Charts and Diagrams:
-
-- [ ] where to put state
+- [ ] where to put state flow chart
 - [ ] testing pyramid
 
-
-
-###### Refactoring and Tech Debt Effort
+- [ ] Refactoring and Tech Debt Effort
 
 ```mermaid
         graph TD
