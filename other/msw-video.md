@@ -10,5 +10,8 @@
 
 ###### Part 2
 
-<video src="../_markdown_assets/videos/msw-overview-and-setup-part-2.mp4"></video>
 
+
+
+
+![video](../_markdown_assets/videos/msw-overview-and-setup-part-2.mp4)
