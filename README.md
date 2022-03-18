@@ -92,9 +92,40 @@ pie
 
 
 
+## 🎦 Demos and Videos
+
+- [MSW Video](https://github.com/charlieargue/pan-code-samples/issues/1) (<2 min)
+  - Follow-up video to team documentation I wrote, on how `msw` mocking works on React MFEs 
+
+  - *I later automated all these implementation details into the MFE CLI*
+
+- [29 Cypress E2E](https://github.com/charlieargue/pan-code-samples/issues/2) tests running against `msw` (3.5 min)
+
+- [Demo of Asset Transfer Flows](https://github.com/charlieargue/pan-code-samples/issues/3) (before loading animations/skeletons were added)
 
 
-## UI Features / Highlights
+
+
+
+## ⭐️ UI Features / Highlights
+
+<img src="_markdown_assets/images/image-20220317224458358.png" alt="image-20220317224458358" style="zoom:67%;" />
+
+
+
+
+
+![Pasted_Image_3_17_22__10_47_PM](/Users/karlgolka/PROJECTS/pan-code-samples/_markdown_assets/images/Pasted_Image_3_17_22__10_47_PM.png)
+
+
+
+
+
+
+
+
+
+
 
 - [ ] 🔥 show ENTIRE SPUI  with container (license Guauges in that!?)
 
@@ -111,21 +142,6 @@ pie
 - [ ] AI:  everything basically
 
   
-
-## Other 
-
-- 🎦 [MSW Video](https://github.com/charlieargue/pan-code-samples/issues/1) (<2 min)
-  
-  - Follow-up video to team documentation I wrote, on how `msw` mocking works on React MFEs 
-  - *I later automated all these implementation details into the MFE CLI*
-  
-- 🎦  [29 Cypress E2E](https://github.com/charlieargue/pan-code-samples/issues/2) tests running against `msw` (3.5 min)
-
-  
-
-- [ ] BLUR: fly-thru of Asset Transfer
-
-
 
 
 
