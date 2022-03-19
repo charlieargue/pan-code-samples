@@ -441,7 +441,7 @@ graph TD
 
 
 
-### Effective Use of Performance Optimization and Debugging Tools:
+### Effective Use of Redux Dev-Tools and Profiler:
 
 ![image-20220319095930017](_markdown_assets/images/image-20220319095930017.png)
 
