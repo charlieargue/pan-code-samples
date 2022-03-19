@@ -1,6 +1,6 @@
 # Palo Alto Networks (PAN) — Code Samples
 
-Code samples, demos and videos, and a detailed "post-mortem" of my time spent at Palo Alto Networks.
+Code samples, demos and videos, and a detailed "post-mortem" and case study of my time spent at Palo Alto Networks.
 
 
 
@@ -126,7 +126,7 @@ pie
 
 <img src="_markdown_assets/images/Pasted_Image_3_17_22__11_22_PM.png" alt="Pasted_Image_3_17_22__11_22_PM" style="zoom:67%;" />
 
-
+![image-20220319085303200](_markdown_assets/images/image-20220319085303200.png)
 
 <img src="_markdown_assets/images/Pasted_Image_3_17_22__10_47_PM.png" alt="Pasted_Image_3_17_22__10_47_PM" style="zoom:67%;" />
 
@@ -140,7 +140,7 @@ pie
 
 | <img src="_markdown_assets/images/image-20220319084702253.png" alt="image-20220319084702253" style="zoom:67%;" /> | <img src="/Users/karlgolka/PROJECTS/FYI/_typora_images/image-20220319084829923.png" alt="image-20220319084829923" style="zoom:67%;" /> |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| <img src="/Users/karlgolka/PROJECTS/pan-code-samples/_markdown_assets/images/image-20220319084932623.png" alt="image-20220319084932623" style="zoom:67%;" /> | <img src="_markdown_assets/images/image-20220317231958141.png" alt="image-20220317231958141" style="zoom:87%;" /> |
+| <img src="_markdown_assets/images/image-20220319084932623.png" alt="image-20220319084932623" style="zoom:67%;" /> | <img src="_markdown_assets/images/image-20220317231958141.png" alt="image-20220317231958141" style="zoom:87%;" /> |
 
 
 
@@ -334,6 +334,8 @@ Guided project management on:
 
 ## 📊 Other Resources
 
+
+
 ### Tech Debt & Refactoring Journey
 
 A simplified flow-chart highlighting key points in the path I took to successfully remove a huge amount of technical debt and refactor multiple MFEs, while simultaneously delivering much-loved new UI features:
@@ -418,6 +420,34 @@ graph TD
       GG --> |"🗣 Shout-outs on any blockers"| H("👷‍♂️👷‍♀️ Development work ...🚧")
       H --> |Finalize any stubbed-out Postman endpoints| GG
 ```
+
+
+
+### My "Testing Pyramid"
+
+![testing-pyramid](_markdown_assets/images/testing-pyramid-20220319093743412.png)
+
+
+
+### "Napkin Sketch" of Testing & Prototyping Pyramid for PAN
+
+<img src="_markdown_assets/images/IMG_0776.png" alt="IMG_0776" style="zoom:67%;" />
+
+
+
+### Example of Clear Communication (in JIRA)
+
+![Pasted_Image_3_19_22__9_46_AM](_markdown_assets/images/Pasted_Image_3_19_22__9_46_AM.png)
+
+
+
+### Effective Use of Performance Optimization and Debugging Tools:
+
+![image-20220319095930017](_markdown_assets/images/image-20220319095930017.png)
+
+
+
+![Performance-Optimizing](_markdown_assets/images/Performance-Optimizing-7710002.gif)
 
 
 
