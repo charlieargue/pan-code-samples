@@ -184,12 +184,12 @@ Or just minimize and see if long "phrases" looks ok
 
 - [x] Built POC demonstrating React Context & Cache Management patterns and best practices ([ctx-options](https://github.com/charlieargue/ctx-options), **DEC 28, 2021**)  - `RTK` was chosen based on this repo
 - [x] After discussion, `react-query` was replaced with `RTK-Q` as Redux was already being used by team (and now that the need for something like `RTK-Q` was understood, refactoring begins of `react-query` to `RTK-Q`, **JAN 3, 2022**)
-- [ ] Upgrades implemented in other MFEs under active development, as well as in MFE boilerplate used to kick-start other micro-frontends
-- [ ] CLI, build tooling, and React-Scripts upgrades (working with ejected CRA and babel/Jest/webpack/eslint/prettier configurations and scripts)
-- [ ] composing MFEs into main container MFE, coding up production fixes for various tooling
-- [ ] Optimizing for performance, eliminating unnecessary renders
-- [ ] page loading spinners, skeletons, and button loading animations and work flows (preventing double-taps, etc.)
-- [ ] adding both local and global Error Boundaries (before app just crashed)
+- [x] Upgrades implemented in other MFEs under active development, as well as in MFE boilerplate used to kick-start other micro-frontends
+- [x] CLI, build tooling, and React-Scripts upgrades (working with ejected CRA and babel/Jest/webpack/eslint/prettier configurations and scripts)
+- [x] ~~composing MFEs into main container MFE,~~ coding up production fixes for various tooling
+- [x] Optimizing for performance, eliminating unnecessary renders
+- [x] page loading spinners, skeletons, and button loading animations and work flows (preventing double-taps, etc.)
+- [x] adding both local and global Error Boundaries (before app just crashed)
 
 
 
@@ -199,7 +199,7 @@ Or just minimize and see if long "phrases" looks ok
 
 ## Tech Debt & Refactoring Journey
 
-A simplification and generalization of the path taken to successfully remove a huge amount of technical debt and refactor multiple MFEs:
+A simplification highlighting key points in the path I took to successfully remove a huge amount of technical debt and refactor multiple MFEs, while simultaneously delivering much-loved new UI features:
 
 ```
       subgraph section
@@ -216,16 +216,23 @@ A simplification and generalization of the path taken to successfully remove a h
 ```mermaid
 graph TD
       A(Converting remaining CLASS COMPONENTS to Functional) --> |DRY-ing and SRP-ing|B(upgrades and bug fixes to legacy & new DESIGN SYSTEMS)
-      B --> |file and folder organization, removing unnecessary PROP DRILLING| C(building TESTABLE components)
-      C ==>|RTK-Q| D[SEPARATION of App State from Server State]
-      C ==> |Contextualizer & SERVICE HUB| E[service and DEPENDENCY INJECTION improvements]
-		  D ==> F(fixing errors and potential MEMORY LEAKS)
-		  E ==> F
-		  F ==> G(useSafeDispatch and useIsMounted)
-		  G ==> |swr VS react-query VS RTK-Q| H(CACHE strategies and configuration)
-		  H --> |pure React Context VS react-tracked VS RTK| I(state management POC, ctx-options)
-		  I --> |Jest, Cypress E2E Tests, and Postman| J(rigorous and efficient testing and debugging)
-		  J --> K(using msw to MOCK entire APIs)
+      B --> |file and folder RE-ORGANIZATION| C(building TESTABLE components)
+      C --> D[SEPARATION of App State from Server State]
+      C --> |removing unnecessary PROP DRILLING| E[service and DEPENDENCY INJECTION improvements]
+		  D --> F(fixing errors and potential MEMORY LEAKS)
+		  E --> F
+		  F --> G(useSafeDispatch and useIsMounted)
+		  G --> |swr VS react-query VS RTK-Q| H(CACHE strategies and configuration)
+		  G --> |pure React Context VS react-tracked VS RTK| I(state management POC, ctx-options)
+		  H --> J(rigorous and efficient testing and debugging)
+		  I --> J
+		  J --> |Jest, Cypress E2E Tests, and Postman| K(using msw to MOCK entire APIs)
+		  K --> L(Upgrades propagated to other MFEs and to MFE boilerplate)
+		  L --> |kick-starting other micro-frontends| M(Optimizing for performance and eliminating unnecessary renders)
+		  M --> |loading spinners, skeletons, and animations| N(adding Error Boundaries)
+		  N --> O(ffa)
+		  V(CLI, tooling, and React-Scripts upgrades) --> |babel / Jest / webpack / eslint / prettier configs| W(working with an ejected Creact-React-App)
+		  W --> X(coding up production fixes for tooling)
 ```
 
 
