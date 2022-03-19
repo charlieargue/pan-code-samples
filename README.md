@@ -447,6 +447,8 @@ graph TD
 
 `Palak Mehrotra` — Senior Software Engineer ([LinkedIn](https://www.linkedin.com/in/palakmehrotra/))
 
+`Veerendra Vundavalli`  — .NET & React (+Native) Developer ([LinkedIn](https://www.linkedin.com/in/veerendravundavalli/))
+
 
 
 ### Feedback after First Demo 
@@ -462,27 +464,57 @@ graph TD
 
 ![image-20220204103203505](_markdown_assets/images/image-20220204103203505-7703951.png)
 
-> "BTW, I gave you the most exciting feature that I believe will be used by a lot of customers :)."  — *Hanford Choy*,  `Feb 1, 2022`
+> "BTW, I gave you the most exciting feature that I believe will be used by a lot of customers :)."  
+>
+> — 🗣 *Hanford Choy*,  `Feb 1, 2022`
+
+
+
+![image-20211209153206942](_markdown_assets/images/image-20211209153206942-7662477.png)
+
+> "Karl, [epic] looks really good. Congrats! I could not find any issues, and closed this ticket."
+> 
+> — 🗣 *Hanford Choy*,  `Dec 7, 2021`
+
+
 
 
 
 ### Feedback from Supervising Staff Engineers
 
-- [ ] 🔥insert **27'39"** `1-on-1` Feb 15🔥 audio clip!
+
+
+> "I love what you did with puppeteer." [<u>re:</u> automating MFE token authentication] 
+> — 🗣 *Mazen Ghalayini* `Dec 9, 2021`
+> 
+> 
+> "It was a great effort on the MFE refactoring." 
+> 
+> — 🗣 *Mazen Ghalayini* `Jan 18, 2021`
 
 
 
-> "As far as coding, your credentials are extremely high, I mean, there's not much I can teach you... if anything, I'm probably gonna have to learn from you..." [during 1-on-1 performance review] — *Mazen Ghalayini* `Feb 15, 2022`
+> "As far as coding, your credentials are extremely high, I mean, there's not much I can teach you... if anything, I'm probably gonna have to learn from you..." [during 1-on-1 performance review] 
 >
-> "Alright, let's give it a shot and see how that works!" [<u>re</u>: creating a shared Postman collection between FE and BE teams]
+> — 🗣 *Mazen Ghalayini* `Feb 15, 2022`
 >
-> — *Mazen Ghalayini*,  `Feb 22, 2022`
+> 
 >
-> "... [unlike other engineer, whose PR's are] total re-writes sometimes... yours so far have been very good, I've only needed to do CSS-stuff [minor things]... keep [doing] what you're doing, you're doing good... you've definitely like learned a lot about how we do things, and you probably now have a really good grasp of how things work... you've been doing great... so just continue to do that, that's great [<u>re:</u> my successful team adoption efforts]... " [during 1-on-1 performance review] — *Mazen Ghalayini* `Feb 15, 2022`
+> "Alright, let's give it a shot and see how that works!" [<u>re</u>: creating a shared Postman collection between FE and BE teams] 
 >
-> "...you know, also, ... we're kind of under siege from [a lot of directions]... so yeah, I think your suggestion is a good one that we need to try..."  [<u>re</u>: to do a backend POC using GraphQL] — *Vish Ramamurthy*,  `Feb 23, 2022`
+> — 🗣 *Mazen Ghalayini*  `Feb 22, 2022`
 >
-> "...your ask [question] is valid and it will be addressed...
+> 
+>
+> "... [unlike other engineer, whose PR's are] total re-writes sometimes... yours so far have been very good, I've only needed to do CSS-stuff [minor things]... keep [doing] what you're doing, you're doing good... you've definitely like learned a lot about how we do things, and you probably now have a really good grasp of how things work... you've been doing great... so just continue to do that, that's great [<u>re:</u> my successful team adoption efforts]... " [during 1-on-1 performance review] 
+>
+> — 🗣 *Mazen Ghalayini*  `Feb 15, 2022`
+>
+> 
+>
+> "...you know, also, ... we're kind of under siege from [a lot of directions]... so yeah, I think your suggestion is a good one that we need to try..."  [<u>re</u>: to do a backend POC using GraphQL] 
+>
+> — 🗣 *Vish Ramamurthy*  `Feb 23, 2022`
 
 
 
@@ -490,13 +522,21 @@ graph TD
 
 > "You're selling it, that's exactly what I'm looking for!" [re: toast notifications, popover messaging, and row highlighting proposals] 
 >
-> — *Alexander Jones* `Feb 23, 2022`
+> — 🗣 *Alexander Jones*  `Feb 23, 2022`
 
 
 
-### Feedback from BE Team
+### Feedback from BE/FE Team
 
-> "I agree with Karl, actually." [<u>re</u>: my clarifying Big Query vs MySQL confusion on Asset Transfer epic] — *Palak Mehrotra* `Feb 23, 2022`
+> "I agree with Karl, actually." [<u>re</u>: my clarifying Big Query vs MySQL confusion on Asset Transfer epic] — 🗣 *Palak Mehrotra*  `Feb 23, 2022`
+>
+> 
+>
+> "Thanks to Mazen and Karl for all their help on UI and Artifactory setup" 
+>
+> — 🗣 *Veerendra Vundavalli*  `Feb, 2022`
+
+
 
 
 
@@ -508,23 +548,17 @@ graph TD
 
 ## ✅ Tasks:  	
 
+- [ ] 🔥🔥🔥🔥🔥🔥 insert **27'39"** `1-on-1` Feb 15🔥 audio clip!
+
 - [ ] see all 1-on-1s !!!!! (.md)
 
   - [ ] `Wed Dec 8, 2021` - see **iphone recording** from same day
 
   - [ ] > one or two other candidates hired along with me got kicked out already! I'm doing great! so far doing good, ...  keep it up!
 
-- [ ] audio (iphone), 
+- [x] audio (iphone), 
 
-  - [ ] 🔥 esp.  entire Mazen VIP recording plz asap! (from **Thur, Feb 10, 2022**)
-
-- [ ] GINA said some good things about me! See the loom (and check on my phone!)
-
-- [ ] transcripts/quotes/blurbs
-
-  - [ ] PR's 100%, no bugs, refactored entire MFE w/i 1 month of being there, no bugs/revisions from QA/UAT!
-
-- [ ] Show Alex's: `all good questions` from [JIRA pic](ALEX-2-Screen Shot 2022-02-14 at 2.15.29 PM.png)
+  - [x] 🔥 esp.  entire Mazen VIP recording plz asap! (from **Thur, Feb 10, 2022**)
 
 - [ ] 🔥 See #iphone recordings with Mazen (Accomplishment one, right before SPUI Part 1/2/3)
 
@@ -532,21 +566,9 @@ graph TD
 
 
 
-![image-20211209153206942](/Users/karlgolka/PROJECTS/FYI/_typora_images/image-20211209153206942-7662477.png)
 
 
 
-
-
-![image-20211213135631248](/Users/karlgolka/PROJECTS/FYI/_typora_images/image-20211213135631248-7662477.png)
-
-![image-20220111182444035](/Users/karlgolka/PROJECTS/FYI/_typora_images/image-20220111182444035-7662477.png)
-
-
-
-![Screen Shot 2022-01-20 at 2.49.32 PM](/Users/karlgolka/PROJECTS/FYI/_typora_images/Screen Shot 2022-01-20 at 2.49.32 PM-7662477.png)
-
-![image-20220124114501482](/Users/karlgolka/PROJECTS/FYI/_typora_images/image-20220124114501482-7662477.png)
 
 
 
@@ -677,7 +699,7 @@ export default {
     384: '384px',
     541: '541px',
   
-  	// So, for example, if you needed a width of 542px or a line-height of 31px in a MFE, 
+  // So, for example, if you needed a width of 542px or a line-height of 31px in a MFE, 
     // you had to go here and add that line explicitly, bump up the versions, 
     // and re-link the repo so you could use it in a MFE, etc.
 };
