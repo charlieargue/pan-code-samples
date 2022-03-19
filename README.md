@@ -66,7 +66,9 @@ pie
 
 - [ctx-options ("Context Options") ](https://github.com/charlieargue/ctx-options)
   - GitHub repo I made showing patterns for avoiding **React Context** "over-rendering", as well as data fetching and caching
-  - `RTK-Q` was chosen team-wide based on this proof-of-concept
+  - 🚀**IMPACT:** 
+    - Clarified a critical misunderstanding of **React Context**, causing dev leadership to bypass it unnecessarily and reach for other solutions (Redux) where it would suffice.
+    - `RTK-Q` was chosen team-wide based on this proof-of-concept, and React Context was restored as a primary solution for state management (both local and global).
 
 
 
@@ -143,6 +145,58 @@ pie
 
 ## Main Impact Areas
 
+- [ ] fixing numerous memory leaks (manually, or with custom hooks like `useSafeDispatch` or `useIsMounted`)
+- [ ] fixing numerous bugs and making upgrades to both legacy and current design systems (built with Ant Design & styled-components)
+- [ ] Service_DI -->
+- [ ] File-and-Component-Separation -->
+- [ ] msw/d -->
+- [ ] Jest-&-E2E-Tests-->
+- [ ] MicroFEs-&-MFE-Boilerplate
+
+- [ ] holy moly, so:
+- [ ] Decoupled everything and moved it out of app.js
+- [ ] Upgraded App.js to functional component
+- [ ] Have 2 providers (service and state)
+- [ ] Wrapped App in HOC afterall so works in both local & SPUI
+- [ ] Started removing props drilling deps that are now unecessary, WIP
+- [ ] Added safe dispatch and generic async reducer
+- [ ] Started refactoring all setState calls to use dispatch, WIP
+- [ ] wiring up ErrorBoundary to SPUI so all MFEs benefit
+
+
+
+**THis is IN ORDER as it happened!**
+
+- [ ] Refactoring EVERYTHING in ambr-impr (app.js, state and service useContext injection, no reducer yet, but decoupling and dividing everything! Oh boy)
+- [ ] lots of discovery and planning with Mazen regarding AT and R-S and how to fork/track CRA team updates, extension hooks, templates for CRA, and my questions and gameplan for the amber-tools upgrades specifically and AT1 vs AT2/3… future…, re-exporting and index.js, etc...
+  - [ ]  getting a grip on what amber-tools really is (an ejected CRA with b/j/w/l/p code from that time, along with any customizations added along the way…
+- [ ] mazen long work session deploying SPUI + NetSec changes, msw-prod-fix, and researching jest AT setups more, and discussing RTK-query and redux and next steps with amb-imp upgrades!
+- [ ] long call w/ Mazen (until 9:30pm!) unblocking issue after issue, suddenly things popping up, argh… going over my amb-imp refactoring in detail, discussing best patterns for state, service DI, contextualizer, view selector, routing, keying services, singletons, service hub, making views as stand-alone and testable as possible, react-query staleTime and options, etc...   DAS and globalState.auth
+- [ ] **Optimizing for performance after refactoring**🔵 taking big step back and fully grokking the useContext unnecessary render caveat and applicable solutions/options 🔵 4 options explored fully, POC ctx-options, best choices made for AI performance refactoring
+
+
+
+
+
+## Tech Debt & Refactoring Journey
+
+```mermaid
+graph TD
+      A(Components: Class to Functional) --> B(Go shopping)
+      B --> C{Let me think}
+      B --> G[/Another/]
+      C ==>|One| D[Laptop]
+      C -->|Two| E[iPhone]
+      C -->|Three| F[fa:fa-car Car]
+      subgraph section
+        C
+        D
+        E
+        F
+        G
+      end
+```
+
 
 
 ### Refactoring and Tech Debt flow chart / process 
@@ -175,25 +229,36 @@ pie
 
 ### Testing & Mocking
 
-- Setup modern **testing infrastructure** **and tooling** (`msw`, Jest, Cypress), centralized so developers could use them from any MFE
+- Introduced a modern **testing infrastructure** **and tooling** (`msw`, Jest, Cypress), centralized so developers could use them from any MFE 
+
 - Setup next-generation **API mocking** (`msw`), that allowed effortless request interception at the network level, and seamless re-use the same mock definitions for testing, development, and debugging
+
 - Demonstrated successful use of **Cypress E2E tests** to confidently and quickly refactor entire MFEs, to hunt/fix/prevent bugs, and as a UI unit and component testing tool (against StoryBook stories)
+
 - Introduced Postman as a critical tool for sharing collections between BE and FE during requirements-gathering phase
-- Guided team on what to test and how to test (see [Testing Pyramid](https://github.com/charlieargue/multi-cart#-testing))
+
+- While refactoring multiple MFEs, wrote highly-testable code so that services, components, utility functions, and custom hooks could all be exercised rigorously
+
+- Guided team on what to test and how to test (see [Testing Pyramid](https://github.com/charlieargue/multi-cart#-testing), eg. how Jest component tests should check for an even handler being called where-as E2E tests should test that a toast message appeared, etc.)
+
 - **🚀 IMPACT:** 
   - Solved FE team's primary pain point of blockage by BE dysfunction and unstable BE environments
   - Super-charged development velocity and allowed for rapid prototyping
-  - Developers stopped putting mocking code all over the codebase
+  - Developers stopped putting messy mocking code all over the codebases
   - Staff engineer started using Cypress/Jest/Postman/`msw` and our joint efforts led to complete adoption by the team
+  - No testing was being done on my team when I arrived, and now the staff engineer and team are writing tests nearly daily and even doing occasional TDD
   - `msw/data` in particular allowed for mocked data persistence and allowed for effectively mocking entire complex workflows and building out entire features without waiting for the BE
   - Greatly improved team's capability to deliver bug-free features
+  
+  
+  
+  
 
-
-
-### Design Impact:
+### UI/UX Design Impact:
 
 - Made the designer very happy with pixel-perfect build-outs of his Figma prototypes (thx [PerfectPixel](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?hl=en)!)
 - Provided frequent useful feedback on better UI design (eg. better design of toasts and alerts for popovers in a DataTable context)
+- Solved a major Data View pain-point by combining loading states for Asset Dashboard Tiles, Product Families, Search, Filters, and Data Table UI/UX, removing the need for a lot of code and buggy edge-cases (users were counter-intuitively running multiple searches at once without realizing it, resulting in race conditions, causing confusion both for users and developers)
 
 
 
@@ -304,3 +369,10 @@ Guided project management on:
 - [ ] ![image-20220316175533444](/Users/karlgolka/PROJECTS/FYI/_typora_images/image-20220316175533444.png)
 
   
+
+
+
+## Reasons for Transition
+
+- [ ] Lots of chaos with the meeting, cancelled and re-scheduled last minute… :)
+- [ ] 
