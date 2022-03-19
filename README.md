@@ -152,16 +152,32 @@ pie
 
 ### 📚 Libraries I Introduced:
 
-- [ ] 🔥 go thru each package.json
+Production dependencies:
+
+- @reduxjs/toolkit (RTK-Q)
+
+
+
+Development dependencies:
+
+*(some removed for security)*
 
 - faker
-- msw, msw/d
-- @testing-library/cypress 
-- cypress 
-- cypress-plugin-tab
-- RTL
-- wdyr
-- cypress coverage / CRA instrumentation 
+- msw and @mswjs/data
+- RTL:
+  - @testing-library/react
+  - @testing-library/user-event
+  - @testing-library/cypress
+- cypress: 
+  - @cypress/react
+  - @cypress/webpack-dev-server
+  - cypress-plugin-tab
+  - @cypress/code-coverage
+    - babel-plugin-istanbul
+    - istanbul
+    - istanbul-lib-coverage
+    - nyc
+- @welldone-software/why-did-you-render
 - husky
 - puppeteer
 
@@ -465,7 +481,7 @@ Guided project management on:
 
   - [ ] `Wed Dec 8, 2021` - see **iphone recording** from same day
 
-    - [ ] > one or two other candidates hired along with me got kicked out already! I'm doing great! so far doing good, ...  keep it up!
+  - [ ] > one or two other candidates hired along with me got kicked out already! I'm doing great! so far doing good, ...  keep it up!
 
 - [ ] audio (iphone), 
 
