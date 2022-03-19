@@ -147,7 +147,7 @@ pie
 
 **Popover Samples:** Incoming, Outgoing, and Rejected
 
-| <img src="_markdown_assets/images/image-20220319084702253.png" alt="image-20220319084702253" style="zoom:67%;" /> | <img src="/Users/karlgolka/PROJECTS/FYI/_typora_images/image-20220319084829923.png" alt="image-20220319084829923" style="zoom:67%;" /> |
+| <img src="_markdown_assets/images/image-20220319084702253.png" alt="image-20220319084702253" style="zoom:67%;" /> | <img src="_markdown_assets/images/image-20220319084829923.png" alt="image-20220319084829923" style="zoom:67%;" /> |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | <img src="_markdown_assets/images/image-20220319084932623.png" alt="image-20220319084932623" style="zoom:67%;" /> | <img src="_markdown_assets/images/image-20220317231958141.png" alt="image-20220317231958141" style="zoom:87%;" /> |
 
