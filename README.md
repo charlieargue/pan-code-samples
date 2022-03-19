@@ -114,7 +114,7 @@ pie
 
 ## 👾 Sample Cheatsheet
 
-- Team 💙 this [MBP "Setup Cheatsheet"](other/mbp-setup-cheatsheet.md) I made for improved DX and productivity
+- Team 💙-ed this [MBP "Setup Cheatsheet"](other/mbp-setup-cheatsheet.md) I made for improved DX and productivity
 
 
 
@@ -160,37 +160,27 @@ pie
 
 ## 🚀 Impact Areas
 
-### 
-
-#### 🍝 LEFT-OVERS:
 
 
+Legend (so one/two word "keys") up top?
 
-
-
-### **THis is IN ORDER as it happened!**
+Or just minimize and see if long "phrases" looks ok
 
 
 
+### **THis is IN ORDER as it happened!** 
 
-
-
-
-
-
-
-
-- [ ] General refactoring of MFEs: 
-  - [ ] Converted remaining Class Components to Functional
-  - [ ] fixing numerous bugs and upgrading both legacy and current Design Systems (built with Ant Design & styled-components)
-  - [ ] Breaking up into components, file and folder organization, de-coupling entire MFEs when "everything is in App.js", removing unnecessary prop drilling, DRY-ing and SRP-ing
-  - [ ] building testable components
-  - [ ] contextualizer for managing multiple contexts, view selector, Data Access Services, and global auth state
-  - [ ] separation of state management, App State from Server State (`react-query` was chosed over `swr`, and pure React.Context for state)
-  - [ ] service and DI (dependency injection) solutions
-  - [ ] fixing numerous memory leaks (manually, or with custom hooks like `useSafeDispatch` or `useIsMounted`)
-  - [ ] `msw` and `@mswjs/data` (mocking entire APIs)
-  - [ ] cache strategies and configuration
+- [x] Converted remaining Class Components to Functional
+- [x] fixing numerous bugs and upgrading both legacy and current Design Systems (built with Ant Design & styled-components)
+- [x] file and folder organization, removing unnecessary prop drilling, 
+- [x] building testable components
+- [x] contextualizer for managing multiple contexts, view selector, Data Access Services, and global auth state
+- [x] separation of state management, App State from Server State (`react-query` was chosed over `swr`, and pure React.Context for state)
+- [x] service and DI (dependency injection) solutions
+- [ ] fixing numerous memory leaks (manually, or with custom hooks like `useSafeDispatch` or `useIsMounted`)
+- [ ] `msw` and `@mswjs/data` (mocking entire APIs)
+- [ ] cache strategies and configuration
+- [ ] rigorous and efficient testing and debugging (Jest, Cypress E2E Tests, and Postman)
 
 - [ ] Built POC demonstrating React Context & Cache Management patterns and best practices ([ctx-options](https://github.com/charlieargue/ctx-options), **DEC 28, 2021**)  - `RTK` was chosen based on this repo
 - [ ] After discussion, `react-query` was replaced with `RTK-Q` as Redux was already being used by team (and now that the need for something like `RTK-Q` was understood, refactoring begins of `react-query` to `RTK-Q`, **JAN 3, 2022**)
@@ -200,7 +190,6 @@ pie
 - [ ] Optimizing for performance, eliminating unnecessary renders
 - [ ] page loading spinners, skeletons, and button loading animations and work flows (preventing double-taps, etc.)
 - [ ] adding both local and global Error Boundaries (before app just crashed)
-- [ ] rigorous and efficient testing and debugging (Jest, Cypress E2E Tests, and Postman)
 
 
 
@@ -210,16 +199,9 @@ pie
 
 ## Tech Debt & Refactoring Journey
 
-A simplification and generalization of the path taken to successfully remove a huge amount of technical debt:
+A simplification and generalization of the path taken to successfully remove a huge amount of technical debt and refactor multiple MFEs:
 
-```mermaid
-graph TD
-      A(Components: Class to Functional) --> B(Go shopping)
-      B --> C{Let me think}
-      B --> G[/Another/]
-      C ==>|One| D[Laptop]
-      C -->|Two| E[iPhone]
-      C -->|Three| F[fa:fa-car Car]
+```
       subgraph section
         C
         D
@@ -231,11 +213,22 @@ graph TD
 
 
 
+```mermaid
+graph TD
+      A(Converting remaining CLASS COMPONENTS to Functional) --> |DRY-ing and SRP-ing|B(upgrades and bug fixes to legacy & new DESIGN SYSTEMS)
+      B --> |file and folder organization, removing unnecessary prop drilling| C(building TESTABLE components)
+      C ==>|RTK-Q| D[separation of App State from Server State]
+      C ==> E[service and dependency injection improvements]
+		  
+```
 
 
 
 
-### "State Pyramid" / "Where to Put State" flow chart
+
+
+
+### Simplified "Where to Put State" Flow Chart
 
 ![image-20220318203826917](/Users/karlgolka/PROJECTS/FYI/_typora_images/image-20220318203826917.png)
 
@@ -285,11 +278,11 @@ graph TD
 ### Mentoring to Staff Engineer 
 
 - [ ] Provided regular guidance to my supervising **staff engineer** on the **latest** React (and general software) best practices, patterns, and trends — he  adopted almost all of my suggestions, including but not limited to:
-  - [ ] **Typora** for markdown
+  - [ ] Advanced use of markdown and **Typora** (a markdown editor)
   
-  - [ ] having a **personal**, centralized, markdown-based "knowledge base" in **GitHub**
+  - [ ] having a centralized, markdown-based **"Personal Knowledge Base"** in GitHub
   
-  - [ ] switching to **MBP** (and guidance on that)
+  - [ ] switching to **MBP** (and guidance on setup and optimization)
   
   - [ ] following **React community leaders** such as Kent Dobbs, Ben Awad, as patterns such as Tao of React, "Rule of Three" or "AHA Programming"
   
@@ -297,25 +290,25 @@ graph TD
   
   - [ ] using **Tabox** for Chrome tab group management
   
-  - [ ] switching to Github Desktop
+  - [ ] using **Github Desktop**
   
-  - [ ] switching to VSCode extensions such as: auto-imports, spell checker, snippets, Quokka, etc.
+  - [ ] **VSCode extensions**: auto-imports, spell checker, snippets, Quokka, themes, #region folding, bookmarks, Markdown to JIRA, CODDX Kanban Board, Turbo Console Log, Auto Barrel, and others
   
-  - [ ] using VSCode keyboard short-cuts such as: auto-order/dedupe imports, auto-formatting, etc.
+  - [ ] using **VSCode keyboard short-cuts** such as: auto-order/dedupe imports, auto-formatting, navigate back/forward, etc.
   
-  - [ ] NOT having prettier auto-format run upon each file save, but instead centralizing prettier formatting via `husky` hooks
+  - [ ] fixed annoying prettier auto-format that was running each time a developer saved a file, to instead run before commits via `husky`
   
-  - [ ] Rule of 3s, ctx-options
+  - [ ] Tao of React, Rule of 3s, AHA Programming
   
   - [ ] separating state into two categories: App state from Server state (and not keeping everything in Redux)
   
   - [ ] successfully implementing various latest patterns and libraries for state-management, data fetching, and cache management options, including pure React Context, react-tracked, react-query, and RTK-Q (Redux was already being used)                                          
   
-  - [ ] not shying away from pure React Context (he was under the misapprehension that it causes everything below it in the tree to over-render, where as only those components that consume the context do so; additionally provided POC repo ctx-options to demonstrate common solutions and patterns for dealing with over-renders)
+  - [ ] clearing up misunderstandings that caused the team to shy away from pure React Context
   
-  - [ ] he setup a shared PostMan collection upon my request for the team
+  - [ ] provided clear POC repo [ctx-options](https://github.com/charlieargue/ctx-options) to demonstrate common state management solutions and patterns for dealing with React Context over-renders
   
-  - [ ] husky
+  - [ ] successfully pushing to setup a shared PostMan collection for the team
   
   - [ ] centralizing library exports and cheatsheets in a separate dev-tools repo
   
@@ -325,9 +318,7 @@ graph TD
   
   - [ ] component-based rapid prototyping with StoryBook (and then using those stories for component UI unit tests via Cypress)
   
-  - [ ] Turbo Logger
-  
-  - [ ] 
+    
   
     
   
