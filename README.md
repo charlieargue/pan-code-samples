@@ -148,6 +148,20 @@ pie
 
 
 
+### 📚 Libraries I Introduced:
+
+- [ ] 🔥 go thru each package.json
+
+- faker
+- msw, msw/d
+- @testing-library/cypress 
+- cypress 
+- cypress-plugin-tab
+- RTL
+- wdyr
+- cypress coverage / CRA instrumentation 
+- husky
+
 
 
 ### Refactoring Journey STEPS
@@ -286,7 +300,7 @@ graph TD
 
 
 
-### Mentoring the Staff Engineer
+### Mentoring to Staff Engineer
 
 - [ ] Provided regular guidance to my supervising **staff engineer** on the **latest** React (and general software) best practices, patterns, and trends — he  adopted almost all of my suggestions, including but not limited to:
   - [ ] Typora for markdown
@@ -301,8 +315,19 @@ graph TD
   - [ ] NOT having prettier auto-format run upon each file save, but instead centralizing prettier formatting via `husky` hooks
   - [ ] Rule of 3s, ctx-options
   - [ ] separating App from Server state
-
+  - [ ] he setup a shared PostMan collection upon my request for the team
+  - [ ] husky
   
+  
+
+### Mentoring to Other Junior & Senior Team Members
+
+- [ ] taking less experienced dev under my wing and helping thru frequent pair programming sessions
+- [ ] guidance on entire dev workflows, specifically how to use:
+  - [ ] StoryBook for **rapid UI prototyping**
+  - [ ] `msw` and `@mswjs/data` for **rapid development** against a mocked API (wiring up data and behavior)
+  - [ ] Postman, Jest, and Cypress for building an efficient and robust **testing pyramid**
+  - [ ] other tips and best practices (see cheatsheet)
 
 
 
@@ -319,11 +344,13 @@ graph TD
 
 ### Future Directions
 
-Created momentum, enthusiasm, and consensus on **future** architectural decisions and upgrades, such as:
+Created momentum, enthusiasm, and consensus on future architectural decisions and upgrades, such as:
 
 - [ ] upgrading to **Next.js** (team now even considering **Remix**!)
 - [ ] migrating to a **monorepo**, such as **NX**  (team now even considering **TurboRepo**!)
 - [ ] running Cypress E2E tests in **CICD** via **GitHub actions** and **Cypress Dashboard** (provided .yml scripts for running E2E tests in parallel, across multiple machines)
+- [ ] guidance on how to create **"Testing Sandboxes"** (by dynamically generating test roles, accounts, users, assets, etc.)
+- [ ] guidance on how to setup screenshot **UI Regression Testing** (via Happo, StoryBook, and Cypress)
 
 
 
@@ -341,13 +368,21 @@ Created momentum, enthusiasm, and consensus on **future** architectural decision
 
 ### Agile and Project Management
 
+Introduced:
+
+- proper epic and story Acceptance Criteria
+- epic kick-offs (w/ design-docs for medium-to-hard stories)
+- post-mortems
+- 1-on-1s 
+
+
+
 Guided project management on:
 
 - [ ] having Retros at end of sprint instead of during sprint
 - [ ] splitting FE from BE in stand-ups
 - [ ] de-coupling FE from BE in stories (separate integration stories)
 - [ ] keeping stand-ups short, using call-outs in JIRA and slack, and leaning out amount of meetings
-
 - [ ] how to switch from Visual to Text editing mode
 - [ ] how to use markdown auto-outlining syntax
 - [ ] what is an epic, how to write Acceptance Criteria, etc.
@@ -380,13 +415,22 @@ Guided project management on:
 
   
 
+- [ ] HF:
+
+  - [ ] BTW, I gave you the most exciting feature that I believe will be used by a lot of customers, CSP-10112 :).
+
 - [ ] pics
+
+- [ ] see all 1-on-1s !!!!! (.md)
 
 - [ ] audio (iphone), 
 
   - [ ] 🔥 esp.  entire Mazen VIP recording plz asap! (from **Thur, Feb 10, 2022**)
 
+- [ ] GINA said some good things about me! See the loom (and check on my phone!)
+
 - [ ] transcripts/quotes/blurbs
+
   - [ ] PR's 100%, no bugs, refactored entire MFE w/i 1 month of being there, no bugs/revisions from QA/UAT!
 
 - [ ] Show Alex's: `all good questions` from [JIRA pic](ALEX-2-Screen Shot 2022-02-14 at 2.15.29 PM.png)
