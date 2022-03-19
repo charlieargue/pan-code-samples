@@ -169,7 +169,7 @@ Fragment from a `Hi-Level Design Doc` of all Asset Transfer workflows, helping t
 * which MFE the action or event occurs in, i.e. ⏸ **`CPT`** VS 🛡 **`NS`** 
 * and current limitations (`FUTURE ENHANCEMENTS`)
 
-![image-20220319081815248](/Users/karlgolka/PROJECTS/FYI/_typora_images/image-20220319081815248.png)
+![image-20220319081815248](_markdown_assets/images/image-20220319081815248.png)
 
 
 
@@ -189,7 +189,7 @@ Fragment from a `Hi-Level Design Doc` of all Asset Transfer workflows, helping t
 
 - Introduced Postman as a critical tool for sharing collections between BE and FE during requirements-gathering phase
 
-- While refactoring multiple MFEs, wrote highly-testable code so that services, components, utility functions, and custom hooks could all be exercised rigorously
+- While refactoring multiple MFEs and building new features, wrote **clean, bug-free, and highly-testable code** so that services, components, utility functions, and custom hooks could all be exercised rigorously
 
 - Guided team on what to test and how to test (see [Testing Pyramid](https://github.com/charlieargue/multi-cart#-testing), eg. how Jest component tests should check for an even handler being called where-as E2E tests should test that a toast message appeared, etc.)
 
@@ -468,13 +468,21 @@ graph TD
 
 ### Feedback from Supervising Staff Engineers
 
-> "You're doing great!" [<u>re</u>: performance review] — *Mazen Ghalayini* `Feb 15, 2022`
+- [ ] 🔥insert **27'39"** `1-on-1` Feb 15🔥 audio clip!
+
+
+
+> "As far as coding, your credentials are extremely high, I mean, there's not much I can teach you... if anything, I'm probably gonna have to learn from you..." [during 1-on-1 performance review] — *Mazen Ghalayini* `Feb 15, 2022`
 >
 > "Alright, let's give it a shot and see how that works!" [<u>re</u>: creating a shared Postman collection between FE and BE teams]
 >
 > — *Mazen Ghalayini*,  `Feb 22, 2022`
 >
+> "... [unlike other engineer, whose PR's are] total re-writes sometimes... yours so far have been very good, I've only needed to do CSS-stuff [minor things]... keep [doing] what you're doing, you're doing good... you've definitely like learned a lot about how we do things, and you probably now have a really good grasp of how things work... you've been doing great... so just continue to do that, that's great [<u>re:</u> my successful team adoption efforts]... " [during 1-on-1 performance review] — *Mazen Ghalayini* `Feb 15, 2022`
+>
 > "...you know, also, ... we're kind of under siege from [a lot of directions]... so yeah, I think your suggestion is a good one that we need to try..."  [<u>re</u>: to do a backend POC using GraphQL] — *Vish Ramamurthy*,  `Feb 23, 2022`
+>
+> "...your ask [question] is valid and it will be addressed...
 
 
 
@@ -498,9 +506,7 @@ graph TD
 
 
 
-- [ ] ![image-20220318160135522](/Users/karlgolka/PROJECTS/FYI/_typora_images/image-20220318160135522.png)
-
-  
+## ✅ Tasks:  	
 
 - [ ] see all 1-on-1s !!!!! (.md)
 
@@ -520,13 +526,15 @@ graph TD
 
 - [ ] Show Alex's: `all good questions` from [JIRA pic](ALEX-2-Screen Shot 2022-02-14 at 2.15.29 PM.png)
 
+- [ ] 🔥 See #iphone recordings with Mazen (Accomplishment one, right before SPUI Part 1/2/3)
+
   
 
 
 
 ![image-20211209153206942](/Users/karlgolka/PROJECTS/FYI/_typora_images/image-20211209153206942-7662477.png)
 
-🔥 See #iphone recordings with Mazen (Accomplishment one, right before SPUI Part 1/2/3)
+
 
 
 
@@ -564,7 +572,7 @@ Not related to Palo Alto Networks:
 
 
 
-### #1) Project Management
+### A) Project Management
 
 Project Management lacked skills,  did Agile "their way", only adding to already-existing serious dysfunction, and proved impervious to course correction and advice:
 
@@ -575,7 +583,7 @@ Project Management lacked skills,  did Agile "their way", only adding to already
 - thereby breaking how branches are made and used
 - and creating exponentially more epics, stories, and sub-tasks than necessary
 
-![image-20220319123108996](/Users/karlgolka/PROJECTS/FYI/_typora_images/image-20220319123108996.png)
+![image-20220319123108996](_markdown_assets/images/image-20220319123108996.png)
 
 
 
@@ -596,9 +604,9 @@ Project Management lacked skills,  did Agile "their way", only adding to already
 
 
 
-### #2) Supervising Staff Engineer
+### B) Supervising Staff Engineer
 
-I received push-back (but finally prevailed) when suggested that we DO NOT keep adding to this file infinitely, and instead refactor it into one line:
+As an example, I received push-back (but finally prevailed) when suggesting that we DO NOT keep adding to this file infinitely, and instead refactor it into one line:
 
 ```js 
 // file: /src/utils/units.js
@@ -669,7 +677,7 @@ export default {
     384: '384px',
     541: '541px',
   
-  	// 😡 ... so if a you needed a width of 542px or a line-height of 31px in a MFE, 
+  	// So, for example, if you needed a width of 542px or a line-height of 31px in a MFE, 
     // you had to go here and add that line explicitly, bump up the versions, 
     // and re-link the repo so you could use it in a MFE, etc.
 };
