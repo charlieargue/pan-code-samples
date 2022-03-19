@@ -158,58 +158,13 @@ pie
 
 
 
-## 🚀 Impact Areas
+## 🚀 Positive Impact 
 
 
 
-Legend (so one/two word "keys") up top?
+### Tech Debt & Refactoring Journey
 
-Or just minimize and see if long "phrases" looks ok
-
-
-
-### **THis is IN ORDER as it happened!** 
-
-- [x] Converted remaining Class Components to Functional
-- [x] fixing numerous bugs and upgrading both legacy and current Design Systems (built with Ant Design & styled-components)
-- [x] file and folder organization, removing unnecessary prop drilling, 
-- [x] building testable components
-- [x] contextualizer for managing multiple contexts, view selector, Data Access Services, and global auth state
-- [x] separation of state management, App State from Server State (`react-query` was chosed over `swr`, and pure React.Context for state)
-- [x] service and DI (dependency injection) solutions
-- [x] fixing numerous memory leaks (manually, or with custom hooks like `useSafeDispatch` or `useIsMounted`)
-- [x] `msw` and `@mswjs/data` (mocking entire APIs)
-- [x] cache strategies and configuration
-- [x] rigorous and efficient testing and debugging (Jest, Cypress E2E Tests, and Postman)
-
-- [x] Built POC demonstrating React Context & Cache Management patterns and best practices ([ctx-options](https://github.com/charlieargue/ctx-options), **DEC 28, 2021**)  - `RTK` was chosen based on this repo
-- [x] After discussion, `react-query` was replaced with `RTK-Q` as Redux was already being used by team (and now that the need for something like `RTK-Q` was understood, refactoring begins of `react-query` to `RTK-Q`, **JAN 3, 2022**)
-- [x] Upgrades implemented in other MFEs under active development, as well as in MFE boilerplate used to kick-start other micro-frontends
-- [x] CLI, build tooling, and React-Scripts upgrades (working with ejected CRA and babel/Jest/webpack/eslint/prettier configurations and scripts)
-- [x] ~~composing MFEs into main container MFE,~~ coding up production fixes for various tooling
-- [x] Optimizing for performance, eliminating unnecessary renders
-- [x] page loading spinners, skeletons, and button loading animations and work flows (preventing double-taps, etc.)
-- [x] adding both local and global Error Boundaries (before app just crashed)
-
-
-
-
-
-
-
-## Tech Debt & Refactoring Journey
-
-A simplification highlighting key points in the path I took to successfully remove a huge amount of technical debt and refactor multiple MFEs, while simultaneously delivering much-loved new UI features:
-
-```
-      subgraph section
-        C
-        D
-        E
-        F
-        G
-      end
-```
+A simplified flow-chart highlighting key points in the path I took to successfully remove a huge amount of technical debt and refactor multiple MFEs, while simultaneously delivering much-loved new UI features:
 
 
 
@@ -219,9 +174,9 @@ graph TD
       B --> |file and folder RE-ORGANIZATION| C(building TESTABLE components)
       C --> D[SEPARATION of App State from Server State]
       C --> |removing unnecessary PROP DRILLING| E[service and DEPENDENCY INJECTION improvements]
-		  D --> F(fixing errors and potential MEMORY LEAKS)
+		  D --> F(fixing errors and potential MEMORY LEAKS with useSafeDispatch and useIsMounted)
 		  E --> F
-		  F --> G(useSafeDispatch and useIsMounted)
+		  F --> G(latest patterns and best practices)
 		  G --> |swr VS react-query VS RTK-Q| H(CACHE strategies and configuration)
 		  G --> |pure React Context VS react-tracked VS RTK| I(state management POC, ctx-options)
 		  H --> J(rigorous and efficient testing and debugging)
@@ -230,19 +185,26 @@ graph TD
 		  K --> L(Upgrades propagated to other MFEs and to MFE boilerplate)
 		  L --> |kick-starting other micro-frontends| M(Optimizing for performance and eliminating unnecessary renders)
 		  M --> |loading spinners, skeletons, and animations| N(adding Error Boundaries)
-		  N --> O(ffa)
-		  V(CLI, tooling, and React-Scripts upgrades) --> |babel / Jest / webpack / eslint / prettier configs| W(working with an ejected Creact-React-App)
-		  W --> X(coding up production fixes for tooling)
+		  N(CLI, tooling, and React-Scripts upgrades) --> |babel / Jest / webpack / eslint / prettier configs| O(working with an ejected Creact-React-App)
+		  O --> P(coding up production fixes for tooling)
+		  subgraph i
+        C
+        D
+        E
+      end
+      subgraph ii
+        G
+        H
+        I
+      end
+      subgraph iii
+        N
+        O
+        P
+      end
 ```
 
 
-
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] ctx-options, POC repo
-- [ ] refactoring to RTK-Q
 
 
 
