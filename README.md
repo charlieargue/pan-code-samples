@@ -1,6 +1,6 @@
-# Palo Alto Networks (PAN) Code Samples
+# Palo Alto Networks (PAN) — Code Samples
 
-Besides code samples, this document also served as a detailed "post-mortem" of my time spent at Palo Alto Networks.
+Code samples, demos and videos, and a detailed "post-mortem" of my time spent at Palo Alto Networks.
 
 
 
@@ -134,11 +134,21 @@ pie
 
 
 
-###### Popovers
+**Popover Samples: ** Incoming, Outgoing, and Rejected
 
 | ![image-20220317231604081](_markdown_assets/images/image-20220317231604081-7584316.png) | ![image-20220317231731005](_markdown_assets/images/image-20220317231731005-7584327.png) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | ![image-20220317231925933](_markdown_assets/images/image-20220317231925933.png) | ![image-20220317231958141](_markdown_assets/images/image-20220317231958141.png) |
+
+
+
+## 📚 Libraries I Introduced:
+
+| Development dependencies: | Production dependencies: |
+| ---- | ------------------------------------------------------------ |
+| *(some removed for security)*<br />- faker<br/>- msw and @mswjs/data<br/>- RTL:<br/>  • @testing-library/react<br/>  • @testing-library/user-event<br/>  • @testing-library/cypress<br/>- cypress: <br/>  • @cypress/react<br/>  • @cypress/webpack-dev-server<br/>  • cypress-plugin-tab<br/>  - @cypress/code-coverage<br/>    • babel-plugin-istanbul<br/>    • istanbul<br/>    • istanbul-lib-coverage<br/>    • nyc<br/>- @welldone-software/why-did-you-render<br/>- husky<br />- puppeteer | - @reduxjs/toolkit (RTK-Q) |
+
+
 
 
 
@@ -148,54 +158,34 @@ pie
 
 ## 🚀 Impact Areas
 
+### 
 
-
-### 📚 Libraries I Introduced:
-
-Production dependencies:
-
-- @reduxjs/toolkit (RTK-Q)
+#### 🍝 LEFT-OVERS:
 
 
 
-Development dependencies:
 
-*(some removed for security)*
 
-- faker
-- msw and @mswjs/data
-- RTL:
-  - @testing-library/react
-  - @testing-library/user-event
-  - @testing-library/cypress
-- cypress: 
-  - @cypress/react
-  - @cypress/webpack-dev-server
-  - cypress-plugin-tab
-  - @cypress/code-coverage
-    - babel-plugin-istanbul
-    - istanbul
-    - istanbul-lib-coverage
-    - nyc
-- @welldone-software/why-did-you-render
-- husky
-- puppeteer
+### **THis is IN ORDER as it happened!**
+
+`react-query` - first mentioned: **DEC, 13, 2021**
+
+`RTK-Q` - first mentioned:
+
+`ctx-options` - first mentioned:
 
 
 
-### Refactoring Journey STEPS
 
 
-
-**THis is IN ORDER as it happened!**
-
-1. I refactored AI, introducing the separation between Server State and App State via react-query (we **together chose** that over swr)
-2. Components: Class to Functional
-3. de-coupling, file and folder organization, componentization
-4. removing unnecessary prop drilling all over the place
-5. To clarify what I had done and the Context misunderstanding he had, he had me do a ctx-options POC repo to investigate additional options (I suggested react-tracked, he suggested RTK-Q since Redux was already being used everywhere) that would be easiest to adopt by the team
-6. He chose RTK-Q, and AI was refactored a 3rd time (1st by him, 2nd by me with react-query, and 3rd by me for RTK-Q)
-7. We then applied the same fixes to both NS and MFE-B and then they made it into every other MFE 
+1. Converted remaining Class Components to Functional
+2. react-query - round #1
+3. Componentization, de-coupling, file and folder organization
+4. Removing unnecessary prop drilling
+5. Built POC repo for establishing and clarifying React Context & Cache Management patterns and best practices (ctx-options, started `Dec 28, 2021`) 
+6. RTK-Q since Redux was already being used everywhere) that would be easiest to adopt by the team
+7. He chose RTK-Q, and AI was refactored a 3rd time (1st by him, 2nd by me with react-query, and 3rd by me for RTK-Q)
+8. We then applied the same fixes to both NS and MFE-B and then they made it into every other MFE 
 
 
 
@@ -286,6 +276,10 @@ graph TD
 ### "State Pyramid" / "Where to Put State" flow chart
 
 ![image-20220318203826917](/Users/karlgolka/PROJECTS/FYI/_typora_images/image-20220318203826917.png)
+
+
+
+### 🔥 Gant of What I worked on and When
 
 
 
