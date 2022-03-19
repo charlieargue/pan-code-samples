@@ -1,10 +1,17 @@
-# Palo Alto Networks (PAN) — Code Samples
+# ✅ Tasks:  
+
+- [ ] re-run spell checker (on ALL pages)
+- [ ] print, proof-read
+
+
+
+# PAN Code Samples
 
 Code samples, demos and videos, and a detailed "post-mortem" and case study of my time spent at Palo Alto Networks.
 
 
 
-## 🕙 How I Spent My Time
+# 🕙 How I Spent My Time
 
 ```mermaid
 pie
@@ -16,7 +23,9 @@ pie
 		"Testing" :  5
 ```
 
-## 💻 Code Samples
+# 💻 Code Samples
+
+<u>Terminology</u>:
 
 `RTK` = *Redux ToolKit* (Redux basically)
 
@@ -97,7 +106,7 @@ pie
 
 
 
-## 🎦 Demos and Videos Samples
+# 🎦 Demos and Videos Samples
 
 - [MSW Video](https://github.com/charlieargue/pan-code-samples/issues/1) (<2 min)
   - Follow-up video to team documentation I wrote, on how `msw` mocking works on React MFEs 
@@ -112,7 +121,7 @@ pie
 
 
 
-## 👾 Sample Cheatsheet
+# 👾 Sample Cheatsheet
 
 - Team 💙-ed this [MBP "Setup Cheatsheet"](other/mbp-setup-cheatsheet.md) I made for improved DX and productivity
 
@@ -120,7 +129,7 @@ pie
 
 
 
-## ⭐️ UI Features / Highlights
+# ⭐️ UI Features / Highlights
 
 <img src="_markdown_assets/images/image-20220317224458358.png" alt="image-20220317224458358" style="zoom:67%;" />
 
@@ -144,7 +153,7 @@ pie
 
 
 
-## 📚 Libraries I Introduced:
+# 📚 Libraries I Introduced:
 
 | Development dependencies: | Production dependencies: |
 | ---- | ------------------------------------------------------------ |
@@ -152,7 +161,7 @@ pie
 
 
 
-## 📝 Sample Design Documents
+# 📝 Sample Design Documents
 
 Fragment from a `Hi-Level Design Doc` of all Asset Transfer workflows, helping to illustrate clearly:
 
@@ -166,11 +175,11 @@ Fragment from a `Hi-Level Design Doc` of all Asset Transfer workflows, helping t
 
 
 
-## 🚀 Positive Impact 
+# 🚀 Positive Impact 
 
 
 
-### Testing & Mocking
+### `Impact on:` Testing & Mocking
 
 - Introduced a modern **testing infrastructure** **and tooling** (`msw`, Jest, Cypress), centralized so developers could use them from any MFE (including Jest and Cypress code coverage)
 
@@ -185,6 +194,7 @@ Fragment from a `Hi-Level Design Doc` of all Asset Transfer workflows, helping t
 - Guided team on what to test and how to test (see [Testing Pyramid](https://github.com/charlieargue/multi-cart#-testing), eg. how Jest component tests should check for an even handler being called where-as E2E tests should test that a toast message appeared, etc.)
 
 - **🚀 IMPACT:** 
+  
   - Solved FE team's primary pain point of blockage by BE dysfunction and unstable BE environments
   - Super-charged development velocity and allowed for rapid prototyping
   - Developers stopped putting messy mocking code all over the codebases
@@ -194,10 +204,8 @@ Fragment from a `Hi-Level Design Doc` of all Asset Transfer workflows, helping t
   - Greatly improved team's capability to deliver bug-free features
   
   
-  
-  
 
-### UI/UX Design Impact:
+### `Impact on:` UI/UX Design
 
 - Made the designer very happy with pixel-perfect build-outs of his Figma prototypes (thx [PerfectPixel](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?hl=en)!)
 - Provided frequent useful feedback on better UI design (eg. better design of toasts and alerts for popovers in a DataTable context)
@@ -205,7 +213,7 @@ Fragment from a `Hi-Level Design Doc` of all Asset Transfer workflows, helping t
 
 
 
-### Mentoring to Staff Engineer 
+### `Impact on:` Supervising Staff Engineer 
 
 - [ ] Provided regular guidance to my supervising **staff engineer** on the **latest** React (and general software) best practices, patterns, and trends — he  adopted almost all of my suggestions, including but not limited to:
   - [ ] Advanced use of markdown and **Typora** (a markdown editor)
@@ -250,11 +258,8 @@ Fragment from a `Hi-Level Design Doc` of all Asset Transfer workflows, helping t
   
     
   
-    
-  
-  
 
-### Mentoring to Other Junior & Senior Team Members
+### `Impact on:` Other Junior & Senior Team Members
 
 - [ ] taking less experienced dev under my wing and helping thru frequent pair programming sessions
 - [ ] guidance on entire dev workflows, specifically how to use:
@@ -265,7 +270,7 @@ Fragment from a `Hi-Level Design Doc` of all Asset Transfer workflows, helping t
 
 
 
-### Team Productivity & DX
+### `Impact on:` Team Productivity & DX
 
 - [ ] repetitive chore automation 💚 (puppeteer, saving hours of dev time, (dozens of MFEs and environments!)
   - [ ] Before & After Processes: **token automation**
@@ -277,7 +282,34 @@ Fragment from a `Hi-Level Design Doc` of all Asset Transfer workflows, helping t
 
 
 
-### Future Directions
+### `Impact on:` Agile and Project Management
+
+<u>Introduced</u>:
+
+- proper Acceptance Criteria
+- epic kick-offs (w/ design-docs for medium-to-hard stories)
+- post-mortems
+- 1-on-1s 
+
+<u>Guided project management on:</u>
+
+- having Retros at end of sprint instead of during sprint
+- NOT re-defining Stand-ups (they wanted to change them to be normalized around features instead of team members)
+- splitting FE from BE in stand-ups
+- de-coupling FE from BE in stories (separate integration stories)
+- keeping stand-ups short, using call-outs in JIRA and slack, and leaning out amount of meetings
+- how to switch from Visual to Text editing mode
+- how to use markdown auto-outlining syntax
+- what is an epic, how to write Acceptance Criteria, etc.
+- how to attach images inline (and not at bottom) of description
+- how to insert markdown tables and formatted code blocks
+- benefits of markdown, mocking API servers, creating sub-tasks (of stories), linking issues, sharing Postman collections, and more
+- lessening the amount of meetings (amount was affecting the team's development productivity)
+- guidance on ceremonies: when and how to have/do Sprint Planning
+
+
+
+### `Impact on:` Future Directions
 
 Created momentum, enthusiasm, and consensus on future architectural decisions and upgrades, such as:
 
@@ -286,53 +318,13 @@ Created momentum, enthusiasm, and consensus on future architectural decisions an
 - [ ] running Cypress E2E tests in **CICD** via **GitHub actions** and **Cypress Dashboard** (provided .yml scripts for running E2E tests in parallel, across multiple machines)
 - [ ] guidance on how to create **"Testing Sandboxes"** (by dynamically generating test roles, accounts, users, assets, etc.)
 - [ ] guidance on how to setup screenshot **UI Regression Testing** (via Happo, StoryBook, and Cypress)
-
-
-
-### Tech Debt
-
-* ctx-options
-* rtk-query / separating App State from Server State
-* class -> functional components
-* state pyramid (include pic like 🛍 MC)
-* etc...
+- [ ] guidance on using [Plop](https://plopjs.com/) to **automatically generate** and scaffold new files with consistency
 
 
 
 
 
-### Agile and Project Management
-
-Introduced:
-
-- proper Acceptance Criteria
-- epic kick-offs (w/ design-docs for medium-to-hard stories)
-- post-mortems
-- 1-on-1s 
-
-
-
-Guided project management on:
-
-- [ ] having Retros at end of sprint instead of during sprint
-- [ ] NOT re-defining Stand-ups (they wanted to change them to be normalized around features instead of team members)
-- [ ] splitting FE from BE in stand-ups
-- [ ] de-coupling FE from BE in stories (separate integration stories)
-- [ ] keeping stand-ups short, using call-outs in JIRA and slack, and leaning out amount of meetings
-- [ ] how to switch from Visual to Text editing mode
-- [ ] how to use markdown auto-outlining syntax
-- [ ] what is an epic, how to write Acceptance Criteria, etc.
-- [ ] how to attach images inline (and not at bottom) of description
-- [ ] how to insert markdown tables and formatted code blocks
-- [ ] benefits of markdown, mocking API servers, creating sub-tasks (of stories), linking issues, sharing Postman collections, and more
-- [ ] lessening the amount of meetings (amount was affecting the team's development productivity)
-- [ ] guidance on ceremonies: when and how to have/do Sprint Planning
-
-
-
-
-
-## 📊 Other Resources
+# 📊 Other Resources and Samples
 
 
 
@@ -429,12 +421,6 @@ graph TD
 
 
 
-### "Napkin Sketch" of Testing & Prototyping Pyramid for PAN
-
-<img src="_markdown_assets/images/IMG_0776.png" alt="IMG_0776" style="zoom:67%;" />
-
-
-
 ### Example of Clear Communication (in JIRA)
 
 ![Pasted_Image_3_19_22__9_46_AM](_markdown_assets/images/Pasted_Image_3_19_22__9_46_AM.png)
@@ -451,7 +437,7 @@ graph TD
 
 
 
-# Testimonials & Feedback
+# 🗣 Testimonials & Feedback
 
 `Mazen Ghalayini` — Staff React Engineer, Direct Supervisor ([LinkedIn](https://www.linkedin.com/in/mazen-g-a76139179/), mghalayini@paloaltonetworks.com)
 
@@ -536,7 +522,7 @@ graph TD
 
   
 
-# 🗣 Testimonials / Feedback
+
 
 ![image-20211209153206942](/Users/karlgolka/PROJECTS/FYI/_typora_images/image-20211209153206942-7662477.png)
 
@@ -558,20 +544,70 @@ graph TD
 
 
 
+# 🔗 Other Code Samples / Repos
+
+Not related to Palo Alto Networks:
+
+- https://github.com/charlieargue/multi-cart#-code-samples (React • GQL • Serverless)
+- https://github.com/charlieargue/multi-cart-pg (React • GQL • PERN stack + Typescript)
+- https://github.com/charlieargue/multi-cart-MRP-containers (Minimum Reproducible Project) 
+  - made while trouble-shooting my GitHub Actions `.yml` script
+  - helped me successfully run Cypress E2E specs across multiple machines in parallel 
+  - helped in fixing CICD `yarn` and `npm` caching issues
+- https://github.com/charlieargue/clickup-july-table (Successfully-passed Angular Interview take-home test for [ClickUp.com](https://clickup.com/))
+
+
+
 
 
 # ⏳ Reasons for Transition
 
-- [ ] Hanford / pm and "we decided to re-define what an epic is: an epic is a sub-task now"
-- [ ] BE and PM dysfunction with no hope of course-correction in any reasonable amount of time
-- [ ] Mazen Ghalayini (things like his code for incrementally refactoring from pixels to rem):
+
+
+### #1) Project Management
+
+Project Management lacked skills,  did Agile "their way", only adding to already-existing serious dysfunction, and proved impervious to course correction and advice:
+
+
+
+#### They decided to <u>re-define an Epic</u> down to the Sub-Task level in JIRA's hierarchy
+
+- thereby breaking how branches are made and used
+- and creating exponentially more epics, stories, and sub-tasks than necessary
+
+![image-20220319123108996](/Users/karlgolka/PROJECTS/FYI/_typora_images/image-20220319123108996.png)
+
+
+
+#### They wanted to <u>re-define Stand-ups</u> so as to normalize them around features instead of team members
+
+- so instead of 
+  - **Person 1**: `yesterday, today, blockers: All Features` 
+  - **Person 2**: `yesterday, today, blockers: All Features`
+  - etc...
+- they wanted:
+  - **Feature A**: *Person 1:* `yesterday, today, blockers`
+  - **Feature A**: *Person 2:* `yesterday, today, blockers`
+  - **Feature B**: *Person 1:* `yesterday, today, blockers`
+  - **Feature B**: *Person 2:* `yesterday, today, blockers`
+  - **Feature C**: *Person 1:* `yesterday, today, blockers`
+  - **Feature C**: *Person 2:* `yesterday, today, blockers`
+- this was decided upon in a context of already-dysfunctional Agile processes, where daily Stand-up ceremonies regularly took more than one hour and did little to relieve team blockage
+
+
+
+### #2) Supervising Staff Engineer
+
+I received push-back (but finally prevailed) when suggested that we DO NOT keep adding to this file infinitely, and instead refactor it into one line:
 
 ```js 
 // file: /src/utils/units.js
 
 // EXAMPLE USAGE: `padding: ${units[30]};`
 
+// -----------------------
 // 🔴 BEFORE:       
+// -----------------------
 export default {
     0: '0',
     1: '1px',
@@ -633,16 +669,27 @@ export default {
     384: '384px',
     541: '541px',
   
-  	// 🔴 etc... so if a you, for example, needed a width of 542px or a line-height of 31px in a MFE, you had to go here and add that line explicitly, and re-link the repo so you could use it in a MFE
+  	// 😡 ... so if a you needed a width of 542px or a line-height of 31px in a MFE, 
+    // you had to go here and add that line explicitly, bump up the versions, 
+    // and re-link the repo so you could use it in a MFE, etc.
 };
 
+// -----------------------
 // ✅ AFTER: 
-// I proposed refactoring this file to a function instead of a never-ending object map, like so:
+// -----------------------
 const remCalc = (pixelValue) => {
-   // for now: 
    return pixelValue === 0 ? '0' : `'${value}px'`;
-   // then later: pixelValue / x = rems ...
-   // and much later: just use rems ... (once legacy ASP.NET CSS issue refactored)
+
+   // THEN LATER:       pixelValue / x = rems 
+   // AND MUCH LATER:   switch to just using rems, once legacy ASP.NET CSS issue fixed
 };
 ```
+
+
+
+
+
+# ✉️ Contact Me
+
+My personal website is https://karlgolka.com/ and you can email me at contact@karlgolka.com 
 
