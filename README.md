@@ -18,7 +18,9 @@ pie
 
 ## 💻 Code Samples
 
-`RTK-Q` = *Redux ToolKit - Query*
+`RTK` = *Redux ToolKit* (Redux basically)
+
+`RTK-Q` = *Redux ToolKit - Query* (data fetching, cache management)
 
 `MFE` = *Micro-Frontend*
 
@@ -67,11 +69,11 @@ pie
 ### POC / Spike Story Examples
 
 - [ctx-options ("Context Options") ](https://github.com/charlieargue/ctx-options)
-  - GitHub repo I made showing patterns for avoiding **React Context** "over-rendering", as well as data fetching and caching
+  - GitHub repo I made showing patterns for avoiding **React Context** "over-rendering" and state management
   - 🚀**IMPACT:** 
     - Clarified a critical misunderstanding of **React Context**, causing dev leadership to bypass it unnecessarily and reach for other solutions (Redux) where it would suffice
     - Introduced a technique for optimizing performance, fixing memory leaks, and eliminating unnecessary over-renders (via [Why Did You Render](https://github.com/welldone-software/why-did-you-render) library and a mix of standard solutions like `useSafeDispatch` or removing unnecessary dispatch calls)
-    - `RTK-Q` was chosen team-wide based on this proof-of-concept, and React Context was restored as a primary solution for state management (both local and global)
+    - `RTK` was chosen team-wide based on this proof-of-concept, and React Context was restored as a viable and primary solution for state management (both local and global)
 
 
 
@@ -134,7 +136,7 @@ pie
 
 
 
-**Popover Samples: ** Incoming, Outgoing, and Rejected
+**Popover Samples:** Incoming, Outgoing, and Rejected
 
 | ![image-20220317231604081](_markdown_assets/images/image-20220317231604081-7584316.png) | ![image-20220317231731005](_markdown_assets/images/image-20220317231731005-7584327.png) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -168,35 +170,6 @@ pie
 
 ### **THis is IN ORDER as it happened!**
 
-`react-query` - first mentioned: **DEC, 13, 2021**
-
-`RTK-Q` - first mentioned:
-
-`ctx-options` - first mentioned:
-
-
-
-
-
-1. Converted remaining Class Components to Functional
-2. react-query - round #1
-3. Componentization, de-coupling, file and folder organization
-4. Removing unnecessary prop drilling
-5. Built POC repo for establishing and clarifying React Context & Cache Management patterns and best practices (ctx-options, started `Dec 28, 2021`) 
-6. RTK-Q since Redux was already being used everywhere) that would be easiest to adopt by the team
-7. He chose RTK-Q, and AI was refactored a 3rd time (1st by him, 2nd by me with react-query, and 3rd by me for RTK-Q)
-8. We then applied the same fixes to both NS and MFE-B and then they made it into every other MFE 
-
-
-
-### Or Also, IN ORDER:
-
-- [ ] Refactoring EVERYTHING in ambr-impr (app.js, state and service useContext injection, no reducer yet, but decoupling and dividing everything! Oh boy)
-- [ ] lots of discovery and planning with Mazen regarding AT and R-S and how to fork/track CRA team updates, extension hooks, templates for CRA, and my questions and gameplan for the amber-tools upgrades specifically and AT1 vs AT2/3… future…, re-exporting and index.js, etc...
-  - [ ]  getting a grip on what amber-tools really is (an ejected CRA with b/j/w/l/p code from that time, along with any customizations added along the way…
-- [ ] mazen long work session deploying SPUI + NetSec changes, msw-prod-fix, and researching jest AT setups more, and discussing RTK-query and redux and next steps with amb-imp upgrades!
-- [ ] long call w/ Mazen (until 9:30pm!) unblocking issue after issue, suddenly things popping up, argh… going over my amb-imp refactoring in detail, discussing best patterns for state, service DI, contextualizer, view selector, routing, keying services, singletons, service hub, making views as stand-alone and testable as possible, react-query staleTime and options, etc...   DAS and globalState.auth
-- [ ] **Optimizing for performance after refactoring**🔵 taking big step back and fully grokking the useContext unnecessary render caveat and applicable solutions/options 🔵 4 options explored fully, POC ctx-options, best choices made for AI performance refactoring ... 
 
 
 
@@ -204,43 +177,30 @@ pie
 
 
 
-### UNSORTED
 
-- [ ] 🔥(do a gant chart! just timeline!) use my notes/Ops to make it super realistic!
 
-- [ ] lots of dealing with **TECH DEBT** (hit the ground sprinting cleaning up tech debt!):
-- [ ] **refactoring entire MFE after 1 month being there!!!**
-  * then refactoring another, and then refactoring the MFE-boilerplate so all future MFEs have the same standards and patterns
-- [ ] service architecture / DI refactoring
-- [ ] upgrading away from legacy class components
-- [ ] DRY-ing / SRP-ing / Tao of React-ing EVERYTHING!
-- [ ] the MFEs/apps/components were basically UNTESTABLE before this!
-- [ ] rigorous and efficient testing
-- [ ] Msw 
-- [ ] useContext upgrade
-- [ ] ErrorBoundary (for every MFE!), before just crashed app, now EVERY MFE is safely container and doesn't crash and shows nice error!
-- [ ] fixed broken error handling for all ambr-impr!
-- [ ] rtk-q
-- [ ] better statemanagement (where to put state, Context clarificaiton, staff engineer was against using context because of a fundamental misunderstanding of how it works, see ctx-options)
-- [ ] caching strategies
 
-- [ ] fixing numerous memory leaks (manually, or with custom hooks like `useSafeDispatch` or `useIsMounted`)
-- [ ] fixing numerous bugs and making upgrades to both legacy and current design systems (built with Ant Design & styled-components)
-- [ ] Service_DI -->
-- [ ] File-and-Component-Separation -->
-- [ ] msw/d -->
-- [ ] Jest-&-E2E-Tests-->
-- [ ] MicroFEs-&-MFE-Boilerplate
+- [ ] General refactoring of MFEs: 
+  - [ ] Converted remaining Class Components to Functional
+  - [ ] fixing numerous bugs and upgrading both legacy and current Design Systems (built with Ant Design & styled-components)
+  - [ ] Breaking up into components, file and folder organization, de-coupling entire MFEs when "everything is in App.js", removing unnecessary prop drilling, DRY-ing and SRP-ing
+  - [ ] building testable components
+  - [ ] contextualizer for managing multiple contexts, view selector, Data Access Services, and global auth state
+  - [ ] separation of state management, App State from Server State (`react-query` was chosed over `swr`, and pure React.Context for state)
+  - [ ] service and DI (dependency injection) solutions
+  - [ ] fixing numerous memory leaks (manually, or with custom hooks like `useSafeDispatch` or `useIsMounted`)
+  - [ ] `msw` and `@mswjs/data` (mocking entire APIs)
+  - [ ] cache strategies and configuration
 
-- [ ] holy moly, so:
-- [ ] Decoupled everything and moved it out of app.js
-- [ ] Upgraded App.js to functional component
-- [ ] Have 2 providers (service and state)
-- [ ] Wrapped App in HOC afterall so works in both local & SPUI
-- [ ] Started removing props drilling deps that are now unecessary, WIP
-- [ ] Added safe dispatch and generic async reducer
-- [ ] Started refactoring all setState calls to use dispatch, WIP
-- [ ] wiring up ErrorBoundary to SPUI so all MFEs benefit
+- [ ] Built POC demonstrating React Context & Cache Management patterns and best practices ([ctx-options](https://github.com/charlieargue/ctx-options), **DEC 28, 2021**)  - `RTK` was chosen based on this repo
+- [ ] After discussion, `react-query` was replaced with `RTK-Q` as Redux was already being used by team (and now that the need for something like `RTK-Q` was understood, refactoring begins of `react-query` to `RTK-Q`, **JAN 3, 2022**)
+- [ ] Upgrades implemented in other MFEs under active development, as well as in MFE boilerplate used to kick-start other micro-frontends
+- [ ] CLI, build tooling, and React-Scripts upgrades (working with ejected CRA and babel/Jest/webpack/eslint/prettier configurations and scripts)
+- [ ] composing MFEs into main container MFE, coding up production fixes for various tooling
+- [ ] Optimizing for performance, eliminating unnecessary renders
+- [ ] page loading spinners, skeletons, and button loading animations and work flows (preventing double-taps, etc.)
+- [ ] adding both local and global Error Boundaries (before app just crashed)
+- [ ] rigorous and efficient testing and debugging (Jest, Cypress E2E Tests, and Postman)
 
 
 
@@ -249,6 +209,8 @@ pie
 
 
 ## Tech Debt & Refactoring Journey
+
+A simplification and generalization of the path taken to successfully remove a huge amount of technical debt:
 
 ```mermaid
 graph TD
@@ -279,7 +241,9 @@ graph TD
 
 
 
-### 🔥 Gant of What I worked on and When
+### 🔥 Gantt of What I worked on and When
+
+🔥(do a gantt chart! just timeline!) use my notes/Ops to make it super realistic!
 
 
 
