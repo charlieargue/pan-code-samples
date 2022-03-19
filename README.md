@@ -67,8 +67,9 @@ pie
 - [ctx-options ("Context Options") ](https://github.com/charlieargue/ctx-options)
   - GitHub repo I made showing patterns for avoiding **React Context** "over-rendering", as well as data fetching and caching
   - 🚀**IMPACT:** 
-    - Clarified a critical misunderstanding of **React Context**, causing dev leadership to bypass it unnecessarily and reach for other solutions (Redux) where it would suffice.
-    - `RTK-Q` was chosen team-wide based on this proof-of-concept, and React Context was restored as a primary solution for state management (both local and global).
+    - Clarified a critical misunderstanding of **React Context**, causing dev leadership to bypass it unnecessarily and reach for other solutions (Redux) where it would suffice
+    - Introduced a technique for optimizing performance, fixing memory leaks, and eliminating unnecessary over-renders (via [Why Did You Render](https://github.com/welldone-software/why-did-you-render) library and a mix of standard solutions like `useSafeDispatch` or removing unnecessary dispatch calls)
+    - `RTK-Q` was chosen team-wide based on this proof-of-concept, and React Context was restored as a primary solution for state management (both local and global)
 
 
 
@@ -143,7 +144,59 @@ pie
 
 
 
-## Main Impact Areas
+## 🚀 Impact Areas
+
+
+
+
+
+### Refactoring Journey STEPS
+
+
+
+**THis is IN ORDER as it happened!**
+
+1. I refactored AI, introducing the separation between Server State and App State via react-query (we **together chose** that over swr)
+2. To clarify what I had done and the Context misunderstanding he had, he had me do a ctx-options POC repo to investigate additional options (I suggested react-tracked, he suggested RTK-Q since Redux was already being used everywhere) that would be easiest to adopt by the team
+3. He chose RTK-Q, and AI was refactored a 3rd time (1st by him, 2nd by me with react-query, and 3rd by me for RTK-Q)
+4. We then applied the same fixes to both NS and MFE-B and then they made it into every other MFE 
+
+
+
+### Or Also, IN ORDER:
+
+- [ ] Refactoring EVERYTHING in ambr-impr (app.js, state and service useContext injection, no reducer yet, but decoupling and dividing everything! Oh boy)
+- [ ] lots of discovery and planning with Mazen regarding AT and R-S and how to fork/track CRA team updates, extension hooks, templates for CRA, and my questions and gameplan for the amber-tools upgrades specifically and AT1 vs AT2/3… future…, re-exporting and index.js, etc...
+  - [ ]  getting a grip on what amber-tools really is (an ejected CRA with b/j/w/l/p code from that time, along with any customizations added along the way…
+- [ ] mazen long work session deploying SPUI + NetSec changes, msw-prod-fix, and researching jest AT setups more, and discussing RTK-query and redux and next steps with amb-imp upgrades!
+- [ ] long call w/ Mazen (until 9:30pm!) unblocking issue after issue, suddenly things popping up, argh… going over my amb-imp refactoring in detail, discussing best patterns for state, service DI, contextualizer, view selector, routing, keying services, singletons, service hub, making views as stand-alone and testable as possible, react-query staleTime and options, etc...   DAS and globalState.auth
+- [ ] **Optimizing for performance after refactoring**🔵 taking big step back and fully grokking the useContext unnecessary render caveat and applicable solutions/options 🔵 4 options explored fully, POC ctx-options, best choices made for AI performance refactoring ... 
+
+
+
+
+
+
+
+### UNSORTED
+
+- [ ] 🔥(do a gant chart! just timeline!) use my notes/Ops to make it super realistic!
+
+- [ ] lots of dealing with **TECH DEBT** (hit the ground sprinting cleaning up tech debt!):
+- [ ] **refactoring entire MFE after 1 month being there!!!**
+  * then refactoring another, and then refactoring the MFE-boilerplate so all future MFEs have the same standards and patterns
+- [ ] service architecture / DI refactoring
+- [ ] upgrading away from legacy class components
+- [ ] DRY-ing / SRP-ing / Tao of React-ing EVERYTHING!
+- [ ] the MFEs/apps/components were basically UNTESTABLE before this!
+- [ ] rigorous and efficient testing
+- [ ] Msw 
+- [ ] useContext upgrade
+- [ ] ErrorBoundary (for every MFE!), before just crashed app, now EVERY MFE is safely container and doesn't crash and shows nice error!
+- [ ] fixed broken error handling for all ambr-impr!
+- [ ] rtk-q
+- [ ] better statemanagement (where to put state, Context clarificaiton, staff engineer was against using context because of a fundamental misunderstanding of how it works, see ctx-options)
+- [ ] caching strategies
 
 - [ ] fixing numerous memory leaks (manually, or with custom hooks like `useSafeDispatch` or `useIsMounted`)
 - [ ] fixing numerous bugs and making upgrades to both legacy and current design systems (built with Ant Design & styled-components)
@@ -164,15 +217,6 @@ pie
 - [ ] wiring up ErrorBoundary to SPUI so all MFEs benefit
 
 
-
-**THis is IN ORDER as it happened!**
-
-- [ ] Refactoring EVERYTHING in ambr-impr (app.js, state and service useContext injection, no reducer yet, but decoupling and dividing everything! Oh boy)
-- [ ] lots of discovery and planning with Mazen regarding AT and R-S and how to fork/track CRA team updates, extension hooks, templates for CRA, and my questions and gameplan for the amber-tools upgrades specifically and AT1 vs AT2/3… future…, re-exporting and index.js, etc...
-  - [ ]  getting a grip on what amber-tools really is (an ejected CRA with b/j/w/l/p code from that time, along with any customizations added along the way…
-- [ ] mazen long work session deploying SPUI + NetSec changes, msw-prod-fix, and researching jest AT setups more, and discussing RTK-query and redux and next steps with amb-imp upgrades!
-- [ ] long call w/ Mazen (until 9:30pm!) unblocking issue after issue, suddenly things popping up, argh… going over my amb-imp refactoring in detail, discussing best patterns for state, service DI, contextualizer, view selector, routing, keying services, singletons, service hub, making views as stand-alone and testable as possible, react-query staleTime and options, etc...   DAS and globalState.auth
-- [ ] **Optimizing for performance after refactoring**🔵 taking big step back and fully grokking the useContext unnecessary render caveat and applicable solutions/options 🔵 4 options explored fully, POC ctx-options, best choices made for AI performance refactoring
 
 
 
@@ -199,26 +243,6 @@ graph TD
 
 
 
-### Refactoring and Tech Debt flow chart / process 
-
-- [ ] 🔥(do a gant chart! just timeline!) use my notes/Ops to make it super realistic!
-
-* lots of dealing with **TECH DEBT** (hit the ground sprinting cleaning up tech debt!):
-* **refactoring entire MFE after 1 month being there!!!**
-  * then refactoring another, and then refactoring the MFE-boilerplate so all future MFEs have the same standards and patterns
-* service architecture / DI refactoring
-* upgrading away from legacy class components
-* DRY-ing / SRP-ing / Tao of React-ing EVERYTHING!
-* the MFEs/apps/components were basically UNTESTABLE before this!
-* rigorous and efficient testing
-* Msw 
-* useContext upgrade
-* ErrorBoundary (for every MFE!), before just crashed app, now EVERY MFE is safely container and doesn't crash and shows nice error!
-* fixed broken error handling for all ambr-impr!
-* rtk-q
-* better statemanagement (where to put state, Context clarificaiton, staff engineer was against using context because of a fundamental misunderstanding of how it works, see ctx-options)
-* caching strategies
-
 
 
 
@@ -229,7 +253,7 @@ graph TD
 
 ### Testing & Mocking
 
-- Introduced a modern **testing infrastructure** **and tooling** (`msw`, Jest, Cypress), centralized so developers could use them from any MFE 
+- Introduced a modern **testing infrastructure** **and tooling** (`msw`, Jest, Cypress), centralized so developers could use them from any MFE (including Jest and Cypress code coverage)
 
 - Setup next-generation **API mocking** (`msw`), that allowed effortless request interception at the network level, and seamless re-use the same mock definitions for testing, development, and debugging
 
@@ -289,6 +313,7 @@ graph TD
 - [ ] linking, starting, and msw command shortcuts (via `zsh` config)
 - [ ] no more prettier sheesh! introduced husky
 - [ ] VSCode extensions, chrome extensions, see MBP cheatsheet
+- [ ] husky & the DISABLE_PRETTIER flag (before that, each time a developer would save their file, the prettier auto-format would run, losing their place on the screen, un-folding all folded code, and causing all sorts of other headaches)
 
 
 
@@ -296,9 +321,9 @@ graph TD
 
 Created momentum, enthusiasm, and consensus on **future** architectural decisions and upgrades, such as:
 
-- [ ] upgrading to Next.js (team now even considering Remix!)
-- [ ] migrating to a monorepo, such as NX  (team now even considering TurboRepo!)
-- [ ] running Cypress E2E tests in CICD via GitHub actions (provided GitHub .yml scripts for running E2E tests in parallel, across multiple machines)
+- [ ] upgrading to **Next.js** (team now even considering **Remix**!)
+- [ ] migrating to a **monorepo**, such as **NX**  (team now even considering **TurboRepo**!)
+- [ ] running Cypress E2E tests in **CICD** via **GitHub actions** and **Cypress Dashboard** (provided .yml scripts for running E2E tests in parallel, across multiple machines)
 
 
 
