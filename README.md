@@ -319,6 +319,8 @@ Guided project management on:
 
 
 
+## 📊 Other Resources
+
 ### Tech Debt & Refactoring Journey
 
 A simplified flow-chart highlighting key points in the path I took to successfully remove a huge amount of technical debt and refactor multiple MFEs, while simultaneously delivering much-loved new UI features:
@@ -389,15 +391,13 @@ graph TD
 
 
 
-### 🔥 Gantt of What I worked on and When
-
-🔥(do a gantt chart! just timeline!) use my notes/Ops to make it super realistic!
-
-
-
 
 
 # Testimonials & Feedback
+
+Staff Engineer, Direct Supervisor
+
+
 
 
 
@@ -405,6 +405,38 @@ graph TD
 
 | <img src="_markdown_assets/images/image-20220318155554872-7645128.png" alt="image-20220318155554872" style="zoom:67%;" /> | ![5lp](_markdown_assets/images/5lp.gif) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
+
+
+
+### Feedback from Project Management
+
+> "I don't want you to quit" — *Hanford Choy*, PM
+>
+> "BTW, I gave you the most exciting feature that I believe will be used by a lot of customers :)."  — *Hanford Choy*, PM
+
+
+
+### Feedback from Supervising Staff Engineers
+
+> "You're doing great!" — *Mazen Ghalayini* `Feb 15, 2022`
+>
+> "...you know, also, we lost a lot of people, we're kind of under siege from [a lot of directions]... so yeah, I think your suggestion is a good one that we need to try..."  [re: to do a POC using GraphQL] — *Vish Ramamurthy*,  `Feb 23, 2022`
+
+
+
+
+
+### Feedback from Designer
+
+> "You're selling it, that's exactly what I'm looking for!" [re: toasts, popover messaging, and row highlighting proposals] 
+>
+> — *Alexander Jones* `Feb 23, 2022`
+
+
+
+### Feedback from BE Team
+
+> "I agree with Karl, actually." [re: Big Query vs MySQL confusion on Asset Transfer] — *Palak Mehrotra* `Feb 23, 2022`
 
 
 
@@ -417,12 +449,6 @@ graph TD
 - [ ] ![image-20220318160135522](/Users/karlgolka/PROJECTS/FYI/_typora_images/image-20220318160135522.png)
 
   
-
-- [ ] HF:
-
-  - [ ] BTW, I gave you the most exciting feature that I believe will be used by a lot of customers, CSP-10112 :).
-
-- [ ] pics
 
 - [ ] see all 1-on-1s !!!!! (.md)
 
