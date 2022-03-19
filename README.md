@@ -138,9 +138,9 @@ pie
 
 **Popover Samples:** Incoming, Outgoing, and Rejected
 
-| ![image-20220317231604081](_markdown_assets/images/image-20220317231604081-7584316.png) | ![image-20220317231731005](_markdown_assets/images/image-20220317231731005-7584327.png) |
+| <img src="_markdown_assets/images/image-20220319084702253.png" alt="image-20220319084702253" style="zoom:67%;" /> | <img src="/Users/karlgolka/PROJECTS/FYI/_typora_images/image-20220319084829923.png" alt="image-20220319084829923" style="zoom:67%;" /> |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![image-20220317231925933](_markdown_assets/images/image-20220317231925933.png) | ![image-20220317231958141](_markdown_assets/images/image-20220317231958141.png) |
+| <img src="/Users/karlgolka/PROJECTS/pan-code-samples/_markdown_assets/images/image-20220319084932623.png" alt="image-20220319084932623" style="zoom:67%;" /> | <img src="_markdown_assets/images/image-20220317231958141.png" alt="image-20220317231958141" style="zoom:87%;" /> |
 
 
 
@@ -152,7 +152,15 @@ pie
 
 
 
+## 📝 Sample Design Documents
 
+Fragment from a `Hi-Level Design Doc` of all Asset Transfer workflows, helping to illustrate clearly:
+
+* `Source` VS `Destination` users
+* which MFE the action or event occurs in, i.e. ⏸ **`CPT`** VS 🛡 **`NS`** 
+* and current limitations (`FUTURE ENHANCEMENTS`)
+
+![image-20220319081815248](/Users/karlgolka/PROJECTS/FYI/_typora_images/image-20220319081815248.png)
 
 
 
@@ -265,6 +273,7 @@ pie
 - [ ] no more prettier sheesh! introduced husky
 - [ ] VSCode extensions, chrome extensions, see MBP cheatsheet
 - [ ] husky & the DISABLE_PRETTIER flag (before that, each time a developer would save their file, the prettier auto-format would run, losing their place on the screen, un-folding all folded code, and causing all sorts of other headaches)
+- [ ] using [loom](https://www.loom.com/) videos to quickly and easily communicate status updates on features, and much more
 
 
 
@@ -296,7 +305,7 @@ Created momentum, enthusiasm, and consensus on future architectural decisions an
 
 Introduced:
 
-- proper epic and story Acceptance Criteria
+- proper Acceptance Criteria
 - epic kick-offs (w/ design-docs for medium-to-hard stories)
 - post-mortems
 - 1-on-1s 
@@ -306,14 +315,18 @@ Introduced:
 Guided project management on:
 
 - [ ] having Retros at end of sprint instead of during sprint
+- [ ] NOT re-defining Stand-ups (they wanted to change them to be normalized around features instead of team members)
 - [ ] splitting FE from BE in stand-ups
 - [ ] de-coupling FE from BE in stories (separate integration stories)
 - [ ] keeping stand-ups short, using call-outs in JIRA and slack, and leaning out amount of meetings
 - [ ] how to switch from Visual to Text editing mode
 - [ ] how to use markdown auto-outlining syntax
 - [ ] what is an epic, how to write Acceptance Criteria, etc.
+- [ ] how to attach images inline (and not at bottom) of description
+- [ ] how to insert markdown tables and formatted code blocks
 - [ ] benefits of markdown, mocking API servers, creating sub-tasks (of stories), linking issues, sharing Postman collections, and more
 - [ ] lessening the amount of meetings (amount was affecting the team's development productivity)
+- [ ] guidance on ceremonies: when and how to have/do Sprint Planning
 
 
 
@@ -389,46 +402,69 @@ graph TD
 
 
 
+### My "JIRA Process" 
 
+From a FE Perspective:
+
+```mermaid
+graph TD
+      A(("🎽 Start with an EPIC")) --> B("🏋️‍♀️Medium-to-hard sprint points need a short DESIGN DOC")
+      B --> |"🎨 UI/UX Figma, prototypes, hand-offs"| C("📌 `PIN POINTS` mapping each endpoint to UI/UX")
+      C --> D("📬 POSTMAN  endpoints, payloads, etc.")
+      D ==> |if design doc exists| E{"🖋 Team sign-off on design doc"}
+      E --> |Assign to team members| F("🪓  Break into STORIES, write full AC/requirements, weigh points")
+      F --> |FE, BE, PROXY, INTEGRATION stories| G("🖨 Clone stories as needed for team")
+      G --> |Use JIRA templates I provided| GG("🔪 Break stories into SUB-TASKS, if needed")
+      GG --> |"🗣 Shout-outs on any blockers"| H("👷‍♂️👷‍♀️ Development work ...🚧")
+      H --> |Finalize any stubbed-out Postman endpoints| GG
+```
 
 
 
 # Testimonials & Feedback
 
-Staff Engineer, Direct Supervisor
+`Mazen Ghalayini` — Staff React Engineer, Direct Supervisor ([LinkedIn](https://www.linkedin.com/in/mazen-g-a76139179/), mghalayini@paloaltonetworks.com)
+
+`Hanford Choy` — Non-Technical Project Manager (hchoy@paloaltonetworks.com)
+
+`Alexander Jones` — Team Head Designer ([LinkedIn](https://www.linkedin.com/in/alexander-jones7/), aljones@paloaltonetworks.com)
+
+`Palak Mehrotra` — Senior Software Engineer ([LinkedIn](https://www.linkedin.com/in/palakmehrotra/))
 
 
 
+### Feedback after First Demo 
 
-
-### Feedback after First Demo  `FRI Jan 21`:
+ `Jan 21, 2022` (*from #slack*)
 
 | <img src="_markdown_assets/images/image-20220318155554872-7645128.png" alt="image-20220318155554872" style="zoom:67%;" /> | ![5lp](_markdown_assets/images/5lp.gif) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ------------------------------------------------------------ | --------------------------------------- |
 
 
 
 ### Feedback from Project Management
 
-> "I don't want you to quit" — *Hanford Choy*, PM
->
-> "BTW, I gave you the most exciting feature that I believe will be used by a lot of customers :)."  — *Hanford Choy*, PM
+![image-20220204103203505](_markdown_assets/images/image-20220204103203505-7703951.png)
+
+> "BTW, I gave you the most exciting feature that I believe will be used by a lot of customers :)."  — *Hanford Choy*,  `Feb 1, 2022`
 
 
 
 ### Feedback from Supervising Staff Engineers
 
-> "You're doing great!" — *Mazen Ghalayini* `Feb 15, 2022`
+> "You're doing great!" [<u>re</u>: performance review] — *Mazen Ghalayini* `Feb 15, 2022`
 >
-> "...you know, also, we lost a lot of people, we're kind of under siege from [a lot of directions]... so yeah, I think your suggestion is a good one that we need to try..."  [re: to do a POC using GraphQL] — *Vish Ramamurthy*,  `Feb 23, 2022`
-
-
+> "Alright, let's give it a shot and see how that works!" [<u>re</u>: creating a shared Postman collection between FE and BE teams]
+>
+> — *Mazen Ghalayini*,  `Feb 22, 2022`
+>
+> "...you know, also, ... we're kind of under siege from [a lot of directions]... so yeah, I think your suggestion is a good one that we need to try..."  [<u>re</u>: to do a backend POC using GraphQL] — *Vish Ramamurthy*,  `Feb 23, 2022`
 
 
 
 ### Feedback from Designer
 
-> "You're selling it, that's exactly what I'm looking for!" [re: toasts, popover messaging, and row highlighting proposals] 
+> "You're selling it, that's exactly what I'm looking for!" [re: toast notifications, popover messaging, and row highlighting proposals] 
 >
 > — *Alexander Jones* `Feb 23, 2022`
 
@@ -436,7 +472,7 @@ Staff Engineer, Direct Supervisor
 
 ### Feedback from BE Team
 
-> "I agree with Karl, actually." [re: Big Query vs MySQL confusion on Asset Transfer] — *Palak Mehrotra* `Feb 23, 2022`
+> "I agree with Karl, actually." [<u>re</u>: my clarifying Big Query vs MySQL confusion on Asset Transfer epic] — *Palak Mehrotra* `Feb 23, 2022`
 
 
 
@@ -468,8 +504,6 @@ Staff Engineer, Direct Supervisor
 
 - [ ] Show Alex's: `all good questions` from [JIRA pic](ALEX-2-Screen Shot 2022-02-14 at 2.15.29 PM.png)
 
-- [ ] ![image-20220316175533444](/Users/karlgolka/PROJECTS/FYI/_typora_images/image-20220316175533444.png)
-
   
 
 # 🗣 Testimonials / Feedback
@@ -495,4 +529,90 @@ Staff Engineer, Direct Supervisor
 
 
 
+
+# ⏳ Reasons for Transition
+
+- [ ] Hanford / pm and "we decided to re-define what an epic is: an epic is a sub-task now"
+- [ ] BE and PM dysfunction with no hope of course-correction in any reasonable amount of time
+- [ ] Mazen Ghalayini (things like his code for incrementally refactoring from pixels to rem):
+
+```js 
+// file: /src/utils/units.js
+
+// EXAMPLE USAGE: `padding: ${units[30]};`
+
+// 🔴 BEFORE:       
+export default {
+    0: '0',
+    1: '1px',
+    2: '2px',
+    3: '3px',
+    4: '4px',
+    6: '6px',
+    7: '7px',
+    8: '8px',
+    9: '9px',
+    10: '10px',
+    11: '11px',
+    12: '12px',
+    14: '14px',
+    15: '15px',
+    16: '16px',
+    17: '17px',
+    18: '18px',
+    20: '20px',
+    22: '22px',
+    24: '24px',
+    25: '25px',
+    28: '28px',
+    29: '29px',
+    30: '30px',
+    32: '32px',
+    33: '33px',
+    35: '35px',
+    36: '36px',
+    40: '40px',
+    44: '44px',
+    48: '48px',
+    56: '56px',
+    64: '64px',
+    72: '72px',
+    76: '76px',
+    80: '80px',
+    96: '96px',
+    112: '112px',
+    128: '128px',
+    144: '144px',
+    160: '160px',
+    168: '168px',
+    176: '176px',
+    184: '184px',
+    192: '192px',
+    208: '208px',
+    222: '222px',
+    224: '224px',
+    240: '240px',
+    250: '250px',
+    255: '255px',
+    256: '256px',
+    270: '270px',
+    288: '288px',
+    320: '320px',
+    350: '350px',
+    450: '450px',
+    384: '384px',
+    541: '541px',
+  
+  	// 🔴 etc... so if a you, for example, needed a width of 542px or a line-height of 31px in a MFE, you had to go here and add that line explicitly, and re-link the repo so you could use it in a MFE
+};
+
+// ✅ AFTER: 
+// I proposed refactoring this file to a function instead of a never-ending object map, like so:
+const remCalc = (pixelValue) => {
+   // for now: 
+   return pixelValue === 0 ? '0' : `'${value}px'`;
+   // then later: pixelValue / x = rems ...
+   // and much later: just use rems ... (once legacy ASP.NET CSS issue refactored)
+};
+```
 
