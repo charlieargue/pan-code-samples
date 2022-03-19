@@ -1,5 +1,7 @@
 # Palo Alto Networks (PAN) Code Samples
 
+Besides code samples, this document also served as a detailed "post-mortem" of my time spent at Palo Alto Networks.
+
 
 
 ## 🕙 How I Spent My Time
@@ -161,6 +163,7 @@ pie
 - wdyr
 - cypress coverage / CRA instrumentation 
 - husky
+- puppeteer
 
 
 
@@ -171,9 +174,12 @@ pie
 **THis is IN ORDER as it happened!**
 
 1. I refactored AI, introducing the separation between Server State and App State via react-query (we **together chose** that over swr)
-2. To clarify what I had done and the Context misunderstanding he had, he had me do a ctx-options POC repo to investigate additional options (I suggested react-tracked, he suggested RTK-Q since Redux was already being used everywhere) that would be easiest to adopt by the team
-3. He chose RTK-Q, and AI was refactored a 3rd time (1st by him, 2nd by me with react-query, and 3rd by me for RTK-Q)
-4. We then applied the same fixes to both NS and MFE-B and then they made it into every other MFE 
+2. Components: Class to Functional
+3. de-coupling, file and folder organization, componentization
+4. removing unnecessary prop drilling all over the place
+5. To clarify what I had done and the Context misunderstanding he had, he had me do a ctx-options POC repo to investigate additional options (I suggested react-tracked, he suggested RTK-Q since Redux was already being used everywhere) that would be easiest to adopt by the team
+6. He chose RTK-Q, and AI was refactored a 3rd time (1st by him, 2nd by me with react-query, and 3rd by me for RTK-Q)
+7. We then applied the same fixes to both NS and MFE-B and then they made it into every other MFE 
 
 
 
@@ -261,7 +267,9 @@ graph TD
 
 
 
-### "Where to Put State" flow chart
+### "State Pyramid" / "Where to Put State" flow chart
+
+![image-20220318203826917](/Users/karlgolka/PROJECTS/FYI/_typora_images/image-20220318203826917.png)
 
 
 
@@ -300,23 +308,54 @@ graph TD
 
 
 
-### Mentoring to Staff Engineer
+### Mentoring to Staff Engineer 
 
 - [ ] Provided regular guidance to my supervising **staff engineer** on the **latest** React (and general software) best practices, patterns, and trends — he  adopted almost all of my suggestions, including but not limited to:
-  - [ ] Typora for markdown
-  - [ ] having a centralized markdown-based knowledge base
-  - [ ] switching to MBP (and guidance on that)
-  - [ ] following React community leaders such as Kent Dobbs, Ben Awad and well-known guides such as Tao of React
-  - [ ] purchasing the Epic React and JavaScript Testing workshops by Kent Dobbs, upon my personal recommendation
-  - [ ] using Tabox for Chrome tab group management
+  - [ ] **Typora** for markdown
+  
+  - [ ] having a **personal**, centralized, markdown-based "knowledge base" in **GitHub**
+  
+  - [ ] switching to **MBP** (and guidance on that)
+  
+  - [ ] following **React community leaders** such as Kent Dobbs, Ben Awad, as patterns such as Tao of React, "Rule of Three" or "AHA Programming"
+  
+  - [ ] purchasing the **Epic React** and **JavaScript Testing workshops** by Kent Dobbs, upon my personal recommendation
+  
+  - [ ] using **Tabox** for Chrome tab group management
+  
   - [ ] switching to Github Desktop
+  
   - [ ] switching to VSCode extensions such as: auto-imports, spell checker, snippets, Quokka, etc.
+  
   - [ ] using VSCode keyboard short-cuts such as: auto-order/dedupe imports, auto-formatting, etc.
+  
   - [ ] NOT having prettier auto-format run upon each file save, but instead centralizing prettier formatting via `husky` hooks
+  
   - [ ] Rule of 3s, ctx-options
-  - [ ] separating App from Server state
+  
+  - [ ] separating state into two categories: App state from Server state (and not keeping everything in Redux)
+  
+  - [ ] successfully implementing various latest patterns and libraries for state-management, data fetching, and cache management options, including pure React Context, react-tracked, react-query, and RTK-Q (Redux was already being used)                                          
+  
+  - [ ] not shying away from pure React Context (he was under the misapprehension that it causes everything below it in the tree to over-render, where as only those components that consume the context do so; additionally provided POC repo ctx-options to demonstrate common solutions and patterns for dealing with over-renders)
+  
   - [ ] he setup a shared PostMan collection upon my request for the team
+  
   - [ ] husky
+  
+  - [ ] centralizing library exports and cheatsheets in a separate dev-tools repo
+  
+  - [ ] establishing caching patterns and strategies
+  
+  - [ ] next generation API mocking for testing and development
+  
+  - [ ] component-based rapid prototyping with StoryBook (and then using those stories for component UI unit tests via Cypress)
+  
+  - [ ] Turbo Logger
+  
+  - [ ] 
+  
+    
   
   
 
@@ -387,6 +426,7 @@ Guided project management on:
 - [ ] how to use markdown auto-outlining syntax
 - [ ] what is an epic, how to write Acceptance Criteria, etc.
 - [ ] benefits of markdown, mocking API servers, creating sub-tasks (of stories), linking issues, sharing Postman collections, and more
+- [ ] lessening the amount of meetings (amount was affecting the team's development productivity)
 
 
 
@@ -423,6 +463,10 @@ Guided project management on:
 
 - [ ] see all 1-on-1s !!!!! (.md)
 
+  - [ ] `Wed Dec 8, 2021` - see **iphone recording** from same day
+
+    - [ ] > one or two other candidates hired along with me got kicked out already! I'm doing great! so far doing good, ...  keep it up!
+
 - [ ] audio (iphone), 
 
   - [ ] 🔥 esp.  entire Mazen VIP recording plz asap! (from **Thur, Feb 10, 2022**)
@@ -439,9 +483,33 @@ Guided project management on:
 
   
 
+# 🗣 Testimonials / Feedback
+
+![image-20211209153206942](/Users/karlgolka/PROJECTS/FYI/_typora_images/image-20211209153206942-7662477.png)
+
+🔥 See #iphone recordings with Mazen (Accomplishment one, right before SPUI Part 1/2/3)
 
 
-## Reasons for Transition
+
+![image-20211213135631248](/Users/karlgolka/PROJECTS/FYI/_typora_images/image-20211213135631248-7662477.png)
+
+![image-20220111182444035](/Users/karlgolka/PROJECTS/FYI/_typora_images/image-20220111182444035-7662477.png)
+
+
+
+![Screen Shot 2022-01-20 at 2.49.32 PM](/Users/karlgolka/PROJECTS/FYI/_typora_images/Screen Shot 2022-01-20 at 2.49.32 PM-7662477.png)
+
+![image-20220124114501482](/Users/karlgolka/PROJECTS/FYI/_typora_images/image-20220124114501482-7662477.png)
+
+
+
+
+
+
+
+
+
+## 𝚫 Reasons for Transition
 
 - [ ] Lots of chaos with the meeting, cancelled and re-scheduled last minute… :)
 - [ ] 
