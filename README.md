@@ -162,82 +162,6 @@ pie
 
 
 
-### Tech Debt & Refactoring Journey
-
-A simplified flow-chart highlighting key points in the path I took to successfully remove a huge amount of technical debt and refactor multiple MFEs, while simultaneously delivering much-loved new UI features:
-
-
-
-```mermaid
-graph TD
-      A(Converting remaining CLASS COMPONENTS to Functional) --> |DRY-ing and SRP-ing|B(upgrades and bug fixes to legacy & new DESIGN SYSTEMS)
-      B --> |file and folder RE-ORGANIZATION| C(building TESTABLE components)
-      C --> D[SEPARATION of App State from Server State]
-      C --> |removing unnecessary PROP DRILLING| E[service and DEPENDENCY INJECTION improvements]
-		  D --> F(fixing errors and potential MEMORY LEAKS with useSafeDispatch and useIsMounted)
-		  E --> F
-		  F --> G(latest patterns and best practices)
-		  G --> |swr VS react-query VS RTK-Q| H(CACHE strategies and configuration)
-		  G --> |pure React Context VS react-tracked VS RTK| I(state management POC, ctx-options)
-		  H --> J(rigorous and efficient testing and debugging)
-		  I --> J
-		  J --> |Jest, Cypress E2E Tests, and Postman| K(using msw to MOCK entire APIs)
-		  K --> L(Upgrades propagated to other MFEs and to MFE boilerplate)
-		  L --> |kick-starting other micro-frontends| M(Optimizing for performance and eliminating unnecessary renders)
-		  M --> |loading spinners, skeletons, and animations| N(adding Error Boundaries)
-		  N(CLI, tooling, and React-Scripts upgrades) --> |babel / Jest / webpack / eslint / prettier configs| O(working with an ejected Creact-React-App)
-		  O --> P(coding up production fixes for tooling)
-		  subgraph i
-        C
-        D
-        E
-      end
-      subgraph ii
-        G
-        H
-        I
-      end
-      subgraph iii
-        N
-        O
-        P
-      end
-```
-
-
-
-
-
-### Simplified "Where to Put State" Flow Chart
-
-Inspired by [Kent Dodds' decision tree chart](https://kentcdodds.com/blog/state-colocation-will-make-your-react-app-faster#so-how-do-you-decide-where-to-put-state):
-
-```mermaid
-graph TD
-      A(Where to put state?) --> B(#1 - data fetching and cache management tool)
-      B --> |eg. RTK-Q| C{#2 - If not server state, then app state:}
-      C --> D(useState)
-      C --> E(lift or co-locate)
-      C --> F(component composition)
-      C --> G(prop drilling)
-      C --> H(Context)
-      D --> I(#3 - Redux)
-      E --> I
-      F --> |... and as a last resort ...|I
-      G --> I
-      H --> I
-```
-
-
-
-
-
-### 🔥 Gantt of What I worked on and When
-
-🔥(do a gantt chart! just timeline!) use my notes/Ops to make it super realistic!
-
-
-
 ### Testing & Mocking
 
 - Introduced a modern **testing infrastructure** **and tooling** (`msw`, Jest, Cypress), centralized so developers could use them from any MFE (including Jest and Cypress code coverage)
@@ -395,6 +319,82 @@ Guided project management on:
 
 
 
+### Tech Debt & Refactoring Journey
+
+A simplified flow-chart highlighting key points in the path I took to successfully remove a huge amount of technical debt and refactor multiple MFEs, while simultaneously delivering much-loved new UI features:
+
+
+
+```mermaid
+graph TD
+      A(Converting remaining CLASS COMPONENTS to Functional) --> |DRY-ing and SRP-ing|B(upgrades and bug fixes to legacy & new DESIGN SYSTEMS)
+      B --> |file and folder RE-ORGANIZATION| C(building TESTABLE components)
+      C --> D[SEPARATION of App State from Server State]
+      C --> |removing unnecessary PROP DRILLING| E[service and DEPENDENCY INJECTION improvements]
+		  D --> F(fixing errors and potential MEMORY LEAKS with useSafeDispatch and useIsMounted)
+		  E --> F
+		  F --> G(latest patterns and best practices)
+		  G --> |swr VS react-query VS RTK-Q| H(CACHE strategies and configuration)
+		  G --> |pure React Context VS react-tracked VS RTK| I(state management POC, ctx-options)
+		  H --> J(rigorous and efficient testing and debugging)
+		  I --> J
+		  J --> |Jest, Cypress E2E Tests, and Postman| K(using msw to MOCK entire APIs)
+		  K --> L(Upgrades propagated to other MFEs and to MFE boilerplate)
+		  L --> |kick-starting other micro-frontends| M(Optimizing for performance and eliminating unnecessary renders)
+		  M --> |loading spinners, skeletons, and animations| N(adding Error Boundaries)
+		  N(CLI, tooling, and React-Scripts upgrades) --> |babel / Jest / webpack / eslint / prettier configs| O(working with an ejected Creact-React-App)
+		  O --> P(coding up production fixes for tooling)
+		  subgraph i
+        C
+        D
+        E
+      end
+      subgraph ii
+        G
+        H
+        I
+      end
+      subgraph iii
+        N
+        O
+        P
+      end
+```
+
+
+
+
+
+### Simplified "Where to Put State" Flow Chart
+
+Inspired by [Kent Dodds' decision tree chart](https://kentcdodds.com/blog/state-colocation-will-make-your-react-app-faster#so-how-do-you-decide-where-to-put-state):
+
+```mermaid
+graph TD
+      A(Where to put state?) --> B(#1 - data fetching and cache management tool)
+      B --> |eg. RTK-Q| C{#2 - If not server state, then app state:}
+      C --> D(useState)
+      C --> E(lift or co-locate)
+      C --> F(component composition)
+      C --> G(prop drilling)
+      C --> H(Context)
+      D --> I(#3 - Redux)
+      E --> I
+      F --> |... and as a last resort ...|I
+      G --> I
+      H --> I
+```
+
+
+
+
+
+### 🔥 Gantt of What I worked on and When
+
+🔥(do a gantt chart! just timeline!) use my notes/Ops to make it super realistic!
+
+
+
 
 
 # Testimonials & Feedback
@@ -470,9 +470,3 @@ Guided project management on:
 
 
 
-
-
-## 𝚫 Reasons for Transition
-
-- [ ] Lots of chaos with the meeting, cancelled and re-scheduled last minute… :)
-- [ ] 
