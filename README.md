@@ -210,7 +210,25 @@ graph TD
 
 ### Simplified "Where to Put State" Flow Chart
 
-![image-20220318203826917](/Users/karlgolka/PROJECTS/FYI/_typora_images/image-20220318203826917.png)
+Inspired by [Kent Dodds' decision tree chart](https://kentcdodds.com/blog/state-colocation-will-make-your-react-app-faster#so-how-do-you-decide-where-to-put-state):
+
+```mermaid
+graph TD
+      A(Where to put state?) --> B(#1 - data fetching and cache management tool)
+      B --> |eg. RTK-Q| C{#2 - If not server state, then app state:}
+      C --> D(useState)
+      C --> E(lift or co-locate)
+      C --> F(component composition)
+      C --> G(prop drilling)
+      C --> H(Context)
+      D --> I(#3 - Redux)
+      E --> I
+      F --> |... and as a last resort ...|I
+      G --> I
+      H --> I
+```
+
+
 
 
 
@@ -264,9 +282,9 @@ graph TD
   
   - [ ] switching to **MBP** (and guidance on setup and optimization)
   
-  - [ ] following **React community leaders** such as Kent Dobbs, Ben Awad, as patterns such as Tao of React, "Rule of Three" or "AHA Programming"
+  - [ ] following **React community leaders** such as Kent Dodds, Ben Awad, as patterns such as Tao of React, "Rule of Three" or "AHA Programming"
   
-  - [ ] purchasing the **Epic React** and **JavaScript Testing workshops** by Kent Dobbs, upon my personal recommendation
+  - [ ] purchasing the **Epic React** and **JavaScript Testing workshops** by Kent Dodds, upon my personal recommendation
   
   - [ ] using **Tabox** for Chrome tab group management
   
