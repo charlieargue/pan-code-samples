@@ -613,7 +613,7 @@ Project Management lacked skills,  did Agile "their way", only adding to already
 
 ### B) Supervising Staff Engineer
 
-As an example, I received push-back (but finally prevailed) when suggesting that we DO NOT keep adding to this file infinitely, and instead refactor it into one line:
+As an example, I received push-back (but finally prevailed) when suggested that we stop adding to this file indefinitely, and instead refactor it into a one-line function:
 
 ```js 
 // file: /src/utils/units.js
@@ -693,7 +693,7 @@ export default {
 // ✅ AFTER: 
 // -----------------------
 const remCalc = (pixelValue) => {
-   return pixelValue === 0 ? '0' : `'${value}px'`;
+   return pixelValue === 0 ? 0 : `'${value}px'`;
 
    // THEN LATER:       pixelValue / x = rems 
    // AND MUCH LATER:   switch to just using rems, once legacy ASP.NET CSS issue fixed
