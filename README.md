@@ -482,6 +482,8 @@ graph TD
 
 ### Feedback from Supervising Staff Engineers
 
+<audio src="/Users/karlgolka/Desktop/⭐️ PAN SORTED/Audio Clips/Code-Credentials-CLIP.wav"></audio>
+
 > "As far as coding, your credentials are extremely high, I mean, there's not much I can teach you... if anything, I'm probably gonna have to learn from you..." [during 1-on-1 performance review] 
 >
 > — 🗣 *Mazen Ghalayini* `Feb 15, 2022`
@@ -513,7 +515,6 @@ graph TD
 > — 🗣 *Vish Ramamurthy*  `Feb 23, 2022`
 >
 >
-> 
 > "You're doing better than all the other people that I onboarded. I'm the first UI developer [on this Rewrite Team], and then it was two others, and a third one, ... two got kicked out, one is still with us, and you are the last one now! ... In my opinion, you definitely are showing the right attitude, and I'm getting the right signals from others... and if you need me to vouch for you, I'm going to give them the thumbs-up... and so far I think you're doing good because I get a pretty good impression from someone higher than me.... he's said good things about you, so keep it up, and you'll get recognized... and hired... I think you'll definitely get there, and it'll be good for Palo Alto, I mean you're a very good candidate for them!" [<u>re:</u> converting from contractor to full-time employment]." 
 > — 🗣 *Mazen Ghalayini*  `Dec 8, 2021` 
 
