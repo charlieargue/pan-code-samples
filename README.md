@@ -1,7 +1,7 @@
 # ✅ Tasks:  
 
 - [ ] re-run spell checker (on ALL pages)
-- [ ] print, proof-read
+- [ ] print, proof-read (ALL pages)
 
 
 
