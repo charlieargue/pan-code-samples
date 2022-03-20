@@ -265,10 +265,8 @@ Fragment from a `Hi-Level Design Doc` of all Asset Transfer workflows, helping t
 
 ### `Impact on:` Team Productivity & DX
 
-- [ ] repetitive chore automation 💚 (puppeteer, saving hours of dev time, (dozens of MFEs and environments!)
-  - [ ] Before & After Processes: **token automation**
+- [ ] repetitive chore automation 💚 (via puppeteer, positively affected dozens of MFEs and environments)
 - [ ] linking, starting, and msw command shortcuts (via `zsh` config)
-- [ ] no more prettier sheesh! introduced husky
 - [ ] VSCode extensions, chrome extensions, see MBP cheatsheet
 - [ ] husky & the DISABLE_PRETTIER flag (before that, each time a developer would save their file, the prettier auto-format would run, losing their place on the screen, un-folding all folded code, and causing all sorts of other headaches)
 - [ ] using [loom](https://www.loom.com/) videos to quickly and easily communicate status updates on features, and much more
