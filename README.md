@@ -1,10 +1,3 @@
-# ✅ Tasks:  
-
-- [ ] re-run spell checker (on ALL pages)
-- [ ] print, proof-read (ALL pages)
-
-
-
 # PAN Code Samples
 
 Code samples, demos and videos, and a detailed "post-mortem" and case study of my time spent at Palo Alto Networks.
