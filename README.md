@@ -178,9 +178,9 @@ Fragment from a `Hi-Level Design Doc` of all Asset Transfer workflows, helping t
 
 - Setup next-generation **API mocking** (`msw`), that allowed effortless request interception at the network level, and seamless re-use the same mock definitions for testing, development, and debugging
 
-- Demonstrated successful use of **Cypress E2E tests** to confidently and quickly refactor entire MFEs, to hunt/fix/prevent bugs, and as a UI unit and component testing tool (against StoryBook stories)
+- Demonstrated successful use of **Cypress E2E tests** to confidently and quickly refactor entire MFEs, to hunt/fix/prevent bugs, and as a UI unit and component testing tool (against StoryBook)
 
-- Introduced Postman as a critical tool for sharing collections between BE and FE during requirements-gathering phase
+- Introduced Postman as a critical tool for sharing collections between BE and FE teams
 
 - While refactoring multiple MFEs and building new features, wrote **clean, bug-free, and highly-testable code** so that services, components, utility functions, and custom hooks could all be exercised rigorously
 
@@ -192,7 +192,7 @@ Fragment from a `Hi-Level Design Doc` of all Asset Transfer workflows, helping t
   - Super-charged development velocity and allowed for rapid prototyping
   - Developers stopped putting messy mocking code all over the codebases
   - Staff engineer started using Cypress/Jest/Postman/`msw` and our joint efforts led to complete adoption by the team
-  - No testing was being done on my team when I arrived, and now the staff engineer and team are writing tests nearly daily and even doing occasional TDD
+  - No testing was being done on my team when I arrived, and now the staff engineer and team are writing tests regularly
   - `msw/data` in particular allowed for mocked data persistence and allowed for effectively mocking entire complex workflows and building out entire features without waiting for the BE
   - Greatly improved team's capability to deliver bug-free features
   
@@ -202,7 +202,7 @@ Fragment from a `Hi-Level Design Doc` of all Asset Transfer workflows, helping t
 
 - Made the designer very happy with pixel-perfect build-outs of his Figma prototypes (thx [PerfectPixel](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?hl=en)!)
 - Provided frequent useful feedback on better UI design (eg. better design of toasts and alerts for popovers in a DataTable context)
-- Solved a major Data View pain-point by combining loading states for Asset Dashboard Tiles, Product Families, Search, Filters, and Data Table UI/UX, removing the need for a lot of code and buggy edge-cases (users were counter-intuitively running multiple searches at once without realizing it, resulting in race conditions, causing confusion both for users and developers)
+- Solved a major Data View pain-point by combining loading states for Asset Dashboard Tiles, Product Families, Search, Filters, and Data Table UI/UX, removing the need for a lot of code and buggy edge-cases
 
 
 
@@ -227,27 +227,25 @@ Fragment from a `Hi-Level Design Doc` of all Asset Transfer workflows, helping t
   
   - [ ] using **VSCode keyboard short-cuts** such as: auto-order/dedupe imports, auto-formatting, navigate back/forward, etc.
   
-  - [ ] fixed annoying prettier auto-format that was running each time a developer saved a file, to instead run before commits via `husky`
+  - [ ] fixed annoying prettier auto-format that was running each time a developer saved a file, to instead run before commits via **`husky`**
   
-  - [ ] Tao of React, Rule of 3s, AHA Programming
+  - [ ] **separating state** into two categories: App state from Server state (and not keeping everything in Redux)
   
-  - [ ] separating state into two categories: App state from Server state (and not keeping everything in Redux)
+  - [ ] successfully implementing various **latest patterns and libraries** for state-management, data fetching, and cache management options, including pure React Context, react-tracked, react-query, and RTK-Q (Redux was already being used)                                          
   
-  - [ ] successfully implementing various latest patterns and libraries for state-management, data fetching, and cache management options, including pure React Context, react-tracked, react-query, and RTK-Q (Redux was already being used)                                          
+  - [ ] clearing up misunderstandings that caused the team to shy away from pure **React Context**
   
-  - [ ] clearing up misunderstandings that caused the team to shy away from pure React Context
+  - [ ] provided clear **POC** repo [ctx-options](https://github.com/charlieargue/ctx-options) to demonstrate common state management solutions and patterns for dealing with React Context over-renders
   
-  - [ ] provided clear POC repo [ctx-options](https://github.com/charlieargue/ctx-options) to demonstrate common state management solutions and patterns for dealing with React Context over-renders
+  - [ ] successfully pushing leadership to setup a shared **PostMan** collection for the team
   
-  - [ ] successfully pushing to setup a shared PostMan collection for the team
+  - [ ] centralizing library exports and **cheatsheets** in a separate dev-tools repo
   
-  - [ ] centralizing library exports and cheatsheets in a separate dev-tools repo
+  - [ ] establishing **caching** patterns and strategies
   
-  - [ ] establishing caching patterns and strategies
+  - [ ] next generation **API mocking** for testing and development
   
-  - [ ] next generation API mocking for testing and development
-  
-  - [ ] component-based rapid prototyping with StoryBook (and then using those stories for component UI unit tests via Cypress)
+  - [ ] component-based **rapid prototyping** with StoryBook (and then using those stories for component UI unit tests via Cypress)
   
     
   
@@ -567,6 +565,8 @@ Not related to Palo Alto Networks:
 
 
 # ⏳ Reasons for Transition
+
+Generally, I felt I had out-grown the team and it was time to move-on, and amongst many other issues:
 
 
 
