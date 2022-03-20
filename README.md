@@ -482,7 +482,7 @@ graph TD
 
 ### Feedback from Supervising Staff Engineers
 
-<audio src="/Users/karlgolka/Desktop/⭐️ PAN SORTED/Audio Clips/Code-Credentials-CLIP.wav"></audio>
+<audio src="_markdown_assets/audio/Code-Credentials-CLIP.wav"></audio>
 
 > "As far as coding, your credentials are extremely high, I mean, there's not much I can teach you... if anything, I'm probably gonna have to learn from you..." [during 1-on-1 performance review] 
 >
