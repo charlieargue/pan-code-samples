@@ -8,6 +8,8 @@
 
 
 
+[TOC]
+
 
 
 # 🕙 How I Spent My Time
@@ -118,7 +120,7 @@ pie
 
 
 
-# Other Samples and Resources:
+# 📚 Other Samples and Resources:
 
 - [Impact on Team](Impact.md)
 - [MBP "Setup Cheatsheet"](other/mbp-setup-cheatsheet.md)
