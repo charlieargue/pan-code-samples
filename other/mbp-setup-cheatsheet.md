@@ -1,4 +1,8 @@
-# **"MBP Setup" *Cheatsheet***
+# 👾 Sample "MBP Setup" Cheatsheet
+
+```
+Team 💙-ed this cheatsheet I made for improving DX and productivity
+```
 
 
 
