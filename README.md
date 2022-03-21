@@ -2,6 +2,14 @@
 
 
 
+"As far as coding, your credentials are extremely high, I mean, there's not much I can teach you... if anything, I'm probably gonna have to learn from you..." [during 1-on-1 performance review] 
+
+— 🗣 *Mazen Ghalayini* `Feb 15, 2022`  🔉 **[Audio Clip 1](https://github.com/charlieargue/pan-code-samples/issues/4)** 
+
+
+
+
+
 # 🕙 How I Spent My Time
 
 ```mermaid
@@ -136,7 +144,7 @@ pie
 
 
 
-### Feedback after First Demo 
+### Feedback after Demo 
 
  `Jan 21, 2022` (*from #slack*)
 
@@ -144,18 +152,6 @@ pie
 | ------------------------------------------------------------ | --------------------------------------- |
 
 
-
-### Feedback from Project Management
-
-> "BTW, I gave you the most exciting feature that I believe will be used by a lot of customers :)."  
->
-> — 🗣 *Hanford Choy*,  `Feb 1, 2022`
-
-
-
-> "Karl, [epic] looks really good. Congrats! I could not find any issues, and closed this ticket."
-> 
-> — 🗣 *Hanford Choy*,  `Dec 7, 2021`
 
 
 
@@ -214,6 +210,20 @@ pie
 > — 🗣 *Mazen Ghalayini*  `Dec 8, 2021` 
 
 
+
+### Feedback from Project Management
+
+> "BTW, I gave you the most exciting feature that I believe will be used by a lot of customers :)."  
+>
+> — 🗣 *Hanford Choy*,  `Feb 1, 2022`
+
+
+
+> "Karl, [epic] looks really good. Congrats! I could not find any issues, and closed this ticket."
+>
+> — 🗣 *Hanford Choy*,  `Dec 7, 2021`
+>
+> 
 
 ### Feedback from Designer
 
