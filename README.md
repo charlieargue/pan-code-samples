@@ -7,11 +7,11 @@
 ```mermaid
 pie
     title Time Spent at PAN
-    "React UI / Features" : 40
-    "Refactoring & Tech Debt" : 30
-    "Tooling, CLI, Automation" : 15
-    "Mentoring / Pair Sessions" :  10
-		"Testing" :  5
+    "React UI / Features (40%)" : 40
+    "Refactoring & Tech Debt (30%)" : 30
+    "Tooling, CLI, Automation (15%)" : 15
+    "Mentoring / Pair Sessions (10%)" :  10
+		"Testing (5%)" :  5
 ```
 
 # 💻 Code Samples
