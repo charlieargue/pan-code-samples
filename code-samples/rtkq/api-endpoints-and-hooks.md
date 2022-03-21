@@ -1,5 +1,7 @@
 # Example #1
 
+###### RTK-Q API, Endpoints, and Auto-Generated Hooks
+
 ```js 
 
 import { api } from '../rtkq/api';
