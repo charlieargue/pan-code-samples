@@ -8,7 +8,21 @@
 
 
 
-[TOC]
+
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents** 
+
+- [🕙 How I Spent My Time](#-how-i-spent-my-time)
+- [💻 Code Samples](#-code-samples)
+- [🎦 Demos and Videos Samples](#-demos-and-videos-samples)
+- [⭐️ UI Features / Highlights](#%EF%B8%8F-ui-features--highlights)
+- [📚 Other Samples and Resources:](#-other-samples-and-resources)
+- [🗣 Testimonials & Feedback](#%F0%9F%97%A3-testimonials--feedback)
+- [🔗 Other Code Samples / Repos](#-other-code-samples--repos)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 
 
