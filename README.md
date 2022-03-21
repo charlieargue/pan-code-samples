@@ -8,19 +8,18 @@
 
 
 
-
-
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents** 
+
+# **Table of Contents** 
 
 - [🕙 How I Spent My Time](#-how-i-spent-my-time)
 - [💻 Code Samples](#-code-samples)
 - [🎦 Demos and Videos Samples](#-demos-and-videos-samples)
 - [⭐️ UI Features / Highlights](#%EF%B8%8F-ui-features--highlights)
-- [📚 Other Samples and Resources:](#-other-samples-and-resources)
 - [🗣 Testimonials & Feedback](#%F0%9F%97%A3-testimonials--feedback)
-- [🔗 Other Code Samples / Repos](#-other-code-samples--repos)
+- [📚 Other Resources](#-other-resources)
+- [🔗 Other Code Samples](#-other-code-samples)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -131,17 +130,6 @@ pie
 | <img src="_markdown_assets/images/image-20220319084932623.png" alt="image-20220319084932623" style="zoom:67%;" /> | <img src="_markdown_assets/images/image-20220317231958141.png" alt="image-20220317231958141" style="zoom:87%;" /> |
 
 
-
-
-
-# 📚 Other Samples and Resources:
-
-- [Impact on Team](Impact.md)
-- [MBP "Setup Cheatsheet"](other/mbp-setup-cheatsheet.md)
-- Sample [Design Document](other/design-doc.md)
-- Example of [Clear Communication](other/JIRA-clear-communication.md) (in JIRA)
-- [Javascript libraries](other/libraries.md) I Introduced
-- 📊 [Flowcharts and Diagrams](other/flowcharts-diagrams.md)
 
 
 
@@ -264,7 +252,18 @@ pie
 
 
 
-# 🔗 Other Code Samples / Repos
+# 📚 Other Resources
+
+- [Impact on Team](Impact.md)
+- [MBP "Setup Cheatsheet"](other/mbp-setup-cheatsheet.md)
+- Sample [Design Document](other/design-doc.md)
+- Example of [Clear Communication](other/JIRA-clear-communication.md) (in JIRA)
+- [Javascript libraries](other/libraries.md) I Introduced
+- 📊 [Flowcharts and Diagrams](other/flowcharts-diagrams.md)
+
+
+
+# 🔗 Other Code Samples
 
 Not related to Palo Alto Networks:
 
