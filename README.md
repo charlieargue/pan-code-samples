@@ -17,7 +17,7 @@
 - [💻 Code Samples](#-code-samples)
 - [🎦 Demos and Videos Samples](#-demos-and-videos-samples)
 - [⭐️ UI Features / Highlights](#%EF%B8%8F-ui-features--highlights)
-- [🗣 Testimonials & Feedback](#%F0%9F%97%A3-testimonials--feedback)
+- [🗣 Testimonials and Feedback](#-testimonials-and-feedback)
 - [📚 Other Resources](#-other-resources)
 - [🔗 Other Code Samples](#-other-code-samples)
 
@@ -134,7 +134,7 @@ pie
 
 
 
-# 🗣 Testimonials & Feedback
+# 🗣 Testimonials and Feedback
 
 `Mazen Ghalayini` — Staff React Engineer, Direct Supervisor ([LinkedIn](https://www.linkedin.com/in/mazen-g-a76139179/), mghalayini@paloaltonetworks.com)
 
