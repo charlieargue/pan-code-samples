@@ -4,7 +4,7 @@
 
 "As far as coding, your credentials are extremely high, I mean, there's not much I can teach you... if anything, I'm probably gonna have to learn from you..." [during 1-on-1 performance review] 
 
-— 🗣 *Mazen Ghalayini* `Feb 15, 2022`  🔉 **[Audio Clip 1](https://github.com/charlieargue/pan-code-samples/issues/4)** 
+— 🗣 *[Mazen Ghalayini](https://www.linkedin.com/in/mazen-g-a76139179/)* `Feb 15, 2022`  🔉 **[Audio Clip 1](https://github.com/charlieargue/pan-code-samples/issues/4)** 
 
 
 
@@ -165,53 +165,51 @@ pie
 
 > "As far as coding, your credentials are extremely high, I mean, there's not much I can teach you... if anything, I'm probably gonna have to learn from you..." [during 1-on-1 performance review] 
 >
-> — 🗣 *Mazen Ghalayini* `Feb 15, 2022`
+> — 🗣 *[Mazen Ghalayini](https://www.linkedin.com/in/mazen-g-a76139179/)* `Feb 15, 2022`
 >
 > 🔉 **[Audio Clip 1](https://github.com/charlieargue/pan-code-samples/issues/4)** 
 
 
 
 > "I think this is excellent work, I think we're moving at a really good pace." [<u>re:</u> MFE refactoring and eliminating tech debt] 
->— 🗣 *Mazen Ghalayini*  `Jan 4, 2022`
+>— 🗣 *[Mazen Ghalayini](https://www.linkedin.com/in/mazen-g-a76139179/)*  `Jan 4, 2022`
 > 
 >🔉 **[Audio Clip 2](https://github.com/charlieargue/pan-code-samples/issues/5)** 
 
 
 
 > "I love what you did with puppeteer." [<u>re:</u> automating MFE token authentication] 
->— 🗣 *Mazen Ghalayini* `Dec 9, 2021`
+>— 🗣 *[Mazen Ghalayini](https://www.linkedin.com/in/mazen-g-a76139179/)* `Dec 9, 2021`
 
 
 
 > "It was a great effort on the MFE refactoring." 
 >
-> — 🗣 *Mazen Ghalayini* `Jan 18, 2021`
+> — 🗣 *[Mazen Ghalayini](https://www.linkedin.com/in/mazen-g-a76139179/)* `Jan 18, 2021`
 
 
 
 > 
 >"Alright, let's give it a shot!" [<u>re</u>: adopting my idea for a shared Postman collection between FE and BE teams] 
 > 
->— 🗣 *Mazen Ghalayini*  `Feb 22, 2022`
+>— 🗣 *[Mazen Ghalayini](https://www.linkedin.com/in/mazen-g-a76139179/)*  `Feb 22, 2022`
 
 
 
 > "... [unlike other engineer, whose PR's are] total rewrites sometimes... yours so far have been very good, I've only needed to do CSS-stuff [minor things]... keep [doing] what you're doing, you're doing good... you've definitely like learned a lot about how we do things, and you probably now have a really good grasp of how things work... you've been doing great... so just continue to do that, that's great [<u>re:</u> my successful team adoption efforts]... " [during 1-on-1 performance review] 
 >
-> — 🗣 *Mazen Ghalayini*  `Feb 15, 2022`
->
+> — 🗣 *[Mazen Ghalayini](https://www.linkedin.com/in/mazen-g-a76139179/)*  `Feb 15, 2022`
 
 
 
 > "...you know, also, ... we're kind of under siege from [a lot of directions]... so yeah, I think your suggestion is a good one that we need to try..."  [<u>re</u>: to seriously consider GraphQL as an option] 
 >
-> — 🗣 *Vish Ramamurthy*  `Feb 23, 2022`
+> — 🗣 *[Vish Ramamurthy](https://www.linkedin.com/in/veerendravundavalli/)*  `Feb 23, 2022`
 
 
 
-> 
->"You're doing better than all the other people that I onboarded. I'm the first UI developer [on this Rewrite Team], and then it was two others, and a third one, ... two got kicked out, one is still with us, and you are the last one now! ... In my opinion, you definitely are showing the right attitude, and I'm getting the right signals from others... and if you need me to vouch for you, I'm going to give them the thumbs-up... and so far I think you're doing good because I get a pretty good impression from someone higher than me.... he's said good things about you, so keep it up, and you'll get recognized... and hired... I think you'll definitely get there, and it'll be good for Palo Alto, I mean you're a very good candidate for them!" [<u>re:</u> converting from contractor to full-time employment]." 
-> — 🗣 *Mazen Ghalayini*  `Dec 8, 2021` 
+> "You're doing better than all the other people that I onboarded. I'm the first UI developer [on this Rewrite Team], and then it was two others, and a third one, ... two got kicked out, one is still with us, and you are the last one now! ... In my opinion, you definitely are showing the right attitude, and I'm getting the right signals from others... and if you need me to vouch for you, I'm going to give them the thumbs-up... and so far I think you're doing good because I get a pretty good impression from someone higher than me.... he's said good things about you, so keep it up, and you'll get recognized... and hired... I think you'll definitely get there, and it'll be good for Palo Alto, I mean you're a very good candidate for them!" [<u>re:</u> converting from contractor to full-time employment]." 
+>— 🗣 *[Mazen Ghalayini](https://www.linkedin.com/in/mazen-g-a76139179/)*  `Dec 8, 2021` 
 
 
 
@@ -233,7 +231,7 @@ pie
 
 > "You're selling it, that's exactly what I'm looking for!" [re: toast notifications, popover messaging, and row highlighting proposals] 
 >
-> — 🗣 *Alexander Jones*  `Feb 23, 2022`
+> — 🗣 *[Alexander Jones](https://www.linkedin.com/in/alexander-jones7/)*  `Feb 23, 2022`
 
 
 
@@ -246,7 +244,7 @@ pie
 
 > "Thanks to Mazen and Karl for all their help on UI and Artifactory setup" 
 >
-> — 🗣 *Veerendra Vundavalli*  `Feb, 2022`
+> — 🗣 *[Veerendra Vundavalli](https://www.linkedin.com/in/veerendravundavalli/)*  `Feb, 2022`
 
 
 
