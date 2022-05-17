@@ -27,9 +27,6 @@ Assume's you're on a MacBook, have VSCode installed already, and you will be wor
 * <u>**Finder**</u> setup:
   - show hidden files:   **`SHIFT`** + **`CMD`** +  **.**  *(period)*
 
-  - setting file viewing defaults 
-
-
 
 
 
