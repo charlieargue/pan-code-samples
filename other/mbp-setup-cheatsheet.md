@@ -177,6 +177,8 @@ Assume's you're on a MacBook, have VSCode installed already, and you will be wor
 | **`SHIFT`** + **`CMD`** + **P**      | opens command palette ([learn more](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette)) |
 | **`CMD`** + **D**                    | (Select something first), selects <u>each next</u> occurence |
 | **`CMD`** +  **`SHIFT`** + **D**     | (Select something first), selects <u>all</u> occurences      |
+| **`CMD`** + **.**                    | (place cursor first) Auto-Imports (can do ALL at once)       |
+| **`CMD`** + **click**                | (on top of an import) Jumps to Referenced file               |
 | **`SHIFT`** + **`⌥ OPTION`** + **F** | auto-formats document                                        |
 | **`SHIFT`** + **`⌥ OPTION`** + **O** | auto-organizes imports (at top of document)                  |
 | **`＾CONTROL`** + **W**              | switch **windows**                                           |
